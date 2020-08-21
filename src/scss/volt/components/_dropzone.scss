@@ -1,0 +1,14 @@
+.dropzone {
+    min-height: 150px;
+    border: 2px dashed $gray-600;
+    background: $white;
+    &:hover{
+        background-color: $soft;
+    }
+    .dz-message{
+        .dz-button{
+            font-size:$font-size-lg;
+            font-weight:$font-weight-bold;
+        }
+    }
+}

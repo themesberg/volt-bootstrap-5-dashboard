@@ -1,0 +1,52 @@
+.ct-bar {
+    stroke-linecap: round;
+    stroke-width: 10px;
+}
+.ct-label {
+    fill: $body-color;
+    color: $body-color;
+    font-size: 0.75rem;
+    margin-top: 6px;
+    font-weight: $font-weight-bold;
+}
+
+.ct-slice-pie {
+    stroke: $white;
+    stroke-width: 3px;
+}
+
+.ct-chart-donut .ct-series {
+    stroke: $white;
+    stroke-width: 3px;
+}
+
+.ct-chart-pie .ct-label, .ct-chart-donut .ct-label {
+    font-size: 0.75rem;
+    font-weight: $font-weight-bold;
+}
+
+.small-chart{
+    margin-left:-1rem;
+}
+
+//Label color Fix for pie chart
+
+.ct-chart-pie .ct-label, .ct-chart-donut .ct-label {
+    color: #ffffff;
+    fill: #ffffff;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+.ct-series-g{
+    .ct-grid {
+        stroke: #F8BD7A;
+        stroke-width: 2px;
+        stroke-dasharray: 2px;
+    }
+    .ct-label.ct-horizontal.ct-end {
+        margin-left:-9px;
+        margin-top:10px;
+        color: $primary;      
+    }
+}

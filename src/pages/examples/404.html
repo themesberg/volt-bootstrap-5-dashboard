@@ -1,0 +1,56 @@
+<!--
+
+=========================================================
+* Volt Pro - Premium Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themes.getbootstrap.com/product/rocket/
+* Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    @@include('./_head.html', {
+        "path": "../..",
+        "title": "Volt Premium Bootstrap Dashboard - 404 Not Found Page"
+    })
+</head>
+
+<body>
+    <main>
+        <section class="vh-100 d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center d-flex align-items-center justify-content-center">
+                        <div>
+                            <a href="../../index.html">
+                                <img class="img-fluid w-75" src="../../assets/img/illustrations/404.svg" alt="404 not found">
+                            </a>
+                            <h1 class="mt-5">Page not <span class="font-weight-bolder text-primary">found</span></h1>
+                            <p class="lead my-4">Oops! Looks like you followed a bad link. If you think this is a
+                                problem with us, please tell us.</p>
+                            <a class="btn btn-primary animate-hover" href="../../index.html"><i class="fas fa-chevron-left mr-3 pl-2 animate-left-3"></i>Go
+                                back home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('./_scripts.html', {
+        "path": "../.."
+    })
+    
+</body>
+
+</html>

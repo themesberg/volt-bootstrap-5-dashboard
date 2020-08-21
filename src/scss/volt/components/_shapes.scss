@@ -1,0 +1,128 @@
+/**
+ * = Shapes
+ */
+
+.pattern,
+.pattern {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url('../assets/img/patterns/wave.svg');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 1450px 160px;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: 140px;
+
+    @include media-breakpoint-down(md) {
+        background-size: 700px 203px;
+    }
+    
+    &.bottom {
+        bottom: -10px;
+        @include transform(rotate(180deg));
+    }
+
+    &.top {
+        top: -10px
+    }
+}
+
+.pattern-soft {
+    background-image: url('../assets/img/patterns/wave-soft.svg');
+}
+
+.organic-shape {
+	&:not(.position-relative) {
+		position: absolute;
+    }
+    
+	svg {
+		background: none !important;
+    }
+    
+	&.top {
+		top: 0;
+    }
+    
+	&.left {
+		left: 0;
+    }
+    
+	&.right {
+		right: 0;
+    }
+    
+	&.middle-y {
+		top: 50%;
+    }
+    
+	&.middle-x {
+		left: 50%;
+    }
+    
+	&.bottom {
+		bottom: 0;
+    }
+    
+	@for $i from 2 through 5 {
+		&.scale-#{$i}{
+			svg{
+				transform: scale(#{$i});
+			}
+		}
+    }
+}
+
+// Icon (svg) organic-shapes fill colors
+@each $color, $value in $theme-colors {
+    .organic-shape-#{$color}{ 
+        fill: rgba( $value, .3 );
+    }
+}
+
+// Shape (svg) fill colors
+@each $color, $value in $theme-colors {
+    .fill-#{$color}  {
+        fill: $value;
+    }
+
+    .stroke-#{$color}  {
+        stroke: $value;
+    }
+}
+
+// Shape colors
+@each $color, $value in $theme-colors {
+    .shape-#{$color}  {
+        background-color: $value;
+        .step-number{
+            background-color:$value;
+        }
+    }
+}
+
+.organic-radius{
+    border-radius:63% 37% 30% 70% / 50% 45% 55% 50%;
+}
+
+.avatar-sm {
+    width: $avatar-sm-y;
+    height: $avatar-sm-x;
+}
+
+.avatar-md {
+    width: $avatar-md-y;
+    height: $avatar-md-x;
+}
+
+.avatar-lg {
+    width: $avatar-lg-y;
+    height: $avatar-lg-x;
+}
+
+.color-shape {
+    width: 7rem;
+    height: 7rem;
+}

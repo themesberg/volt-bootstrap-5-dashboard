@@ -1,0 +1,103 @@
+/**
+ * = Custom forms
+ */
+
+ .custom-control-label {
+    // Background-color and (when enabled) gradient
+    &:before {
+        box-shadow: $custom-control-box-shadow;
+        @if $enable-transitions {
+            transition: $input-transition;
+        } 
+    }
+
+    span {
+        position: relative;
+        top: 2px;
+    }
+} 
+
+.custom-control-label {
+    margin-bottom: 0;
+}
+
+.custom-control-input {
+    &:active~.custom-control-label::before {
+        border-color: $custom-control-indicator-active-border-color;
+    }
+}
+
+// Custom File Input
+
+.custom-file-label {
+    background-color: #f3f3f5;
+  
+    &::after {
+
+      background-color: #f3f3f5;
+    }
+}
+
+
+//Select
+.custom-select{
+    font-size: $input-btn-font-size;
+    box-shadow:none;
+
+    &.custom-select-shadow {
+        box-shadow: $input-box-shadow;
+        transition: box-shadow .15s ease;
+    
+        &:focus {
+            box-shadow: $shadow-input-focus;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// Inbox star
+.rating-star {
+    &.star-lg{
+        label{
+            margin-bottom: .5rem;
+            &::before{
+                font-size: $font-size-xl;
+            }
+        }
+    }
+	label {
+		position: relative;
+		margin-bottom: 0;
+		cursor: pointer;
+        color: $light;
+        &:before {
+			content: "\f005";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			transition: all .2s ease;
+			font-size: 1.0625rem;
+		}
+	}
+	input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+    }
+
+    >input:checked~label {
+        color: $warning;
+    }
+
+	>label {
+		&:hover {
+			color: $warning;
+		}
+		&:hover~label {
+			color: $warning;
+		}
+	}
+}
+

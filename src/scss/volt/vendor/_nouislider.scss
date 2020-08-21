@@ -1,0 +1,498 @@
+// Original styles
+.noUi-target,
+.noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    touch-action: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.noUi-target {
+    position: relative;
+    direction: ltr;
+}
+
+.noUi-base,
+.noUi-connects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Wrapper for all connect elements.
+ */
+
+.noUi-connects {
+    overflow: hidden;
+    z-index: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+    will-change: transform;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: 0 0;
+}
+
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
+    left: auto;
+    right: 0;
+}
+
+.noUi-vertical .noUi-origin {
+    width: 0;
+}
+
+.noUi-horizontal .noUi-origin {
+    height: 0;
+}
+
+.noUi-handle {
+    position: absolute;
+}
+
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+    transition: transform .3s;
+}
+
+.noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+.noUi-horizontal {
+    height: $noui-target-thickness;
+}
+
+.noUi-horizontal .noUi-handle {
+    left: -17px;
+    top: -10px;
+}
+
+.noUi-vertical {
+    width: $noui-target-thickness;
+    height: 340px;
+}
+
+.noUi-vertical .noUi-handle {
+    width: 18px;
+    height: 34px;
+    left: -6px;
+    top: -17px;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+    right: -17px;
+    left: auto;
+}
+
+.noUi-connects {
+    border-radius: 3px;
+}
+
+.noUi-connect {
+    background: $noui-slider-connect-bg;
+}
+
+.noUi-draggable {
+    cursor: ew-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+    cursor: ns-resize;
+}
+
+.noUi-handle {
+    border: 1px solid $gray-100;
+    border-radius: 3px;
+    background: $white;
+    cursor: default;
+    outline: none;
+      // Change the cursor to a grab hand on hover.
+    &:hover {
+        cursor: grab;
+        cursor: -webkit-grab;
+        cursor:-moz-grab;
+        background-color: $light;
+    }
+
+    // Change the cursor to a grabbing hand on active.
+    &:active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        cursor:-moz-grabbing;
+        background-color: $light;
+        @include box-shadow($noui-handle-active-shadow);
+    }
+
+    &:focus{
+        @include box-shadow($noui-handle-active-shadow);
+        background-color: $light;
+    }
+}
+
+.noUi-active {
+    outline: none;
+    //box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+}
+
+
+/* Disabled state;
+ */
+
+[disabled] .noUi-connect {
+    background: $gray-400;
+}
+
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+    cursor: not-allowed;
+}
+
+
+/* Base;
+ *
+ */
+
+.noUi-pips,
+.noUi-pips * {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.noUi-pips {
+    position: absolute;
+    color: $gray-800;
+    font-size: $font-size-xs;
+}
+
+
+/* Values;
+ *
+ */
+
+.noUi-value {
+    margin-top: 5px;
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.noUi-value-sub {
+    color: $gray-400;
+    font-size: $font-size-xs;
+}
+
+
+/* Markings;
+ *
+ */
+
+.noUi-marker {
+    position: absolute;
+    background: $gray-800;
+}
+
+.noUi-marker-sub {
+    background: $gray-800;
+}
+
+.noUi-marker-large {
+    background: $gray-800;
+}
+
+
+/* Horizontal layout;
+ *
+ */
+
+.noUi-pips-horizontal {
+    padding: 12px 0;
+    height: auto;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.noUi-value-horizontal {
+    transform: translate(-50%, 50%);
+}
+
+.noUi-rtl .noUi-value-horizontal {
+    transform: translate(50%, 50%);
+}
+
+.noUi-marker-horizontal.noUi-marker {
+    margin-left: -1px;
+    width: 2px;
+    height: 5px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+    height: 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+    height: 12px;
+}
+
+
+/* Vertical layout;
+ *
+ */
+
+.noUi-pips-vertical {
+    padding: 0 10px;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+
+.noUi-value-vertical {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%, 0);
+    padding-left: 25px;
+}
+
+.noUi-rtl .noUi-value-vertical {
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+}
+
+.noUi-marker-vertical.noUi-marker {
+    width: 5px;
+    height: 2px;
+    margin-top: -1px;
+}
+
+.noUi-marker-vertical.noUi-marker-sub {
+    width: 10px;
+}
+
+.noUi-marker-vertical.noUi-marker-large {
+    width: 15px;
+}
+
+.noUi-tooltip {
+    background: $white;
+    color: $gray-800;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-normal;
+    display: block;
+    position: absolute;
+    padding: 5px 10px;
+    text-align: center;
+    white-space: nowrap;
+    @include border-radius($border-radius);
+    border: $border-width solid $light;
+}
+
+.noUi-horizontal .noUi-tooltip {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 30px;
+}
+
+.noUi-vertical .noUi-tooltip {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    right: 120%;
+}
+
+
+//  Custom styles
+
+.noUi-target {
+    background: $noui-target-bg;
+    border-radius: $noui-target-border-radius;
+    border: 0;
+    box-shadow: $noui-target-box-shadow;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.noUi-horizontal {
+    height: $noui-target-thickness;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+    right: -10px;
+}
+
+.noUi-vertical {
+    width: $noui-target-thickness;
+}
+
+.noUi-connect {
+    background: $noui-handle-bg;
+    box-shadow: none;
+}
+
+.noUi-handle {
+    position: absolute;
+    border: 1px solid $primary;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    @include box-shadow($noui-box-shadow);
+    background: $white;
+    transition: all 150ms cubic-bezier(.17,.01,.28,1.06);
+}
+
+.noUi-vertical .noUi-handle {
+    border: 1px solid $gray-700;
+    border-radius: 3px;
+    background: $white;
+    cursor: default;
+    box-shadow: inset 0 0 1px $white, inset 0 1px 7px $gray-100, 0 3px 6px -3px $gray-200;
+    outline: none;
+      // Change the cursor to a grab hand on hover.
+    &:hover {
+        cursor: grab;
+        cursor: -webkit-grab;
+        cursor:-moz-grab;
+        background-color: $light;
+    }
+
+    // Change the cursor to a grabbing hand on active.
+    &:active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        cursor:-moz-grabbing;
+        background-color: $light;
+        @include box-shadow($noui-handle-active-shadow);
+    }
+
+    &:focus{
+        @include box-shadow($noui-handle-active-shadow);
+        background-color: $light;
+    }
+}
+
+
+.noUi-horizontal .noUi-handle.noUi-active,
+.noUi-vertical .noUi-handle.noUi-active {
+    transform: scale(1.2);
+}
+
+.noUi-horizontal .noUi-active,
+.noUi-vertical .noUi-active {
+    //box-shadow: 0 0 3px 1px rgba(0, 0, 0, .1);
+}
+
+.input-slider--cyan .noUi-connect {
+    background: $cyan;
+}
+
+.input-slider--cyan.noUi-horizontal .noUi-handle,
+.input-slider--cyan.noUi-vertical .noUi-handle {
+    background-color: $cyan;
+}
+
+.input-slider--red .noUi-connect {
+    background: $red;
+}
+
+.input-slider--red.noUi-horizontal .noUi-handle,
+.input-slider--red.noUi-vertical .noUi-handle {
+    background-color: $red;
+}
+
+.input-slider--green .noUi-connect {
+    background: $green;
+}
+
+.input-slider--green.noUi-horizontal .noUi-handle,
+.input-slider--green.noUi-vertical .noUi-handle {
+    background-color: $green;
+}
+
+.input-slider--yellow .noUi-connect {
+    background: $yellow;
+}
+
+.input-slider--yellow.noUi-horizontal .noUi-handle,
+.input-slider--yellow.noUi-vertical .noUi-handle {
+    background-color: $yellow;
+}
+
+.input-slider--pink .noUi-connect {
+    background: $pink;
+}
+
+.input-slider--pink.noUi-horizontal .noUi-handle,
+.input-slider--pink.noUi-vertical .noUi-handle {
+    background-color: $pink;
+}
+/* Disabled state */
+[disabled] .noUi-connect,
+[disabled].noUi-connect {
+    background: $noui-slider-connect-disabled-bg;
+}
+
+[disabled] .noUi-handle,
+[disabled].noUi-origin {
+    cursor: not-allowed;
+}
+
+/* Range slider value labels */
+.range-slider-value {
+    font-size: $font-size-xs;
+    font-weight: 500;
+    background-color: rgba($dark, .7);
+    color: color-yiq($dark);
+    border-radius: 10px;
+    padding: .4em .8em .3em .85em;
+}
+
+.range-slider-wrapper .upper-info {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.input-slider-value-output {
+    background: $dark;
+    color: $white;
+    padding: 4px 8px;
+    position: relative;
+    top: 12px;
+    font-size: 11px;
+    border-radius: 2px;
+}
+
+.input-slider-value-output:after {
+    bottom: 100%;
+    left: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: $dark;
+    border-bottom-color: #333;
+    border-width: 4px;
+    margin-left: -4px;
+}
+
+.input-slider-value-output.left:after {
+    left: 10px;
+    right: auto;
+}
+
+.input-slider-value-output.right:after {
+    right: 10px;
+    left: auto;
+}

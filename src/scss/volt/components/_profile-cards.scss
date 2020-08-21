@@ -1,0 +1,390 @@
+/**
+ * = Profile cards
+ */
+
+.profile-card {
+
+    .card-image {
+        .card-title {
+            position: absolute;
+            left: 1.25rem;
+            top:  1.25rem;
+        }
+        .dropdown {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+        }
+    }
+
+    .profile-cover {
+        @include background-image(no-repeat, cover); 
+        height: 175px;
+    }
+
+    .profile-image {
+        width: 10rem;
+        height: 10rem;
+        margin: 0 auto;
+        @include transform(translateY(-3rem));
+    }
+
+    .profile-image-small {
+        width: 8rem;
+        height: 8rem;
+        margin: 0 auto;
+
+        img {
+            border: $border-width-lg solid $border-color-white;
+        }
+    }
+
+    .card-link{
+        font-size: $font-size-sm;
+    }
+    .card-footer {
+        background-color: $white;
+    }
+    .social-buttons {
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+
+        li{
+            display:inline-block;
+
+            a{
+                &.btn{
+                    padding:$card-social-padding;
+                }
+            }
+        }
+    }
+}
+
+//Rotating Profile Card
+.rotating-card-container{
+
+    .card-rotate{
+        background: transparent;
+        box-shadow: none;
+
+        &:after{
+            display: none;
+        }
+    }
+
+    .card {
+        @include transitions(.8s,$transition-bezier-card);
+        @include transform-style(preserve-3d);
+        position: relative;
+
+        .back, .front {
+            @include display-flex();
+            @include flex-direction(column);
+            @include align-content(center);
+            @include justify-content(center);
+            @include backface-visibility(hidden);
+            position: absolute;
+            @include border-radius($border-radius);
+            top: 0;
+            left: 0;
+
+            .card-body{
+                justify-content:center;
+                align-content:center;
+                @include display-flex();
+                @include flex-direction(column);
+
+                .card-subtitle{
+                    color: $primary;
+                }
+                .social-buttons{
+                    margin-bottom: 0;
+                    padding: 0;
+                    list-style: none;
+            
+                    li{
+                        display:inline-block;
+            
+                        a{
+                            &.btn{
+                                padding:$card-social-padding;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .front {
+            z-index: 2;
+            position: relative;
+            .profile-image{
+                width: 9rem;
+                height: 9rem;
+                margin: 0 auto;
+                img{
+                    border-width:$border-width-md;
+                    border-style:solid;
+                    padding: .25rem;
+                }
+            }
+        }
+
+        .back {
+            @include rotateY-180();
+            z-index: 5;
+            text-align: center;
+
+            width: 100%;
+            height: 100%;
+
+            &.back-background{
+                &:after{
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    content: "";
+                    background-color: rgba(0,0,0,.56);
+                    @include border-radius($border-radius);
+                }
+                .card-body{
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+            .card-footer{
+                .btn{
+                    margin: 0;
+                }
+            }
+
+            .card-body{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+
+    &:not(.manual-flip):hover{
+        .card{
+            @include rotateY-180();
+        }
+
+    }
+
+
+    &.hover.manual-flip{
+        .card{
+            @include rotateY-180();
+        }
+    }
+
+    .card-profile &{
+        .front{
+            text-align: left;
+        }
+    }
+}
+
+.back-background{
+    .card-body{
+        min-height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.back-background,
+.front-background{
+    background-position: center center;
+    background-size: cover;
+}
+
+
+//Full-Image Profile Card 
+.profile-card-image {
+    text-align: center;
+    &:hover {
+        .card:after {
+            background: $white;
+        }
+
+        .card-body, .social-buttons{
+            opacity: 1!important;
+            @include transform(translate(0, -50%));
+        }
+
+    }
+    .card {
+        position: relative;
+        overflow: hidden;
+    
+        &:after {
+            display: block;
+            background: transparent;
+            position: absolute;
+            content: " ";
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            @include transitions(.8s,$transition-bezier-card);
+        }
+
+        .card-body,
+        .social-buttons {
+            @include transitions(.8s,$transition-bezier-card);
+            opacity: 0;
+            z-index: 2;
+            bottom: 0;
+        }
+
+        .card-body {
+            position: absolute;
+
+            h6 {
+                color: $secondary;
+            }
+
+        }
+
+        .social-buttons{
+            margin-bottom: 0;
+            padding: 0;
+            list-style: none;
+    
+            li{
+                display: inline-block;
+    
+                a.btn {
+                    padding:$card-social-padding;
+                }
+            }
+        }
+    }
+}
+
+//Circle Profile Card
+
+.profile-card-alternative {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: $card-spacer-x;
+    @include transitions(.3s, $transition-bezier-card);
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    &:hover {
+
+        .team-mask {
+            opacity: .85;
+            @include transform(scale(1));
+        }
+
+        h5, p, .social-buttons {
+            opacity: 1;
+            @include transitions(.3s, $transition-bezier-card);
+        }
+    }
+
+    &.over-hide {
+        overflow: hidden;
+    }
+
+    &.organic-radius {
+        .team-mask {
+            border-radius: $organic-radius;
+        }
+    }
+
+    &.rounded-circle {
+        .team-mask {
+            border-radius: $circle-radius;
+        }
+    }
+
+    h4 {
+        width: 100%;
+        @include transitions(.8s,$transition-bezier-card);
+        @include media-breakpoint-down(md) { 
+            font-size: $font-size-lg;
+        }
+    }
+
+    .card-subtitle {
+        position: absolute;
+        color: $body-color;
+        font-size: $font-size-sm;
+        margin-top: -1rem;
+        left: 0;
+        width: 100%;
+        @include transitions(.8s, $transition-bezier-card);
+    }
+
+    .social-buttons{
+        margin-top: 2.75rem;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        @include transitions(.8s, $transition-bezier-card);
+        opacity: 0;
+
+        li{
+            display: inline-block;
+            position: relative;
+
+            a.btn {
+                padding: $card-social-padding;
+            }
+        }
+    }
+}
+
+.team-mask {
+    position: absolute;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    left: .25rem;
+    top: .25rem;
+    z-index: 1;
+    display: block;
+    opacity: 0;
+    @include transition(all .2s linear);
+}
+
+/*       Fix bug for IE      */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .rotating-card-container .card .front,
+    .rotating-card-container .card .back{
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .rotating-card-container .card .back {
+        visibility: hidden;
+        transition: visibility .3s cubic-bezier(0.34, 1.45, 0.7, 1);
+    }
+    .rotating-card-container .card .front{
+        z-index: 4;
+    }
+
+    .rotating-card-container:not(.manual-flip):hover .card .back,
+    .rotating-card-container.manual-flip.hover .card .back{
+        z-index: 5;
+        visibility: visible;
+    }
+}
+        

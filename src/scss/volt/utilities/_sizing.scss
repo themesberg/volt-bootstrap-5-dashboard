@@ -1,0 +1,45 @@
+/**
+ * = Sizing
+ */
+
+// Height values in vh
+.h-100vh {
+	height: 100vh !important;
+}
+
+@for $nr from 1 to 40 {
+	.fh-#{$nr*50} {
+		height: #{$nr*50}px !important;
+	}
+}
+
+@for $nr from 1 to 40 {
+	.fw-#{$nr*50} {
+		width: #{$nr*50}px !important;
+	}
+}
+
+@for $nr from 1 to 40 {
+	.fmh-#{$nr*50} {
+		min-height: #{$nr*50}px !important;
+	}
+}
+
+@for $nr from 1 to 40 {
+	.fmw-#{$nr*50} {
+		min-width: #{$nr*50}px !important;
+	}
+}
+
+@for $nr from 1 to 40 {
+	.fmxh-#{$nr*50} {
+		max-height: #{$nr*50}px !important;
+	}
+}
+
+@for $nr from 1 to 40 {
+	.fmxw-#{$nr*50} {
+		max-width: #{$nr*50}px !important;
+	}
+}
+

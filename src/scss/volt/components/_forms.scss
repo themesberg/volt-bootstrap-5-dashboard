@@ -1,0 +1,86 @@
+.form-control{
+    box-shadow:none;
+
+    &.form-control-lg{
+        padding: $inpu-lg-padding-y $input-padding-x;
+    }
+
+}
+
+
+
+.form-check-input {
+    &.round-check{
+        &[type="checkbox"] {
+            @include border-radius($form-check-radio-border-radius);
+          }
+    }
+}
+
+.search-bar {
+    .form-control {
+        width: 200px;
+        transition: width .2s ease-in-out;
+
+        &:focus {
+            width: 300px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 120px;
+
+            &:focus {
+                width: 150px;
+            }
+        }
+    }
+}
+
+.input-group {
+    .form-control:focus {
+        border-color: $input-border-color;
+
+        & + .input-group-text {
+            border-color: $input-border-color; 
+        }
+    }
+}
+
+.focused {
+
+    .form-control {
+        border-color: $input-focus-border-color;
+        background-color: $input-focus-bg;
+    }
+}
+
+.form-switch {
+    padding-left: $form-switch-padding-left;
+  
+    .form-check-input {
+        height: 1.275em;
+    }
+}
+
+.form-select {
+    .form-select-lg{
+        padding: $form-select-padding-y ($form-select-padding-x + $form-select-indicator-padding) $form-select-padding-y $form-select-padding-x;
+    }
+}
+
+//Add File Alternative Style
+
+.file-field input[type="file"] {
+    position: absolute;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    padding-bottom: 30px;
+}
+.file-field span {
+    cursor: pointer;
+}
+
+.datepicker-dropdown {
+    z-index: 9999;
+}

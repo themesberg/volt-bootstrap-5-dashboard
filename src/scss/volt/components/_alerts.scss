@@ -1,0 +1,111 @@
+/**
+ * = Alerts
+ */
+
+.alert {
+    padding: $alert-padding-y $alert-padding-x;
+    border: 0;
+    font-size: $font-size-sm;
+    @include border-radius($alert-border-radius);
+
+    &.alert-sm{
+        padding: .5rem 1rem;
+    }
+
+    &.alert-secondary {
+        color: $dark;
+    }
+
+    .alert-inner--icon {
+        display: inline-block; 
+        font-size: $font-size-lg;
+        margin-right: 1.25rem;
+        vertical-align: middle;
+
+        i{
+            position: relative;
+            top: 1px;
+        }
+    }
+    .alert-inner--text {
+        display: inline-block;
+        color: $alert-link-color;
+        vertical-align: middle;
+        a {
+            font-weight: $font-weight-bold;
+        }
+    }
+
+}
+
+.alert-heading {
+    font-weight: $font-weight-bold;
+    font-size: $h5-font-size;
+    margin-top: .15rem; 
+} 
+
+.alert-dismissible {
+    .close { 
+        top: 50%;
+        right: $alert-padding-x;
+        padding: 0;
+        transform: translateY(-50%);
+        color: rgba($white, .6);
+        opacity: 1;
+
+        &:hover,
+        &:focus {
+            color: rgba($white, .9);
+            opacity: 1 !important;
+        }
+
+        @include media-breakpoint-down(xs) {
+            top: 1rem;
+            right: .5rem;
+        }
+
+        &>span:not(.sr-only) {
+            font-size: $font-size-xl;
+            background-color: transparent;
+            color: rgba($white, .6);
+        }
+
+        &:hover,
+        &:focus {
+            &>span:not(.sr-only) {
+                background-color: transparent;
+                color: rgba($white, .9);
+            }
+        }
+    }
+}
+
+// Alternate styles
+// Generate text modifier classes for colorizing the text.
+
+@each $color, $value in $theme-colors {
+    .alert-#{$color} {
+      @include alert-variant($value, $value, $value);
+    }
+}
+
+[data-notify="container"] {
+
+    width: auto !important;
+
+    .alert {
+        display: flex;
+        align-items: center;
+        width: auto;
+
+        [data-notify="icon"] {
+            margin-right: .7rem;
+        }
+
+        [data-notify="message"] {
+            margin-right: 1rem;
+            margin-bottom: 0;
+        }
+    }
+
+}

@@ -1,0 +1,279 @@
+.submit-wizard{
+    form.slideform-form {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+    
+        .slideform-track {
+            overflow: hidden;
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+        }
+    
+        .slideform-wrapper {
+            -webkit-transition: all $sf-transition;
+            transition: all $sf-transition;
+        }
+    
+        .slideform-slide {
+
+            display: flex;
+            -webkit-overflow-scrolling: touch;
+            opacity: 0;
+            -webkit-transition: opacity $sf-transition;
+            transition: opacity $sf-transition;
+            overflow: auto;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+    
+            &.active {
+                opacity: 1;
+            }
+    
+            @include breakpoint(md) {
+                display: block;
+            }
+        }
+    
+        .slideform-group {
+            padding: 30px 15px;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+    
+            @include breakpoint(md) {
+                margin: auto;
+            }
+        }
+        
+    
+        .slideform-btn {
+            font-family: $btn-font-family;
+            font-weight: $btn-font-weight;
+            color: $white;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            background-color: $primary;
+            border: $btn-border-width solid transparent;
+            @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+            @include transition($btn-transition);
+    
+            &:disabled {
+                background: $sf-color-tertiary;
+                border: 1px solid $sf-color-tertiary;
+                color: $sf-color-secondary;
+            }
+        }
+    
+        input[type='text'], input[type='email'], input[type='tel'], input[type='number'], textarea {
+            width: 100%;
+            padding: 15px;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            border: 1px solid $sf-color-border;
+            outline: none;
+            border-radius: none;
+            background: $sf-color-tertiary;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+                 appearance: none;
+    
+            &:focus {
+                border-bottom: 1px solid lighten( $sf-color-primary, 20%);
+            }
+        }
+    
+        input[type='text'], input[type='email'], input[type='tel'], input[type=number] {
+            height: 50px;
+    
+            &.small {
+                height: 40px;
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+        }
+    
+    
+        .options-list {
+            label {
+                display: block;
+                margin: 0;
+                padding: 10px 0;
+            }
+    
+            input[type=checkbox], input[type=radio] {
+    
+                position: absolute;
+                z-index: -1;
+                visibility: hidden;
+                width: auto;
+                height: auto;
+    
+                &:checked + span:after {
+                    opacity: 1;
+                    -webkit-transform: scale(1);
+                            transform: scale(1);
+                }
+    
+                + span {
+                    display: inline-block;
+                    position: relative;
+                    font-weight: 600;
+    
+                    &:before {
+                        content: '';
+                        margin-right: 10px;
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        vertical-align: middle;
+                        background: $sf-color-tertiary;
+                        border: 1px solid $sf-color-secondary;
+                    }
+    
+                    &:after {
+                        display: inline-block;
+                        font-size: 22px;
+                        color: $sf-color-primary;
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        left: 0;
+                        text-align: center;
+                        line-height: 30px;
+                        opacity: 0;
+                        -webkit-transform: scale(3);
+                                transform: scale(3);
+                        -webkit-transition: all .3s ease;
+                        transition: all .3s ease;
+                    }
+                }
+            }
+    
+            input[type=radio] {
+                + span:before {
+                    border-radius: 50%;
+                }
+    
+                + span:after {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    background: $sf-color-primary;
+                    border-radius: 50%;
+                    top: 7px;
+                    left: 7px;
+                }
+            }
+        }
+    
+    
+        .options-buttons {
+            label {
+               margin: 0 5px 15px 0;
+               display: inline-block;
+               text-transform: none;
+           }
+    
+            input[type=radio], input[type=checkbox] {
+               position: absolute;
+               left: -9999px;
+    
+               &:checked + span {
+                   background: $sf-color-primary;
+                   border: 1px solid $sf-color-primary;
+                   color: $sf-btn-text-color;
+               }
+            }
+    
+    
+            input[type=checkbox] + span, input[type=radio] + span {
+               font-size: 16px;
+               line-height: 20px;
+               display: inline-block;
+               background: $sf-color-tertiary;
+               border: 1px solid $sf-color-secondary;
+               padding: 5px 20px;
+               width: auto;
+               text-align: center;
+               cursor: pointer;
+               -webkit-transition: all .3s ease;
+               transition: all .3s ease;
+               border-radius: 4px;
+               font-weight: 600;
+            }
+        }
+    
+        label.error {
+            color: $sf-color-red;
+            display: block;
+            font-size: 14px;
+            margin-top: 5px;
+            text-transform: none;
+        }
+    
+        .slideform-condition {
+            display: none;
+        }
+    
+        .slideform-footer {
+            background: $white;
+            padding: 0 15px;
+            border-top: 1px solid $sf-color-tertiary;
+            z-index: 1000;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            height: $sf-footer-height;
+    
+            .slideform-btn {
+                display: inline-block;
+                font-size: $font-size-base;
+            }
+        }
+    
+        .slideform-progress-bar {
+            height: 7px;
+            border-radius: 1px;
+            background: $sf-color-tertiary;
+            display: inline-block;
+            overflow: hidden;
+            line-height: 0;
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            margin-right: 20px;
+    
+            span {
+                display: inline-block;
+                width: 0%;
+                height: 100%;
+                background: $sf-color-primary;
+                -webkit-transition: all $sf-transition;
+                transition: all $sf-transition;
+            }
+        }
+        .wizard-brand{
+            img{
+                width:70px;
+            }
+        }
+    }
+}

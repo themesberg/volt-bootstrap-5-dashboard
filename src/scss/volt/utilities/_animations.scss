@@ -1,0 +1,230 @@
+
+/**
+ * = Animations
+ */
+
+@for $size from 1 to 10 {
+    .animate-up-#{$size},
+    .animate-right-#{$size},
+    .animate-down-#{$size},
+    .animate-left-#{$size},
+    .scale-up-#{$size},
+    .scale-down-#{$size} {
+        transition: $transition-base;
+    }
+
+    .scale-up-#{$size} {
+        &:hover {
+            transform: scale($size / 1.8);
+        }
+    }
+
+    .scale-up-hover-#{$size} {
+        &:hover {
+            & .scale {
+                transform: scale($size / 1.8);
+            }
+        }
+    }
+
+    .scale-down-#{$size} {
+        &:hover {
+            transform: scale($size / 2.5);
+        }
+    }
+
+    .animate-up-#{$size} {
+        &:hover,
+        .animate-hover:hover & {
+            @include translate(0, -#{$size}px);
+        }
+    }
+    .animate-right-#{$size} {
+        &:hover,
+        .animate-hover:hover & {
+            @include translate(#{$size}px, 0);
+        }
+    }
+    .animate-down-#{$size} {
+        &:hover,
+        .animate-hover:hover & {
+            @include translate(0, #{$size}px);
+        }
+    }
+    .animate-left-#{$size} {
+        &:hover,
+        .animate-hover:hover & {
+            @include translate(-#{$size}px, 0);
+        }
+    }
+}
+
+// Keyframes
+@keyframes show-navbar-collapse {
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+        transform-origin: 100% 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    } 
+}
+
+@keyframes hide-navbar-collapse {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: 100% 0;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(.95);
+    } 
+}
+
+@keyframes show-navbar-dropdown {
+    0% {
+        opacity: 0;
+        transform: translate(0, 10px) perspective(200px) rotateX(-2deg);
+        transition: visibility 0.45s, opacity 0.45s, transform 0.45s;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    } 
+}
+
+@keyframes hide-navbar-dropdown {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(0, 10px);
+    } 
+}
+
+@keyframes show-dropdown {
+    0% {
+        opacity: 0;
+        transform-origin: perspective(200px) rotateX(-2deg);
+        transition: visibility 0.45s, opacity .5s;
+    }
+
+    100% {
+        opacity: 1;
+    } 
+}
+
+
+@keyframes hide-dropdown {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(0, 10px);
+    } 
+}
+
+.bell-shake {
+    &.shaking {
+        animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
+        backface-visibility: hidden;
+        transform-origin: top right;
+    }
+}
+
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+  }
+
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+.animate__jackInTheBox {
+    -webkit-animation-name: jackInTheBox;
+    animation-name: jackInTheBox;
+}
+
+@keyframes bellshake {
+    0% { transform: rotate(0); }
+    15% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    45% { transform: rotate(4deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(2deg); }
+    85% { transform: rotate(-2deg); }
+    92% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
+}
+
+@-webkit-keyframes jackInTheBox {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.1) rotate(30deg);
+      transform: scale(0.1) rotate(30deg);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+    }
+  
+    50% {
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+    }
+  
+    70% {
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes jackInTheBox {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.1) rotate(30deg);
+      transform: scale(0.1) rotate(30deg);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+    }
+  
+    50% {
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+    }
+  
+    70% {
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  .animate__jackInTheBox {
+    -webkit-animation-name: jackInTheBox;
+    animation-name: jackInTheBox;
+  }

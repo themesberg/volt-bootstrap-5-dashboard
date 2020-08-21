@@ -1,0 +1,24 @@
+.preloader {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: height .2s linear;
+    width: 100%;
+    z-index: 9999;
+
+    .loader-element {
+        opacity: 1;
+        transition: opacity .5s linear;
+
+        &.hide {
+            opacity: 0 !important;
+        }
+    }
+
+    &.show {
+        height: 0;
+    }
+}

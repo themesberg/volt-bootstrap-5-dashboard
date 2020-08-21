@@ -1,0 +1,74 @@
+/**steps
+ * = Accordions
+ */
+
+.step{
+    position: relative;
+    margin-bottom: 4rem;
+    border-radius: 6px;
+
+    .step-shape{
+        display: inline-flex;
+        width: $step-shape-size;
+        height: $step-shape-size;
+        text-align: center;
+        @include align-items(center);
+        @include justify-content(center);
+
+        i, svg {
+            font-size: $icon-size;
+        }
+
+        .step-number{
+            position: absolute;
+            font-weight: $font-weight-bold;
+            top: -10px;
+            width: 32px;
+            height: 32px;
+            border-width: $step-border-width;
+            border-style: solid;
+            line-height: 1.7;
+        }
+
+        &.bordered {
+            border-width: $step-border-width;
+            border-style: solid;
+
+            .step-number {
+                background-color: $white;
+                top:-12px;
+            }
+        }
+
+        &.rounded-circle{
+            .step-number{
+                margin-right:1.275rem;
+            }
+        }
+        &.organic-radius{
+            .step-number{
+                margin-right:1.25rem;
+                border-radius:$organic-radius;
+            }
+        }
+    }
+
+    .icon-lg{
+        font-size: $step-icon-size;
+    }
+
+    .back-layer{
+        @include display-flex();
+        position: absolute;
+        font-size: $step-number-size;
+        z-index: 0;
+        top: 0;
+    }
+}
+
+// Icon (svg) organic-shapes fill colors
+@each $color, $value in $theme-colors {
+    .layer-#{$color}{ 
+        color: rgba( $value, .15 );
+    }
+}

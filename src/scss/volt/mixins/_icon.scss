@@ -1,0 +1,17 @@
+@mixin icon-shape-variant($color) {
+    color: $color;
+    background-color: rgba( $color, .3 );
+}
+
+@mixin icon-parallax-background($background-position,$background-size,$background-attachment,$background-repeat) {
+    background-position: $background-position;
+    background-size: $background-size;
+    background-attachment: $background-attachment;
+    background-repeat: $background-repeat; 
+} 
+
+@mixin icon-image-background($background-position,$background-size,$background-repeat) {
+    background-position: $background-position;
+    background-size: $background-size;
+    background-repeat: $background-repeat; 
+}

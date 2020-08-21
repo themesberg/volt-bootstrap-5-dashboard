@@ -1,0 +1,58 @@
+/*
+* = Buttons
+*/
+
+.btn {
+    &.btn-circle {
+        border-radius: $circle-radius;
+    }
+	&.btn-md{
+        padding: 0.65rem 1.25rem;
+    }
+    &.btn-xs{
+        padding: 0.175rem 0.45rem;
+        font-size: 0.7rem;
+    }
+}
+
+.btn-icon-only {
+    width: 2.575rem;
+    height: 2.575rem;
+    padding: 0;
+
+    &a {
+        line-height: 2.5;
+    }
+
+    &.btn-xs {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    &.btn-sm {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+// Brand (social) buttons 
+@each $color, $value in $brand-colors {
+    .btn-#{$color} {
+        @include button-variant($value, $value);
+
+		&.btn-link {
+			color: $value;
+			background: transparent;
+			box-shadow: none;
+            border:0;
+            border-style: none;
+			&:hover,
+			&:focus,
+			&.active {
+                background-color: transparent !important;
+                box-shadow: none;
+                border: 0;
+				color: $value;
+			}
+		}
+    }
+}

@@ -1,0 +1,34 @@
+/**
+ * = Sidebars
+ */
+
+#doc-index:not(.collapse.show), .doc-sidebar {
+    display: none;
+}
+
+@include media-breakpoint-up(lg){
+    #doc-index{
+        display: block;
+    }
+    
+    .doc-sidebar {
+        display: block;
+        height: calc(100vh - 2rem);
+        overflow-y: scroll;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 2rem;
+
+        .nav-link[data-toggle="collapse"] > .icon {
+            transform: rotateZ(-90deg);
+            position: relative;
+            right: .25rem;
+        }
+
+        .nav{
+            .nav-item{
+                font-size:$font-size-sm;
+            }
+        }
+    } 
+}  

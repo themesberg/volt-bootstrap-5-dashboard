@@ -1,0 +1,749 @@
+<!--
+
+=========================================================
+* Pixel Pro Bootstrap 5 UI Kit
+=========================================================
+
+* Product Page: https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit
+* Copyright 2019 Themesberg (https://www.themesberg.com)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal. Contact us if you want to remove it.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    @@include('./_head.html', {
+        "path": ".",
+        "title": "Volt Pro - Premium Bootstrap 5 Admin Dashboard"
+    })
+</head>
+
+<body>
+    @@include('./_navigation.html', {
+        "path": ".",
+        "classes": "navbar-dark"
+    })
+    <main>
+
+        <!-- Hero -->
+        <section class="section-header pb-9 pb-lg-12 bg-primary text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="navbar-brand-dark mb-4" src="./assets/img/brand/light.svg" height="120" alt="Logo light">
+                        <h1 class="display-1">Volt<span class="pixel-pro-badge font-weight-bolder text-dark">PRO</span></h1>
+                        <h2 class="h3 text-muted mb-5">Premium Bootstrap 5 Dashboard</h2>
+                        <!-- Button Modal -->
+                        <div class="d-flex justify-content-center mb-6">
+                            <a href="./pages/dashboard/dashboard.html" class="btn btn-secondary text-dark mr-4"><span class="fas fa-chart-line mr-2 d-none d-sm-inline"></span> Dashboard Demo</a>
+                            <a href="#" class="btn btn-outline-white">Docs v1.0</a>
+                        </div>
+                        <div class="d-flex justify-content-center flex-column mb-6">
+                            <a href="https://themesberg.com" target="_blank">
+                                <img src="./assets/img/themesberg.svg" class="d-block mx-auto mb-3" height="25" width="25" alt="Themesberg Logo">
+                                <span class="text-muted font-small">A Themesberg production</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2"><svg class="fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4"><path d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path></svg></figure>       
+        </section>
+        <div class="section pt-0">
+            <div class="container mt-n10 mt-lg-n12 z-2">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <img src="./assets/img/mockup-presentation.png" alt="Mockup presentation">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="section section-sm pt-0">
+            <div class="container">
+                <div class="row justify-content-center mb-5 mb-lg-6">
+                    <div class="col-12 text-center">
+                        <h2 class="h1 px-lg-5">20 hand-crafted pages</h2>
+                        <p class="lead px-lg-10">Every page from Volt has been carefully built to provide all the necessary pages your startup will require</p>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-6 mb-5">
+                        <a href="./pages/dashboard/dashboard.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/overview.jpg" alt="Dashboard page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Overview <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/dashboard/traffic-sources.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/traffic-sources.jpg" alt="Traffic Sources page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Traffic Sources <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/dashboard/app-analysis.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/app-analysis.jpg" alt="App Analysis page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">App Analysis <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/users.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/users-list.jpg" alt="Users page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Users List <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/transactions.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/transactions.jpg" alt="Transactions page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Transactions <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/tasks.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/tasks.jpg" alt="Tasks page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Tasks <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/settings.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/settings.jpg" alt="Settings page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Settings <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/messages.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/messages.jpg" alt="Messages page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Messages <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/single-message.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/single-message.jpg" alt="Chat page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Chat <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/calendar.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/calendar.jpg" alt="Calendar page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Calendar <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/billing.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/billing.jpg" alt="Billing page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Billing <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/invoice.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/invoice.jpg" alt="Invoice page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Invoice <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/pricing.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/pricing.jpg" alt="Pricing page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Pricing <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/sign-in.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/sign-in.jpg" alt="Sign In page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Sign In <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/sign-up.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/sign-up.jpg" alt="Sign Up page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Sign Up <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/lock.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/lock.jpg" alt="Lock page preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Sign Up <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/forgot-password.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/forgot-password.jpg" alt="Forgot password preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Forgot password <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/reset-password.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/reset-password.jpg" alt="Reset password preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">Reset password <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/404.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/404.jpg" alt="404 error preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">404 <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 mb-5">
+                        <a href="./pages/examples/500.html" class="page-preview page-preview-lg scale-up-hover-2">
+                            <img class="shadow-lg rounded scale" src="./assets/img/pages/500.jpg" alt="500 error preview">
+                            <div class="text-center show-on-hover">
+                                <h6 class="m-0 text-center text-white">500 <i class="fas fa-external-link-alt ml-2"></i></h6>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6 col-md-3 text-center mb-4">
+                        <div class="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle icon-secondary mb-4">
+                            <span class="fas fa-pager"></span>
+                        </div>
+                        <h3 class="font-weight-bolder">20</h3>
+                        <p class="text-gray">Dashboard Pages</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center mb-4">
+                        <div class="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle icon-secondary mb-4">
+                            <span class="fas fa-puzzle-piece"></span>
+                        </div>
+                        <h3 class="font-weight-bolder">800+</h3>
+                        <p class="text-gray">Premium Components</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <div class="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle icon-secondary mb-4">
+                            <span class="fab fa-sass"></span>
+                        </div>
+                        <h3 class="font-weight-bolder">Workflow</h3>
+                        <p class="text-gray">Sass & Gulp</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <div class="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle icon-secondary mb-4">
+                            <span class="fab fa-js-square"></span>
+                        </div>
+                        <h3 class="font-weight-bolder">Vanilla</h3>
+                        <p class="text-gray">Javascript</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg bg-soft">
+            <div class="container">
+                <div class="row justify-content-between align-items-center mb-5 mb-lg-7">
+                    <div class="col-lg-5 order-lg-2 mb-5 mb-lg-0">
+                        <h2 class="h1">Mapbox</h2>
+                        <p class="mb-4 lead font-weight-bold">Markers and cards integration with Leaflet.js</p>
+                        <p class="mb-4">You can use this map to add markers with custom cards and show them on a map using our custom MapBox integration with Leaflet.js</p>
+                        <a href="./pages/map.html" target="_blank" class="btn btn-secondary text-dark mr-3"><span class="fas fa-map-marked-alt mr-2"></span> Demo</a>
+                        <a href="#" target="_blank" class="btn btn-outline-primary"><span class="fas fa-book mr-2"></span> Guide</a>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <img src="./assets/img/mockup-map-presentation.png" alt="MapBox Leaflet.js Custom Integration Mockup">
+                    </div>
+                </div>
+                <div class="row justify-content-between align-items-center mb-5 mb-lg-7">
+                    <div class="col-lg-5">
+                        <h2 class="h1">Calendar</h2>
+                        <p class="mb-4 lead font-weight-bold">Advanced FullCalendar.js integration</p>
+                        <p class="mb-4">We created a fully editable calendar where you can add, edit and delete events for your admin dashboard.</p>
+                        <a href="./pages/map.html" target="_blank" class="btn btn-secondary text-dark mr-3"><span class="far fa-calendar-alt mr-2"></span> Demo</a>
+                        <a href="#" target="_blank" class="btn btn-outline-primary"><span class="fas fa-book mr-2"></span> Guide</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="./assets/img/mockup-calendar-presentation.png" alt="Calendar Preview">
+                    </div>
+                </div>
+                <div class="row justify-content-between align-items-center mb-5 mb-lg-7">
+                    <div class="col-lg-5 order-lg-2 mb-5 mb-lg-0">
+                        <h2 class="h1">Bootstrap 5</h2>
+                        <p class="mb-4 lead font-weight-bold">Latest version of Bootstrap without jQuery</p>
+                        <p class="mb-4">Volt is built using the latest version of Bootstrap 5 and we only used Vanilla Javascript for everything including the plugins</p>
+                        <a href="#" target="_blank" class="btn btn-outline-primary"><span class="fas fa-book mr-2"></span> Getting started</a>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <img src="./assets/img/illustrations/bs5-illustrations.svg" alt="Front pages overview">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg bg-primary text-white">
+            <div class="container">
+                <div class="row justify-content-center mb-5 mb-lg-6">
+                    <div class="col-12 text-center">
+                        <h2 class="h1 px-lg-5">Awesome Features</h2>
+                        <p class="lead px-lg-8">You get all Bootstrap components fully customized. Besides, you receive numerous plugins out of the box and ready to use.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fab fa-bootstrap"></span></span>
+                                <h5 class="font-weight-bold text-primary">Bootstrap 5</h5>
+                                <p>Built with the most popular CSS Framework</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fab fa-sass"></span></span>
+                                <h5 class="font-weight-bold text-primary">Sass</h5>
+                                <p>Variables and mixins to empower development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fas fa-mobile-alt"></span></span>
+                                <h5 class="font-weight-bold text-primary">Responsive</h5>
+                                <p>All pages and components are 100% responsive</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fab fa-gulp"></span></span>
+                                <h5 class="font-weight-bold text-primary">Gulp</h5>
+                                <p>Gulp & BrowserSync for a flawless workflow</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="far fa-images"></span></span>
+                                <h5 class="font-weight-bold text-primary">Creative rights</h5>
+                                <p>All images, icons and fonts are licensed & free to use</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="far fa-file-alt"></span></span>
+                                <h5 class="font-weight-bold text-primary">Documentation</h5>
+                                <p>Everything that comes with Rocket is well documented</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fab fa-accessible-icon"></span></span>
+                                <h5 class="font-weight-bold text-primary">WCAG Accessibility</h5>
+                                <p>Accessibility oriented design and functionality</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fab fa-html5"></span></span>
+                                <h5 class="font-weight-bold text-primary">W3C Validated</h5>
+                                <p>HTML pages are all valid by W3C Standards</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fab fa-js-square"></span></span>
+                                <h5 class="font-weight-bold text-primary">Vanilla JS</h5>
+                                <p>jQuery is not a required dependency for Volt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="far fa-calendar-alt"></span></span>
+                                <h5 class="font-weight-bold text-primary">Calendar</h5>
+                                <p>Advanced integration with FullCalendar.js</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fas fa-map-marked-alt"></span></span>
+                                <h5 class="font-weight-bold text-primary">MapBox</h5>
+                                <p>Custom integration with markers and cards</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card bg-white shadow-soft text-primary rounded mb-4">
+                            <div class="px-3 px-lg-4 py-5 text-center">
+                                <span class="icon icon-lg mb-4"><span class="fas fa-pen-fancy"></span></span>
+                                <h5 class="font-weight-bold text-primary">Design</h5>
+                                <p>Crafted by professional UI/UX designers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg line-bottom-soft">
+            <div class="container">
+                <div class="row justify-content-center mb-5 mb-lg-6">
+                    <div class="col-12 text-center">
+                        <h2 class="h1 px-lg-5">What's inside?</h2>
+                        <p class="lead px-lg-8">We have carefully crafted the perfect folder structure to ensure that finding the files you're looking for are easily reachable and well organized.</p>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center">
+                    <div class="col-12 col-lg-6 mb-4">
+                        <div class="d-none d-lg-block mt-5">
+                            <h4>You need only HTML, CSS and Javascript?</h4>
+                            <p class="lead mb-4">Don't worry, we got you covered. We have a folder called <code class="text-danger">html&css</code> which includes only the basic HTML5, CSS3 and Javascript technologies.</p>
+                            <a href="https://themesberg.com/docs/rocket/getting-started/file-structure/" target="_blank" class="btn btn-md btn-secondary text-dark"><i class="fas fa-book mr-2"></i> Docs v1.0</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 order-lg-first d-flex justify-content-center">
+                        <ul class="d-block fmw-100 list-style-none folder-structure">
+                            <li data-toggle="tooltip" data-placement="left" title="Main folder that you will be working with"><i class="fas fa-folder mr-2"></i>src</li>
+                            <li>
+                                <ul class="list-style-none pl-4">
+                                    <li data-toggle="tooltip" data-placement="left" title="CSS, Images, Fonts and Javascript"><i class="fas fa-folder mr-2"></i> assets</li>
+                                    <li data-toggle="tooltip" data-placement="left" title="HTML templates"><i class="fas fa-folder mr-2"></i> pages</li>
+                                    <li data-toggle="tooltip" data-placement="left" title="Partials are HTML snippets that are included in multiple pages, such as the menu or footer"><i class="fas fa-folder mr-2"></i> partials</li>
+                                    <li data-toggle="tooltip" data-placement="left" title="Sass source files"><i class="fas fa-folder mr-2"></i> scss</li>
+                                    <li data-toggle="tooltip" data-placement="left" title="The page you're looking at right now. Call it inception."><i class="fab fa-html5 mr-2 text-secondary"></i> index.html</li>
+                                </ul>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="left" title="Rocket with only HTML, CSS and Javascript"><i class="fas fa-folder mr-2 text-muted"></i> html&css</li>
+                            <li data-toggle="tooltip" data-placement="left" title="Temporary folder that is created when serving files with BrowserSync"><i class="fas fa-folder text-muted mr-2"></i>.temp</li>
+                            <li data-toggle="tooltip" data-placement="left" title="Minified version of the project"><i class="fas fa-folder mr-2 text-muted"></i> dist</li>
+                            <li data-toggle="tooltip" data-placement="left" title="Project dependencies from package.json"><i class="fas fa-folder text-muted mr-2"></i> node_modules
+                            </li>
+                            <li data-toggle="tooltip" data-placement="left" title="Development workflow commands. We have them well documented."><i class="fab fa-js-square mr-2 text-warning"></i> gulpfile.js</li>
+                            <li data-toggle="tooltip" data-placement="left" title="Project details and dependencies."><i class="fas fa-file-code mr-2 text-tertiary"></i> package.json</li>
+                            <li data-toggle="tooltip" data-placement="left" title="No project can miss a README :)"><i class="fas fa-file-code mr-2 text-tertiary"></i> README.md</li>
+                            <li data-toggle="tooltip" data-placement="left" title="This file ensures that generated files and folder are ignored by Git. (eg. node_modules)">
+                                <i class="fas fa-file-code mr-2 text-tertiary"></i> .gitignore</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-5 d-lg-none">
+                        <h5>You need only HTML, CSS and Javascript?</h5>
+                        <p>Don't worry, we got you covered. We have a folder called <code class="text-danger">html&css</code> which includes only the basic HTML5, CSS3 and Javascript technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg bg-primary">
+            <div class="container">
+                <div class="row justify-content-center text-center text-white mb-5">
+                    <div class="col-12">
+                        <h2 class="h1 font-weight-light mb-3">Less <span class="font-weight-bold">work</span>, more <span class="font-weight-bold">flow</span>.</h2>
+                        <p class="lead px-lg-8">
+                            Boost productivity with BrowserSync. Sass changes are reflected instantly and pages scroll and refresh on devices as you work.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-6">
+                    <div class="col-md-10 col-xl-9">
+                        <div class="position-relative">
+                            <div class="rounded bg-white p-4 text-dark mb-2">
+                                <div class="mb-3">
+                                    <div class="font-weight-bold">&gt; $ npm install</div>
+                                    <div class="text-gray">Everything’s installed!</div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="font-weight-bold">&gt; $ gulp</div>
+                                    <div class="text-gray">SCSS watching</div>
+                                    <div class="text-gray">LiveReload started</div>
+                                    <div class="text-gray">Opening localhost:3000</div>
+                                </div>
+                                <div>
+                                    <div class="font-weight-bold">&gt; $ that's it?</div>
+                                    <div class="text-gray">It's that simple!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-white text-center">Looks unfamiliar? Don’t worry! Our <a class="text-white text-underline font-weight-bold" href="https://themesberg.com/docs/rocket/getting-started/overview/" target="_blank">documentation</a> has got you covered.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <h2 class="h1 font-weight-light mb-3">Free Demo</h2>
+                        <p class="lead mb-4">Would you like to test out Volt Bootstrap 5 Dashboard before purchasing it? You're in luck, because we have an open source version of Volt that you can set up and try it out.</p>
+                        <div class="d-flex align-items-center">
+                            <a href="https://github.com/themesberg/pixel-bootstrap-ui-kit" target="_blank" class="btn btn-dark mr-4 animate-up-2">
+                                View on GitHub
+                            </a>
+                            <!-- Place this tag where you want the button to render. -->
+                            <div class="mt-2">
+                                <!-- Place this tag where you want the button to render. -->
+                                <a class="github-button" href="https://github.com/themesberg/pixel-bootstrap-ui-kit" data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themesberg/pixel-bootstrap-ui-kit on GitHub">Star</a>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="github-big-icon">
+                            <span class="fab fa-github"></span>
+                        </div>
+                      </div>
+                </div>
+                <div class="row mt-6">
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="card border-light p-4">
+                            <!-- Header -->
+                            <div class="card-header bg-white border-0 pb-0">
+                                <span class="d-block">
+                                    <span class="h2 text-primary font-weight-bold align-top">Free Demo</span>
+                                </span>
+                            </div>
+                            <!-- End Header -->
+                            <!-- Content -->
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush price-list">
+                                    <li class="list-group-item bg-white border-0 pl-0"><strong>100</strong> Components</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><strong>3</strong> Example Pages</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><span class="icon-danger mr-2"><span class="fas fa-times-circle"></span></span> MapBox</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><span class="icon-danger mr-2"><span class="fas fa-times-circle"></span></span> Calendar</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><span class="icon-danger mr-2"><span class="fas fa-times-circle"></span></span> Vectorial Map</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><span class="icon-danger mr-2"><span class="fas fa-times-circle"></span></span> Advanced pages</li>
+                                    <li class="list-group-item bg-white border-0 pl-0 pb-0"><span class="icon-danger mr-2"><span class="fas fa-times-circle"></span></span> Premium Support</li>
+                                </ul>
+                            </div>
+                            <!-- End Content -->
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="card border-light p-4 py-5 mt-lg-n5">
+                            <!-- Header -->
+                            <div class="card-header bg-white border-0 pb-0">
+                                <span class="d-block">
+                                    <span class="h2 text-primary font-weight-bold align-top">Pro Version</span>
+                                </span>
+                            </div>
+                            <!-- End Header -->
+                            <!-- Content -->
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush price-list">
+                                    <li class="list-group-item bg-white border-0 pl-0"><strong>1000+</strong> Components</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><strong>35</strong> Example Pages</li>
+                                    <li class="list-group-item bg-white border-0 pl-0">Dashboard included</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><span class="icon-success mr-2"><span class="fas fa-check-circle"></span></span> MapBox</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><span class="icon-success mr-2"><span class="fas fa-check-circle"></span></span> Calendar</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><span class="icon-success mr-2"><span class="fas fa-check-circle"></span></span> Vectorial Map</li>
+                                    <li class="list-group-item bg-white border-0 pl-0"><span class="icon-success mr-2"><span class="fas fa-check-circle"></span></span> Advanced pages</li>
+                                    <li class="list-group-item bg-white border-0 border-0 pl-0 pb-0"><span class="icon-success mr-2"><span class="fas fa-check-circle"></span></span> Premium Support</li>
+                                </ul>
+                            </div>
+                            <!-- End Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bg-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h2 class="h1 text-white">Got questions?</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <!--Accordion-->
+                        <div class="accordion mt-5 shadow-soft">
+                            <div class="card card-sm card-body border-soft mb-0">
+                                <a href="#panel-what-is-pixel" data-target="#panel-what-is-pixel" class="accordion-panel-header" data-toggle="collapse" aria-expanded="false" aria-controls="panel-what-is-pixel">
+                                    <span class="icon-title h6 mb-0 font-weight-bold">What is Volt?</span>
+                                    <span class="icon"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse" id="panel-what-is-pixel">
+                                    <div class="pt-3">
+                                        <p>Rocket is a premium web template that you can use to showcase and present your Software as a Service business. We used the most popular CSS framework Bootstrap for the elements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-sm card-body border-soft mb-0">
+                                <a href="#panel-demo" data-target="#panel-demo" class="accordion-panel-header" data-toggle="collapse" aria-expanded="false" aria-controls="panel-demo">
+                                    <span class="icon-title h6 mb-0 font-weight-bold">Do I have right to use the images, fonts and other creatives?</span>
+                                    <span class="icon"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse" id="panel-demo">
+                                    <div class="pt-3">
+                                        <p class="mb-0">Everything that you see in the preview is included in the downloaded product and can be used in your products based on our licensing terms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-sm card-body border-soft mb-0">
+                                <a href="#panel-money-back" data-target="#panel-money-back" class="accordion-panel-header" data-toggle="collapse" aria-expanded="false" aria-controls="panel-money-back">
+                                    <span class="icon-title h6 mb-0 font-weight-bold">Is there a money back guarantee?</span>
+                                    <span class="icon"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse" id="panel-money-back">
+                                    <div class="pt-3">
+                                        <p>We offer a 30-day money back guarantee for clients that are not satisfied with the product.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-sm card-body border-soft mb-0">
+                                <a href="#panel-updates" data-target="#panel-updates" class="accordion-panel-header" data-toggle="collapse" aria-expanded="false" aria-controls="panel-updates">
+                                    <span class="icon-title h6 mb-0 font-weight-bold">Do I get free updates?</span>
+                                    <span class="icon"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse" id="panel-updates">
+                                    <div class="pt-3">
+                                        <p>By default we offer at least 6 months of updates for every product that we launch.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-sm card-body border-soft mb-0">
+                                <a href="#panel-support" data-target="#panel-support" class="accordion-panel-header" data-toggle="collapse" aria-expanded="false" aria-controls="panel-support">
+                                    <span class="icon-title h6 mb-0 font-weight-bold">Where can I get support?</span>
+                                    <span class="icon"><i class="fas fa-plus"></i></span>
+                                </a>
+                                <div class="collapse" id="panel-support">
+                                    <div class="pt-3">
+                                        <p class="mb-0">Even for the smallest pricing plan we offer at least 6 months of premium support. Please check the pricing plan below for further details.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Accordion-->
+                    </div>
+                </div>
+                <div class="row mt-lg-5 mt-5">
+                    <div class="col text-center text-white">
+                        <p class="text-italic">Didn't find what you were looking for? No biggie!</p>
+                        <a href="https://themesberg.com/contact" class="btn btn-sm btn-outline-white" target="_blank">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg bg-soft">
+            <div class="container">
+                <div class="row justify-content-center mb-6">
+                    <div class="col-12 col-lg-9 text-center">
+                        <h2 class="display-3 font-weight-light mb-4">Choose the right plan for your business</h2>
+                        <p class="lead">You have at least <span class="font-weight-bold text-primary">Free 6 Months of Updates</span> and <span class="font-weight-bold text-primary">Premium Support</span> on each package. You also have 30 days to request a refund if you're not happy with your purchase.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 col-xl-4 mb-5">
+                            <div class="card border-light rounded-md mb-3 px-2">
+                                <div class="card-header bg-white border-light p-4">
+                                    <div class="d-flex mb-3"> <span class="h5 mb-0">$</span> <span class="price display-2 mb-0 text-primary">59</span> </div>
+                                    <h3 class="h4 mb-3 text-black">Freelancer</h3>
+                                    <p class="font-weight-normal font-small mb-0">Great for personal use and for your side projects.</p>
+                                </div>
+                                <div class="card-body py-4">
+                                    <ul class="list-group simple-list">
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Full documentation</li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Domains: <strong>1</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Team size: <strong>1 developer</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Premium support: <strong>6 months</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Free updates: <strong>6 months</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0 px-4 pb-4"><a href="#" target="_blank" class="btn btn-block btn-secondary text-dark rounded animate-up-2"> Buy now <span class="icon icon-xs ml-3"></span> </a> </div>
+                            </div> 
+                            <a href="https://themesberg.com/licensing#freelancer" target="_blank" data-toggle="tooltip" data-placement="bottom" title="" class="font-small text-gray text-center d-block mt-4" data-original-title="Something unclear? Click to read the full Freelancer license."><span class="fas fa-balance-scale mr-2"></span>Freelancer License</a> 
+                        </div>
+                        <div class="col-12 col-lg-6 col-xl-4 mb-5">
+                            <div class="card border-light rounded-md mb-3 px-2">
+                                <div class="card-header bg-white border-light p-4">
+                                    <div class="d-flex mb-3"> <span class="h5 mb-0">$</span> <span class="price display-2 mb-0 text-primary">129</span> </div>
+                                    <h3 class="h4 mb-3 text-black">Company</h3>
+                                    <p class="font-weight-normal font-small mb-0">Relevant for multiple users and extended support.</p>
+                                </div>
+                                <div class="card-body py-4">
+                                    <ul class="list-group simple-list">
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Full documentation</li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Domains: <strong>Unlimited</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Team size: <strong>1-5 developers</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Premium support: <strong>12 months</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Free updates: <strong>12 months</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0 px-4 pb-4"><a href="#" target="_blank" class="btn btn-block btn-primary rounded animate-up-2"> Buy now <span class="icon icon-xs ml-3"></span> </a> </div>
+                            </div> 
+                            <a href="https://themesberg.com/licensing#company" target="_blank" data-toggle="tooltip" data-placement="bottom" title="" class="font-small text-gray text-center d-block mt-4" data-original-title="Something unclear? Click to read the full Freelancer license."><span class="fas fa-balance-scale mr-2"></span>Company License</a> 
+                        </div>
+                        <div class="col-12 col-lg-6 col-xl-4 mb-5">
+                            <div class="card border-light rounded-md mb-3 px-2">
+                                <div class="card-header bg-white border-light p-4">
+                                    <div class="d-flex mb-3"> <span class="h5 mb-0">$</span> <span class="price display-2 mb-0 text-primary">499</span> </div>
+                                    <h3 class="h4 mb-3 text-black">Enterprise</h3>
+                                    <p class="font-weight-normal font-small mb-0">Best for large scale uses and extended redistribution rights.</p>
+                                </div>
+                                <div class="card-body py-4">
+                                    <ul class="list-group simple-list">
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Full documentation</li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Domains: <strong>Unlimited</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Team size: <strong>Unlimited</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Premium support: <strong>24 months</strong></li>
+                                        <li class="list-group-item font-weight-normal border-0"><span class="icon-success mr-2"><span class="fas fa-check"></span></span>Free updates: <strong>12 months</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0 px-4 pb-4"><a href="#" target="_blank" class="btn btn-block btn-primary rounded animate-up-2"> Buy now <span class="icon icon-xs ml-3"></span> </a> </div>
+                            </div> 
+                            <a href="https://themesberg.com/licensing#enterprise" target="_blank" data-toggle="tooltip" data-placement="bottom" title="" class="font-small text-gray text-center d-block mt-4" data-original-title="Something unclear? Click to read the full Freelancer license."><span class="fas fa-balance-scale mr-2"></span>Enterprise License</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('./_footer.html', {
+        "path": ".",
+        "classes": "bg-primary text-white"
+    })
+
+    @@include('./_scripts.html', {
+        "path": "."
+    })
+</body>
+
+</html>

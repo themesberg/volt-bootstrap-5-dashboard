@@ -1,0 +1,102 @@
+/**
+ * = Badges
+ */
+
+.badge {
+    font-size:$badge-font-size;
+    font-weight: $badge-font-weight;
+
+    a {
+        color: $white;
+    }
+
+    &.super-badge{
+        vertical-align: super;
+    }
+}
+
+// Variations
+.badge-pill {
+    padding-right: $badge-pill-padding-x;
+    padding-left: $badge-pill-padding-x;
+}
+
+// Multiple inline badges
+.badge-inline {
+    margin-right: .625rem;
+
+    & + span {
+        top: 2px;
+        position: relative;
+
+        & > a {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Sizes
+.badge-md {
+    padding: .25rem .4rem;
+}
+
+.badge-lg {
+    padding: .35rem .85rem;
+}
+
+.badge-xl {
+    font-size: $font-size-lg;
+    padding: .35rem .85rem;
+}
+
+//button badges
+
+.btn{
+    .badge-corner{
+        position: absolute;
+        top: -50%;
+        right: .5rem;
+        transform: translate(50%,50%);
+        margin: 0;
+        border: 3px solid;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+//Tags 
+.wi-tags{
+    a {
+        display: inline-block;
+        padding: 0.125rem 0.875rem;
+        margin: 0.25rem;
+        line-height: 2;
+        font-size: $font-size-sm;
+        box-shadow: $box-shadow-sm;
+        background-color: $white;
+    }
+}
+
+.pixel-pro-badge{
+    position: relative;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    right: -20px;
+    padding: 5px 14px;
+    top: -46px;
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-sm;
+    @include media-breakpoint-down(sm){
+        font-size: $font-size-base;
+        right: -13px;
+        padding: 5px 10px;
+        top: -23px;
+    }
+}
+
+.subscription-badge {
+    top: -19px;
+    right: -12px;
+    font-size: .75rem;
+}

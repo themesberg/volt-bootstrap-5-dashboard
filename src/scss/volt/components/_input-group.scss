@@ -1,0 +1,50 @@
+/**
+ * = Input groups
+ */
+
+.input-group {
+	border-radius: $input-border-radius;
+	transition: $transition-base;
+
+	.form-control {
+		box-shadow: none;
+
+		&:not(:first-child) {
+		    	border-left: 0;
+		    	padding-left: 0;
+		}
+		&:not(:last-child) {
+			border-right: 0;
+			padding-right: 0;
+		}
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+.input-group-text {
+	font-size: $font-size-sm;
+	transition: $input-transition;
+}
+
+
+
+.input-group-prepend {
+	margin-right: -2px;
+}
+
+// .focus class is applied dinamycally from theme.js
+
+.focused {
+
+	.input-group-text {
+	    	color: $input-group-addon-focus-color;
+	    	background-color: $input-group-addon-focus-bg;
+	}
+
+	.input-group-shadow{
+		box-shadow:$shadow-input-focus;
+	}
+}
+

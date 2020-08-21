@@ -1,0 +1,65 @@
+/**
+* = Helper classes
+*/
+
+// Overflows
+.overflow-visible {
+    overflow: visible !important;
+}
+
+// Opacity classes
+@for $nr from 0 to 10 {
+    .opacity-#{$nr} {
+        opacity: #{$nr/10} !important;
+    }
+}
+
+// Fill opacity classes
+@for $nr from 0 to 10 {
+    .fill-opacity-#{$nr} {
+        fill-opacity: #{$nr/10} !important;
+    }
+}
+
+// Z indexes
+@for $nr from 0 to 10 {
+    .z-#{$nr} {
+        position: relative;
+        z-index: #{$nr} !important;
+    }
+}
+
+.w-auto {
+    width: auto !important;
+}
+
+// Border widths
+.bw-md {
+    border-width: $border-width-md !important;
+}
+.bw-lg {
+    border-width: $border-width-lg !important;
+}
+.bw-xl {
+    border-width: $border-width-xl !important;
+}
+
+.border-top-left-radius-0 {
+    border-top-left-radius: 0 !important;
+}
+
+.border-top-right-radius-0 {
+    border-top-right-radius: 0 !important;
+}
+
+.border-bottom-left-radius-0 {
+    border-bottom-left-radius: 0 !important;
+}
+
+.border-bottom-right-radius-0 {
+    border-bottom-right-radius: 0 !important;
+}
+
+.rounded-xl {
+    border-radius: $border-radius-xl !important;
+}

@@ -1,0 +1,37 @@
+/**
+ * = Backgrounds
+*/
+
+@each $color, $value in $theme-colors {
+	@include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+}
+
+// Backgrounds Overlay
+@each $color, $value in $theme-colors {
+    .overlay-#{$color}{ 
+        &:before{
+            position: absolute;
+            content:"";
+            background: $value;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            z-index: 0;
+        }
+    }
+}
+
+.section-image {
+   @include background-image(no-repeat, cover); 
+}
+
+.bg-yellow-alt{
+    background-color: lighten($secondary, 15% );
+}
+
+.form-bg-image {
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+}

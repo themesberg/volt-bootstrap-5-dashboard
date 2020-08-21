@@ -1,0 +1,42 @@
+// Wrapper for the tooltip content
+.tooltip-inner {
+    @include box-shadow($box-shadow);
+}
+
+.chartist-tooltip {
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    min-width: 5em;
+    padding: .5em;
+    background: $soft;
+    border: 1px solid $light;
+    border-radius: $border-radius;
+    color: $dark;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+    transition: $transition-base;
+}
+
+.chartist-tooltip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top-color: $soft;
+}
+
+.chartist-tooltip.tooltip-show {
+    opacity: 1;
+}
+  
+.ct-area, .ct-line {
+    pointer-events: none;
+}
+  

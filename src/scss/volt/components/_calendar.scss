@@ -1,0 +1,65 @@
+.fc-h-event {
+    border: 0;
+    padding: 3px;
+    display: inline-flex;
+}
+
+.fc-daygrid-day-frame {
+    padding: 5px;
+    border: 1px solid $soft;
+}
+
+.fc-daygrid-day {
+    transition: $transition-base;
+}
+
+.fc .fc-scrollgrid, .fc .fc-scrollgrid table {
+    border-color: $white;
+}
+
+.fc-daygrid-day:hover {
+    cursor: pointer;
+    background: rgba($secondary, 0.2);
+}
+
+.fc {
+    .fc-highlight {
+        background-color: rgba($secondary, 0.2);
+    }
+
+    .fc-col-header-cell-cushion {
+        &::before{
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            font-size: $font-size-sm; 
+            content: "\f783";
+            margin-right:10px;
+        }
+    }
+
+    .fc-col-header-cell-cushion {
+        padding: 6px 8px;
+    }
+}
+
+.fc-daygrid-event {
+    font-weight: $font-weight-bold;
+    &::before{
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f274";
+        color: $white;
+        margin-right:4px;
+    }
+}
+
+.fc-direction-ltr {
+    .fc-daygrid-event{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.fc-daygrid-day-number{
+    font-weight: $font-weight-bold;
+}

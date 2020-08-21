@@ -1,0 +1,96 @@
+/**
+ * = List groups
+ */
+
+// Space list items
+.list-group-space {
+    .list-group-item {
+        margin-bottom: 1.5rem;
+        @include border-radius($list-group-border-radius);
+    }
+}
+
+
+// List group components
+.list-group-item{
+    border:0;
+    &.active {
+        z-index: 2; // Place active items above their siblings for proper border styling
+        color: $list-group-active-color;
+        background-color: $list-group-active-bg;
+        border-color: $list-group-active-border-color;
+    }
+
+    i{
+        width: 1rem;
+    }
+}
+
+.list-group-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    vertical-align: top;
+    margin: -.1rem 1.2rem 0 -.2rem;
+}
+.list-group-content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 0;
+
+    > p {
+        color: $gray-500;
+        line-height: 1.5;
+        margin: .2rem 0 0;
+    }
+}
+.list-group-heading {
+    font-size: $font-size-base;
+    color: $gray-800;
+
+    > small {
+        float: right;
+        color: $gray-500;
+        font-weight: 500;
+    }
+}
+
+
+.list-group{
+    &.simple-list{
+        .list-group-item{
+            background: transparent;
+            border: none;
+            padding: 0.375rem 0.125rem;
+            i{
+                vertical-align: middle;
+                width: 35px;
+                display: inline-block;
+            }
+        }
+    }
+
+}
+
+
+//News list for widgets
+
+.news-list{
+	.row{
+		> [class*='col']{
+	  		padding: 0 $spacer/4;
+		}
+	}
+
+	> li{
+		&:not(:last-child){
+		  margin-bottom: .75rem;
+		}
+	}
+
+	img{
+		min-height: 100%;
+		object-fit: cover;
+	}
+}

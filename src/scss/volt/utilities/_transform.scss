@@ -1,0 +1,16 @@
+/**
+ * = Transform
+ */
+
+@include media-breakpoint-up(lg) {
+	.transform-perspective-right {
+		transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
+	}
+	.transform-perspective-left{
+		transform: scale(1) perspective(900px) rotateY(27deg) rotateX(2deg) rotate(-2deg);
+	}
+}
+
+.t-none{
+	transform: none !important;
+}

@@ -1,0 +1,163 @@
+/**
+ * = Typography
+ */
+
+h1,h2,h3,h4,h5,h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $font-family-sans-serif;
+	font-weight: $headings-font-weight;
+}
+
+p, ol li, ul li, .p {
+	font-family: $font-family-base;
+	font-size: $paragraph-font-size;
+	font-weight: $font-weight-normal;
+	line-height: $paragraph-line-height;
+}
+
+a, .text-action {
+	color: $link-color;
+	transition: $transition-base;
+	&:hover{
+		color: $link-hover-color;
+		cursor: pointer;
+	}
+}
+
+.lead {
+	+ .btn-wrapper {
+		margin-top: 3rem;
+	}
+	@include media-breakpoint-down(md){
+		font-size: $font-size-base;
+	}
+}
+
+.line-through{
+	-webkit-text-decoration: line-through;
+    text-decoration: line-through;
+}
+
+.text-italic{
+	font-style: italic !important;
+}
+
+.description {
+	font-size: $font-size-sm;
+}
+
+// Headings
+
+.heading {
+	font-size: $h2-font-size;
+	font-weight: $font-weight-bold;
+}
+
+
+
+@include media-breakpoint-down(md){
+	.display-2{
+	  font-size: $display4-size;
+	}
+}
+
+@include media-breakpoint-down(lg){
+	.display-3{
+	  font-size: $display4-size;
+
+	}
+}
+  
+@include media-breakpoint-down(sm){
+	.display-4{
+		font-size: $h4-font-size;
+	}
+}
+
+// Blockquotes
+.blockquote {
+	font-style: italic;
+	&.blockquote-large{
+
+		@include media-breakpoint-down(md) {
+			font-size: $font-size-lg;
+		}
+	}
+ 	.blockquote-footer{
+		font-size: $font-size-sm;
+		font-weight: $font-weight-bolder;
+
+		@include media-breakpoint-down(md) {
+			font-size: $font-size-lg;
+		}
+	}
+}
+
+// Font Sizes
+
+.font-small {
+  @include font-size($font-size-sm);
+  font-weight: $font-weight-light;
+}
+
+.font-base{
+	@include font-size($font-size-base);
+	font-weight: $font-weight-light;
+}
+
+.font-medium {
+	@include font-size($font-size-lg);
+	font-weight: $font-weight-light;
+}
+
+
+//PrismJs text	
+
+code[class*="language-"], pre[class*="language-"]{
+	text-shadow: none;
+	font-family: $font-family-base;
+	font-weight: $font-weight-bold;
+}
+
+// Set color of theme buttons
+@each $color, $value in $theme-colors {
+	.text-#{$color} {
+        &, &:hover {
+			color: $value !important;
+		}
+
+		a:not(.btn),h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.display-1, .display-2, .display-3, .display-4{
+			color: $value;
+		  }
+		  .text-muted{
+			color: rgba($value,.7) !important;
+		  }
+    }
+}
+
+
+article {
+	img {
+		margin: 40px 0;
+	}
+	p, ul, ol, blockquote {
+		margin-bottom: 20px;
+	}
+	p, ul li, ol li {
+		font-size: 1.2rem;
+	}
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		margin-bottom: 30px;
+	}
+}
+
+.folder-structure li {
+	font-size: 1.2rem;
+}
+
+.truncate-text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

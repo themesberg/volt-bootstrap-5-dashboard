@@ -1,0 +1,32 @@
+// Global Elements
+$sf-height: 100vh !default;
+
+// Breakpoints
+$md-breakpoint: 767px !default;
+$sm-breakpoint: 479px !default;
+
+// Variables
+$sf-group-width: 600px !default;
+
+// Colors
+$sf-color-primary: $primary !default; // Used for buttons
+$sf-color-secondary: $soft !default; // Used for secondary buttons, helpers. etc.
+$sf-color-tertiary: $soft !default; 
+$sf-color-border: $light !default; // Used for borders
+$sf-color-black: $dark !default;
+$sf-color-white: $white !default;
+$sf-color-red: $danger !default;
+
+// Buttons
+$sf-btn-height: 40px !default;
+$sf-btn-padding: 0 20px !default;
+$sf-btn-font-size: $font-size-base !default;
+$sf-bg-color: $sf-color-primary !default;
+$sf-btn-text-color: $white !default;
+$sf-btn-text-color-inverse: $dark !default;
+
+// footer
+$sf-footer-height: 65px !default;
+
+// Transitions
+$sf-transition: .5s ease !default;

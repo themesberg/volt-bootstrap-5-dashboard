@@ -1,0 +1,54 @@
+/**
+ * = Blog cards
+ */
+
+.blog-card{
+    margin-bottom: 2rem;
+
+    .card {
+        &.img-card{
+            @include background-image(no-repeat, cover); 
+        }
+    }
+    .card-header{
+        background:transparent;
+    }
+    .card-body{
+        .bottom-content{
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+    .card-footer{
+        background:transparent;
+        padding: 1rem 1rem;
+    }
+
+    .avatar-sm-custom{
+        img{
+            border:$border-width-md solid $secondary;
+            padding: .25rem;
+            width:50px;
+            height:50px;
+        }
+    }
+
+    .card-img-top{
+        object-fit: cover;
+    }
+
+    .card-article-wide{
+        img{
+            height: 100%;
+        }
+    }
+}
+
+.card-img-overlay{
+    padding: 0;
+    .card-footer,
+    .card-header{
+        background: transparent;
+        border-color:$gray-700;
+    }
+}

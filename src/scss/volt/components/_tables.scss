@@ -1,0 +1,387 @@
+// General styles
+
+.table {
+
+  thead th {
+      padding-top: $table-head-spacer-y;
+      padding-bottom: $table-head-spacer-y;
+      font-size: $table-head-font-size;
+      text-transform: $table-head-text-transform;
+      font-weight: $font-weight-bolder;
+      border-top: $table-border-width solid $table-border-color;
+  }
+
+  th {
+      font-weight: $font-weight-bold;
+      padding:1rem;
+  }
+
+  td {
+      .progress {
+          height: 3px;
+          width: 120px;
+          margin: 0;
+      }
+  }
+
+  td,
+  th {
+      font-size: $table-body-font-size;
+      white-space: nowrap;
+  }
+
+  // User Table
+
+  &.user-table{
+    thead th{
+        border-top:0;
+    }
+  }
+
+  // Vetical align table content
+
+  &.align-items-center {
+      td,
+      th {
+          vertical-align: middle;
+      }
+  }
+
+
+ // Styles for dark table
+
+ .thead-dark {
+      th {
+          background-color: $dark;
+          color: $white;
+
+          a {
+              color: $dark;
+          }
+      }
+  }
+
+
+  // Styles for light table
+
+  .thead-light {
+      th {
+          background-color: $soft;
+          color: $dark;
+
+          a {
+              color: $dark;
+          }
+      }
+  }
+}
+
+
+// Add transition for hover state
+
+.table-hover {
+  tr {
+      @include transition($transition-base);
+  }
+}
+
+
+// Flush tables
+
+.table-flush {
+  td,
+  th {
+      border-left: 0;
+      border-right: 0;
+  }
+
+  tbody {
+      tr {
+          &:first-child {
+              td,
+              th {
+                  border-top: 0;
+              }
+          }
+
+          &:last-child {
+              td,
+              th {
+                  border-bottom: 0;
+              }
+          }
+      }
+  }
+}
+
+
+// Tables inside cards
+
+.card {
+  .table {
+      margin-bottom: 0;
+
+      td,
+      th {
+          padding-left: $card-spacer-x;
+          padding-right: $card-spacer-x;
+      }
+  }
+}
+  
+.table  {
+    [data-sort] {
+        cursor: pointer;
+    }
+
+    .custom-toggle {
+        display: block;
+    }
+  
+    .thead-dark {
+        [data-sort] {
+            &::after {
+                content: str-replace(url("data:image/svg+xml;utf8,<svg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M3 0L6 4H0L3 0ZM3 10L0 6H6L3 10Z' fill='#{$dark}'/></svg>"), "#", "%23");
+                margin-left: .25rem;
+            }
+        }
+    }
+
+    .thead-light {
+        [data-sort] {
+            &::after {
+                content: str-replace(url("data:image/svg+xml;utf8,<svg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M3 0L6 4H0L3 0ZM3 10L0 6H6L3 10Z' fill='#{$dark}'/></svg>"), "#", "%23");
+                margin-left: .25rem;
+            }
+        }
+    } 
+}
+
+.dataTables_wrapper {
+
+    .dataTables_info{
+        padding-left: 1.5rem;
+    }
+
+    .dataTables_paginate{
+        padding-right: 1.5rem;
+    }
+    
+    .dataTables_length {
+        label{
+            padding-left:1.5rem;
+        }
+    }
+
+    .dataTables_filter {
+        padding-right: 1.5rem;
+    }
+}
+
+.dataTable-top,
+.dataTable-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.dataTable-top {
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.dataTable-bottom {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.dataTable-pagination {
+    display: flex;
+    @include list-unstyled();
+
+    a {
+        padding: $pagination-padding-y $pagination-padding-x;
+        @include font-size(null);
+    }
+    
+    li {
+    @if $pagination-margin-left == (-$pagination-border-width) {
+        &:first-child {
+        a {
+            @include border-left-radius($pagination-border-radius);
+        }
+        }
+
+        &:last-child {
+        a {
+            @include border-right-radius($pagination-border-radius);
+        }
+        }
+    } @else {
+        //Add border-radius to all pageLinks in case they have left margin
+        a {
+        @include border-radius($pagination-border-radius);
+        }
+    }
+    }
+
+    > li {
+        &:not(:first-child) a {
+            margin-left: $pagination-margin-left;
+          }
+        
+          &.active a {
+            z-index: 3;
+            color: $pagination-active-color;
+            @include gradient-bg($pagination-active-bg);
+            border-color: $pagination-active-border-color;
+          }
+        
+          &.disabled a {
+            color: $pagination-disabled-color;
+            pointer-events: none;
+            background-color: $pagination-disabled-bg;
+            border-color: $pagination-disabled-border-color;
+          }
+
+          a {
+            position: relative;
+            display: block;
+            color: $pagination-color;
+            text-decoration: if($link-decoration == none, null, none);
+            background-color: $pagination-bg;
+            border: $pagination-border-width solid $pagination-border-color;
+          
+            &:hover {
+              z-index: 2;
+              color: $pagination-hover-color;
+              text-decoration: if($link-hover-decoration == underline, none, null);
+              background-color: $pagination-hover-bg;
+              border-color: $pagination-hover-border-color;
+            }
+          
+            &:focus {
+              z-index: 3;
+              outline: $pagination-focus-outline;
+              box-shadow: $pagination-focus-box-shadow;
+            }
+          }
+    }
+}
+
+.dataTable-selector {
+    display: inline-block;
+    width: auto;
+    height: $form-select-height;
+    padding: $form-select-padding-y ($form-select-padding-x + $form-select-indicator-padding) $form-select-padding-y $form-select-padding-x;
+    font-family: $form-select-font-family;
+    @include font-size($form-select-font-size);
+    font-weight: $form-select-font-weight;
+    line-height: $form-select-line-height;
+    color: $form-select-color;
+    vertical-align: middle;
+    background-color: $form-select-bg;
+    background-image: escape-svg($form-select-indicator);
+    background-repeat: no-repeat;
+    background-position: $form-select-bg-position;
+    background-size: $form-select-bg-size;
+    border: $form-select-border-width solid $form-select-border-color;
+    @include border-radius($form-select-border-radius, 0);
+    @include box-shadow($form-select-box-shadow);
+    appearance: none;
+
+    &:focus {
+        border-color: $form-select-focus-border-color;
+        outline: 0;
+        @if $enable-shadows {
+        @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+        } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: $form-select-focus-box-shadow;
+        }
+
+        &::-ms-value {
+        // For visual consistency with other platforms/browsers,
+        // suppress the default white text on blue background highlight given to
+        // the selected option text when the (still closed) <select> receives focus
+        // in Edge.
+        // See https://github.com/twbs/bootstrap/issues/19398.
+        color: $input-color;
+        background-color: $input-bg;
+        }
+    }
+
+    &[multiple],
+    &[size]:not([size="1"]) {
+        height: auto;
+        padding-right: $form-select-padding-x;
+        background-image: none;
+    }
+
+    &:disabled {
+        color: $form-select-disabled-color;
+        background-color: $form-select-disabled-bg;
+        border-color: $form-select-disabled-border-color;
+    }
+
+    // Remove outline from select box in FF
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 $form-select-color;
+    }
+}
+
+.dataTable-input {
+    display: block;
+    width: 100%;
+    min-height: $input-height;
+    padding: $input-padding-y $input-padding-x;
+    font-family: $input-font-family;
+    @include font-size($input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color;
+    appearance: none; // Fix appearance for date inputs in Safari
+
+    // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+    @include border-radius($input-border-radius, 0);
+
+    @include box-shadow($input-box-shadow);
+    @include transition($input-transition);
+
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus {
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+        outline: 0;
+        @if $enable-shadows {
+        @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+        } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: $input-focus-box-shadow;
+        }
+    }
+
+    // Placeholder
+    &::placeholder {
+        color: $input-placeholder-color;
+        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        opacity: 1;
+    }
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+        background-color: $input-disabled-bg;
+        border-color: $input-disabled-border-color;
+        // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+        opacity: 1;
+    }
+}

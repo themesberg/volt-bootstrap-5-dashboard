@@ -17,48 +17,10 @@
       </div>
     </div>
     <ul class="nav flex-column">
-      <li class="nav-item">
-        <span class="nav-link @@if (context.page_group !== 'dashboard') { collapsed } d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#submenu-dashboard">
-          <span>
-            <span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span> 
-            Dashboard
-          </span>
-          <span class="link-arrow"><span class="fas fa-chevron-right"></span></span> 
-        </span>
-        <div class="multi-level collapse @@if (context.page_group === 'dashboard') { show }" role="list" id="submenu-dashboard" aria-expanded="false">
-            <ul class="flex-column nav">
-              <li class="nav-item @@if (context.page === 'overview') { active }">
-                <a href="@@path/pages/dashboard/dashboard.html" class="nav-link">
-                    <span>Overview</span>
-                </a>
-              </li>
-              <li class="nav-item @@if (context.page === 'traffic-sources') { active }">
-                <a href="@@path/pages/dashboard/traffic-sources.html" class="nav-link">
-                    <span>Traffic & Engagement</span>
-                </a>
-              </li>
-              <li class="nav-item @@if (context.page === 'analysis') { active }">
-                <a href="@@path/pages/dashboard/app-analysis.html" class="nav-link">
-                    <span>Product Analysis</span>
-                </a>
-              </li>
-            </ul>
-        </div>
-      </li>
-
-      <li class="nav-item @@if (context.page === 'messages') { active }">
-        <a href="@@path/pages/messages.html" class="nav-link d-flex align-items-center justify-content-between">
-            <span>
-              <span class="sidebar-icon"><span class="fas fa-inbox"></span></span>
-              Messages
-            </span>
-            <span class="badge badge-md bg-danger badge-pill">4</span>
-        </a>
-      </li>
-      <li class="nav-item @@if (context.page === 'users') { active }">
-        <a href="@@path/pages/users.html" class="nav-link">
-          <span class="sidebar-icon"><span class="fas fa-user-check"></span></span>
-            <span>Users List</span>
+      <li class="nav-item @@if (context.page === 'overview') { active }">
+        <a href="@@path/pages/dashboard/dashboard.html" class="nav-link">
+          <span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span>
+          <span>Overview</span>
         </a>
       </li>
       <li class="nav-item @@if (context.page === 'transactions') { active }">
@@ -67,28 +29,10 @@
             <span>Transactions</span>
         </a>
       </li>
-      <li class="nav-item @@if (context.page === 'tasks') { active }">
-        <a href="@@path/pages/tasks.html" class="nav-link">
-            <span class="sidebar-icon"><span class="fas fa-clipboard-list"></span></span>
-            <span>Task List</span>
-        </a>
-      </li>
       <li class="nav-item @@if (context.page === 'settings') { active }">
         <a href="@@path/pages/settings.html" class="nav-link">
             <span class="sidebar-icon"><span class="fas fa-cog"></span></span>
             <span>Settings</span>
-        </a>
-      </li>
-      <li class="nav-item @@if (context.page === 'calendar') { active }">
-        <a href="@@path/pages/calendar.html" class="nav-link">
-            <span class="sidebar-icon"><span class="far fa-calendar-alt"></span></span>
-            <span>Calendar</span>
-        </a>
-      </li>
-      <li class="nav-item @@if (context.page === 'map') { active }">
-        <a href="@@path/pages/map.html" class="nav-link">
-            <span class="sidebar-icon"><span class="fas fa-map-marked-alt"></span></span>
-            <span>Map</span>
         </a>
       </li>
       <li class="nav-item">
@@ -101,7 +45,6 @@
         </span>
         <div class="multi-level collapse @@if (context.page === 'datatables' || context.page === 'tables') { show }" role="list" id="submenu-app" aria-expanded="false">
             <ul class="flex-column nav">
-                <li class="nav-item @@if (context.page === 'datatables') { active }"><a class="nav-link" href="@@path/pages/tables/datatables.html"><span>DataTables</span></a></li>
                 <li class="nav-item @@if (context.page === 'tables') { active }"><a class="nav-link" href="@@path/pages/tables/bootstrap-tables.html"><span>Bootstrap Tables</span></a></li>
             </ul>
         </div>
@@ -116,9 +59,6 @@
         </span>
         <div class="multi-level collapse @@if (context.page_group === 'page_examples') { show }" role="list" id="submenu-pages" aria-expanded="false">
             <ul class="flex-column nav">
-                <li class="nav-item @@if (context.page === 'pricing') { active }"><a class="nav-link" href="@@path/pages/examples/pricing.html"><span>Pricing</span></a></li>
-                <li class="nav-item @@if (context.page === 'billing') { active }"><a class="nav-link" href="@@path/pages/examples/billing.html"><span>Billing</span></a></li>
-                <li class="nav-item @@if (context.page === 'invoice') { active }"><a class="nav-link" href="@@path/pages/examples/invoice.html"><span>Invoice</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="@@path/pages/examples/sign-in.html"><span>Sign In</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="@@path/pages/examples/sign-up.html"><span>Sign Up</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="@@path/pages/examples/forgot-password.html"><span>Forgot password</span></a></li>
@@ -146,12 +86,6 @@
                 <li class="nav-item @@if (context.page === 'typography') { active }"><a class="nav-link" href="@@path/pages/components/typography.html"><span>Typography</span></a></li>
             </ul>
         </div>
-      </li>
-      <li class="nav-item @@if (context.page === 'widgets') { active }">
-        <a href="@@path/pages/widgets.html" class="nav-link">
-            <span class="sidebar-icon"><span class="fas fa-th-large"></span></span>
-            <span>Widgets</span>
-        </a>
       </li>
       <li role="separator" class="dropdown-divider mt-4 mb-3 border-black"></li>
       <li class="nav-item">

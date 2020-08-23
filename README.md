@@ -12,7 +12,7 @@ Volt is a free and open source Bootstrap 5 Admin Dashboard featuring over 100 co
 
 Volt is built using the latest version of Bootstrap 5 and because [jQuery is no longer required as a dependency](https://themesberg.com/blog/tutorial/bootstrap-5-tutorial), Volt has been built using only Vanilla JS.
 
-## Bootstrap 5 Components
+## 100+ Components
 
 Because it is created using the latest version of Bootstrap 5, every components and element is based on the latest Bootstrap 5 Sass variables and HTML markup. Check out the documentation of the components [here](https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/).
 

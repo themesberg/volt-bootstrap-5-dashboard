@@ -1,28 +1,24 @@
-# [Volt - Bootstrap 5 Admin Dashboard](https://demo.themesberg.com/volt/)
+# [Volt - Bootstrap 5 Dashboard](https://demo.themesberg.com/volt/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%volt-bootstrap-5-dashboard&via=themesberg&text=Kick-start%20development%20with%20Pixel%20Bootstrap%20UI%20Kit&hashtags=bootstrap%2C%20ui%20kit)
 
-![Volt - Bootstrap 5 Admin Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg "Volt - Bootstrap 5 Admin Dashboard")
+ ![version](https://img.shields.io/badge/version-3.1.2-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/themesberg/volt-bootstrap-5-dashboard.svg?maxAge=2592000)](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/themesberg/volt-bootstrap-5-dashboard.svg?maxAge=2592000)](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
-Volt is a premium Bootstrap 5 Admin Dashboard featuring over 800 premium components, 10 advanced plugins and 20 dashboard pages.
+<a href="https://demo.themesberg.com/volt/">
+ <img src="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg" alt="Volt Bootstrap 5 Dashboard Preview"/>
+ </a>
 
-**100+ Bootstrap 5 components**
+Volt is a free and open source Bootstrap 5 Admin Dashboard featuring over 100 components, 11 example pages and 3 customized plugins. Volt **does not require jQuery** as a dependency meaning that every library and script's are jQuery free.
 
-Volt is based on the latest version of Bootstrap 5 meaning that all of the components like buttons, alerts, navigation bars and so on use the new Bootstrap 5 Sass variables and markup.
+## Bootstrap 5 Components
 
-**Vanilla JS**
+Because it is created using the latest version of Bootstrap 5, every components and element is based on the latest Bootstrap 5 Sass variables and HTML markup. Check out the documentation of the components [here](https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/).
 
-Because Bootstrap 5 no longer request jQuery as a dependency we also decided to create Volt as a Vanilla JS Admin Dashboard. Every library and scripts don't include and don't require jQuery at all.
+## 11 Example pages
 
-**11 Dashboard Pages**
+We created no less than 11 advanced example pages such as the overview page, transactions, user settings, sign in and sign up and many more.
 
-We created 11 dashboard pages including user settings, login, register, 404, 500 pages and many more.
+## Full documentation
 
-**3 Advanced Plugins**
-
-We have customized 3 advanced plugins both in terms of styling and we also wrote extra Javascript code to extend the features and functionality. Every plugin is completely open source and won't require another license purchase.
-
-**Complete Documentation**
-
-Each component, plugin and the general workflow is well documented. Check out the [online documentation for Volt](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).
+Every component, plugin and getting started is thoroughly documented on our [online documentation](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).
 
 ## Workflow
 
@@ -37,6 +33,7 @@ This product is built using the following widely used technologies:
 * [Demo](#demo)
 * [Quick Start](#quick-start)
 * [Documentation](#documentation)
+* [File Structure](#file-structure)
 * [Browser Support](#browser-support)
 * [Resources](#resources)
 * [Reporting Issues](#reporting-issues)
@@ -46,12 +43,20 @@ This product is built using the following widely used technologies:
 
 ## Demo
 
--   [Live Preview](https://demo.themesberg.com/volt/)
--   [Product Page](https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard)
+| Components | About | Pricing | Services |
+| --- | --- | --- | --- |
+| [![Components](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/all-components.jpg)](https://demo.themesberg.com/pixel-lite/html/components/all.html) | [![About page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/about.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/about-company.html) | [![Pricing page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/pricing.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/pricing.html) | [![Services page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/services.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/services.html)
+
+| Contact | Login | Register | Documentation |
+| --- | --- | --- | --- |
+| [![Contact page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/contact.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/contact.html) | [![Login page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/sign-in.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/sign-in.html) | [![Register page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/sign-up.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/sign-up.html) | [![Documentation](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/docs.jpg)](https://themesberg.com/docs/pixel-bootstrap/getting-started/overview/)
+
+-   [Live Preview](https://demo.themesberg.com/pixel-lite/)
+-   [Details](https://themesberg.com/product/ui-kits/pixel-lite-free-bootstrap-4-ui-kit?ref=github-pixel-lite-bootstrap)
 
 ## Quick start
 
-1. Purchase from [Themesberg](https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard)
+1. Download from [Themesberg](https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard) or clone this repository
 2. Download the project's zip
 3. Make sure you have Node locally installed.
 4. Download Gulp Command Line Interface to be able to use gulp in your Terminal.
@@ -97,7 +102,43 @@ gulp build:dist
 This will generate a folder `dist` which will have minified CSS, Html and Javascript.
 
 ## Documentation
-The documentation for Volt Admin Dashboard is hosted on our [website](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).
+The documentation for Pixel Bootstrap UI Kit is hosted on our [website](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).
+
+## File Structure
+Within the download you'll find the following directories and files:
+
+```
+Pixel Bootstrap UI Kit
+├── LICENSE
+├── README.md
+├── gulpfile.js
+├── package-lock.json
+├── package.json
+└── src
+    ├── assets
+    │   ├── img
+    │   └── js
+    ├── html
+    │   ├── components
+    │   └── pages
+    ├── index.html
+    ├── partials
+    │   ├── _cta-careers.html
+    │   ├── _cta-footer.html
+    │   ├── _footer.html
+    │   ├── _free-vs-pro.html
+    │   ├── _head.html
+    │   ├── _navigation.html
+    │   ├── _pages-preview.html
+    │   ├── _preloader.html
+    │   ├── _scripts.html
+    │   ├── _tracking.html
+    │   └── components
+    └── scss
+        ├── bootstrap
+        ├── pixel
+        └── pixel.scss
+```
 
 ## Browser Support
 
@@ -106,38 +147,35 @@ At present, we officially aim to support the last two versions of the following 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
 ## Resources
-- Demo: <https://demo.themesberg.com/volt/index.html>
+- Demo: <https://demo.themesberg.com/volt/>
 - Download Page: <https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard>
 - Documentation: <https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/>
 - License Agreement: <https://themesberg.com/licensing>
 - Support: <https://themesberg.com/contact>
-- Issues: [Premium support](https://themesberg.com/contact)
+- Issues: [Github Issues Page](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues)
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for Volt. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for Volt Bootstrap 5 Admin Dashboard. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Volt. Check the CHANGELOG from your dashboard on our [website](https://themesberg.com/).
+1. Make sure that you are using the latest version of Volt Bootstrap 5 Admin Dashboard. Check the CHANGELOG from your dashboard on our [website](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/changelog/).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
-
 
 ## Technical Support or Questions
 
 If you have questions or need help integrating the product please [contact us](https://themesberg.com/contact) instead of opening an issue.
 
-
 ## Licensing
 
-- Copyright 2020 Themesberg (Crafty Dwarf SRL) (https://themesberg.com/)
-
-- Themesberg [license](https://themesberg.com/licensing)
-
+- Copyright 2020 Themesberg (Crafty Dwarf LLC) (https://themesberg.com)
+- Themesberg [license](https://themesberg.com/licensing#mit) (MIT License)
 
 ## Useful Links
 
 - [More themes](https://themesberg.com/themes) from Themesberg
-- [Free themes](https://themesberg.com/products/free-themes) from Themesberg
+- [Free themes](https://themesberg.com/templates/free) from Themesberg
+- [Bootstrap Themes, Templates & UI Kits](https://themesberg.com/templates/bootstrap) from Themesberg
 - [Affiliate Program](https://themesberg.com/affiliate)
 
 ##### Social Media

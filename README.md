@@ -1,4 +1,4 @@
-# [Volt - Bootstrap 5 Dashboard](https://demo.themesberg.com/volt/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%volt-bootstrap-5-dashboard&via=themesberg&text=Kick-start%20development%20with%20Pixel%20Bootstrap%20UI%20Kit&hashtags=bootstrap%2C%20ui%20kit)
+# [Volt - Bootstrap 5 Dashboard](https://demo.themesberg.com/volt/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%2Fvolt-bootstrap-5-dashboard&via=themesberg&text=Volt%20-%20Open%20Source%20Bootstrap%205%20Admin%20Dashboard)
 
  ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/themesberg/volt-bootstrap-5-dashboard.svg?maxAge=2592000)](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/themesberg/volt-bootstrap-5-dashboard.svg?maxAge=2592000)](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
@@ -43,16 +43,20 @@ This product is built using the following widely used technologies:
 
 ## Demo
 
-| Components | About | Pricing | Services |
+| Dashboard | Transactions | Settings | Forms |
 | --- | --- | --- | --- |
-| [![Components](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/all-components.jpg)](https://demo.themesberg.com/pixel-lite/html/components/all.html) | [![About page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/about.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/about-company.html) | [![Pricing page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/pricing.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/pricing.html) | [![Services page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/services.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/services.html)
+| [![Dashboard](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/dashboard.jpg)](https://demo.themesberg.com/volt/pages/dashboard/dashboard.html) | [![Transactions](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/transactions.jpg)](https://demo.themesberg.com/volt/pages/transactions.html) | [![Settings](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/settings.jpg)](https://demo.themesberg.com/volt/pages/settings.html) | [![Forms](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/forms.jpg)](https://demo.themesberg.com/volt/pages/components/forms.html)
 
-| Contact | Login | Register | Documentation |
+| Sign in | Sign up | Forgot password | Reset password |
 | --- | --- | --- | --- |
-| [![Contact page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/contact.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/contact.html) | [![Login page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/sign-in.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/sign-in.html) | [![Register page](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/sign-up.jpg)](https://demo.themesberg.com/pixel-lite/html/pages/sign-up.html) | [![Documentation](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/docs.jpg)](https://themesberg.com/docs/pixel-bootstrap/getting-started/overview/)
+| [![Sign in](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/signin.jpg)](https://demo.themesberg.com/volt/pages/examples/sign-in.html) | [![Sign up](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/signup.jpg)](https://demo.themesberg.com/volt/pages/examples/sign-up.html) | [![Forgot Password](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/forgot-password.jpg)](https://demo.themesberg.com/volt/pages/examples/forgot-password.html) | [![Reset password](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/forgot-password.jpg)](https://demo.themesberg.com/volt/pages/examples/reset-password.html)
 
--   [Live Preview](https://demo.themesberg.com/pixel-lite/)
--   [Details](https://themesberg.com/product/ui-kits/pixel-lite-free-bootstrap-4-ui-kit?ref=github-pixel-lite-bootstrap)
+| Lock Profile | 404 Not Found | 500 Server Error | Documentation |
+| --- | --- | --- | --- |
+| [![Lock Profile](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/lock.jpg)](https://demo.themesberg.com/volt/pages/examples/lock.html) | [![404 Not Found](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/404.jpg)](https://demo.themesberg.com/volt/pages/examples/404.html) | [![500 Server Error](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/500.jpg)](https://demo.themesberg.com/volt/pages/examples/500.html) | [![Documentation](https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/github/docs.jpg)](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/)
+
+-   [Live Preview](https://demo.themesberg.com/volt/)
+-   [Details](https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard)
 
 ## Quick start
 
@@ -102,14 +106,14 @@ gulp build:dist
 This will generate a folder `dist` which will have minified CSS, Html and Javascript.
 
 ## Documentation
-The documentation for Pixel Bootstrap UI Kit is hosted on our [website](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).
+The documentation for Volt is hosted on our [website](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).
 
 ## File Structure
 Within the download you'll find the following directories and files:
 
 ```
-Pixel Bootstrap UI Kit
-├── LICENSE
+Volt Bootstrap 5 Admin Dashboard
+.
 ├── README.md
 ├── gulpfile.js
 ├── package-lock.json
@@ -118,26 +122,26 @@ Pixel Bootstrap UI Kit
     ├── assets
     │   ├── img
     │   └── js
-    ├── html
-    │   ├── components
-    │   └── pages
     ├── index.html
+    ├── pages
+    │   ├── components
+    │   ├── dashboard
+    │   ├── examples
+    │   ├── settings.html
+    │   ├── tables
+    │   └── transactions.html
     ├── partials
-    │   ├── _cta-careers.html
-    │   ├── _cta-footer.html
+    │   ├── _analytics.html
     │   ├── _footer.html
-    │   ├── _free-vs-pro.html
     │   ├── _head.html
     │   ├── _navigation.html
     │   ├── _pages-preview.html
     │   ├── _preloader.html
     │   ├── _scripts.html
-    │   ├── _tracking.html
-    │   └── components
+    │   └── dashboard
     └── scss
-        ├── bootstrap
-        ├── pixel
-        └── pixel.scss
+        ├── volt
+        └── volt.scss
 ```
 
 ## Browser Support

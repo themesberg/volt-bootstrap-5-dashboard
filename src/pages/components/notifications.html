@@ -71,22 +71,6 @@
                             <div class="col-12 col-lg-6">
                                 <div class="card">
                                     <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h2 class="h4 mb-0">Sweet alerts</h2>
-                                        <a href="#" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Documentation</a>
-                                    </div>
-                                    <div class="card-body">
-                                        <button class="btn btn-primary" id="basicAlert">Basic alert</button>
-                                        <button class="btn btn-info" id="infoAlert">Info alert</button>
-                                        <button class="btn btn-success" id="successAlert">Success alert</button>
-                                        <button class="btn btn-danger" id="dangerAlert">Danger alert</button>
-                                        <button class="btn btn-warning" id="warningAlert">Warning alert</button>
-                                        <button class="btn btn-gray" id="questionAlert">Question</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="card">
-                                    <div class="card-header d-flex justify-content-between align-items-center">
                                         <h2 class="h4 mb-0">Notyf</h2>
                                         <a href="#" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Documentation</a>
                                     </div>
@@ -114,56 +98,6 @@
     })
 
     <script>
-
-        // SweetAlert 2
-        document.getElementById('basicAlert').addEventListener('click', function () {
-            Swal.fire(
-                'Basic alert',
-                'You clicked the button!'
-            )
-        });
-
-        document.getElementById('infoAlert').addEventListener('click', function () {
-            Swal.fire(
-                'Info alert',
-                'You clicked the button!',
-                'info'
-            )
-        });
-
-        document.getElementById('successAlert').addEventListener('click', function () {
-            Swal.fire({
-                icon: 'success',
-                title: 'Your work has been saved',
-                showConfirmButton: false,
-                timer: 1500
-            })
-        });
-
-        document.getElementById('warningAlert').addEventListener('click', function () {
-            Swal.fire(
-                'Warning alert',
-                'You clicked the button!',
-                'warning'
-            )
-        });
-
-        document.getElementById('dangerAlert').addEventListener('click', function () {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Something went wrong!',
-                footer: '<a href>Why do I have this issue?</a>'
-            })
-        });
-
-        document.getElementById('questionAlert').addEventListener('click', function () {
-            Swal.fire(
-                'The Internet?',
-                'That thing is still around?',
-                'question'
-            );
-        });
 
         // Bootstrap Notify
         document.getElementById('notifyTopLeft').addEventListener('click', function (){

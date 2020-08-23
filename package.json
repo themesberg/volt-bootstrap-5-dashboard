@@ -1,5 +1,5 @@
 {
-    "name": "volt-bootstrap-5-dashboard",
+    "name": "@themesberg/volt-bootstrap-5-dashboard",
     "version": "1.0.0",
     "description": "Volt - Bootstrap 5 Dashboard",
     "main": "gulpfile.js",
@@ -19,7 +19,11 @@
     "bugs": {
         "url": "https://themesberg.com/contact"
     },
-    "license": "https://themesberg.com/licensing",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/themesberg/volt-bootstrap-5-dashboard"
+    },
+    "license": "https://github.com/themesberg/volt-bootstrap-5-dashboard/blob/master/LICENSE.md",
     "devDependencies": {
         "browser-sync": "2.26.7",
         "del": "4.1.1",

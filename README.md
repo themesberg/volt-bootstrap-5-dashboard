@@ -8,6 +8,10 @@
 
 Volt is a free and open source Bootstrap 5 Admin Dashboard featuring over 100 components, 11 example pages and 3 customized plugins. Volt **does not require jQuery** as a dependency meaning that every library and script's are jQuery free.
 
+## Bootstrap 5 and Vanilla Javascript
+
+Volt is built using the latest version of Bootstrap 5 and because [jQuery is no longer required as a dependency](https://themesberg.com/blog/tutorial/bootstrap-5-tutorial), Volt has been built using only Vanilla JS.
+
 ## Bootstrap 5 Components
 
 Because it is created using the latest version of Bootstrap 5, every components and element is based on the latest Bootstrap 5 Sass variables and HTML markup. Check out the documentation of the components [here](https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/).
@@ -157,6 +161,10 @@ At present, we officially aim to support the last two versions of the following 
 - License Agreement: <https://themesberg.com/licensing>
 - Support: <https://themesberg.com/contact>
 - Issues: [Github Issues Page](https://github.com/themesberg/volt-bootstrap-5-dashboard/issues)
+
+## Upgrade to Pro
+
+There is also a pro version of Volt which has more than 800 components, 20 example pages and over 10 advanced plugins that can take your admin dashboard application to the next level. Check out [Volt Pro Premium Bootstrap 5 Admin Dashboard](https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard).
 
 ## Reporting Issues
 

@@ -1,31 +1,23 @@
 /*
 
 =========================================================
-* Pixel Pro Bootstrap 5 UI Kit
+* Volt - Bootstrap 5 Admin Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit
-* Copyright 2019 Themesberg (https://www.themesberg.com)
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2020 Themesberg (https://www.themesberg.com)
 
 * Designed and coded by https://themesberg.com
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal. Contact us if you want to remove it.
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
 
 */
 
 "use strict";
 const d = document;
 d.addEventListener("DOMContentLoaded", function(event) {
-
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-            confirmButton: 'btn btn-primary mr-3',
-            cancelButton: 'btn btn-gray'
-        },
-        buttonsStyling: false
-    });
 
     // options
     const breakpoints = {
@@ -107,20 +99,6 @@ d.addEventListener("DOMContentLoaded", function(event) {
             buttonClass: 'btn'
           });
     })
-
-    // DataTables
-    var dataTableEl = d.getElementById('datatable');
-    if(dataTableEl) {
-        const dataTableConfig = {
-            data,
-            filters: {"Job": ["Assistant", "Manager"],
-                      "Email": [e => e.endsWith('.edu'), e => e.endsWith('.com')],
-                      "Ext.": [e => e > 6000]},
-    
-            columns: [{ select: 4, type: 'date', format: 'MM/DD/YYYY' }]
-        };
-        const dataTable = new simpleDatatables.DataTable(dataTableEl, dataTableConfig);
-    }
 
     if(d.querySelector('.input-slider-container')) {
         [].slice.call(d.querySelectorAll('.input-slider-container')).map(function(el) {
@@ -287,52 +265,6 @@ d.addEventListener("DOMContentLoaded", function(event) {
 
     if(d.querySelector('.current-year')){
         d.querySelector('.current-year').textContent = new Date().getFullYear();
-    }
-
-    // Glide JS
-
-    if (d.querySelector('.glide')) {
-        new Glide('.glide', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 3
-          }).mount();
-    }
-
-    if (d.querySelector('.glide-testimonials')) {
-        new Glide('.glide-testimonials', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 1,
-            autoplay: 2000
-          }).mount();
-    }
-
-    if (d.querySelector('.glide-clients')) {
-        new Glide('.glide-clients', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 5,
-            autoplay: 2000
-          }).mount();
-    }
-
-    if (d.querySelector('.glide-news-widget')) {
-        new Glide('.glide-news-widget', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 1,
-            autoplay: 2000
-          }).mount();
-    }
-
-    if (d.querySelector('.glide-autoplay')) {
-        new Glide('.glide-autoplay', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 3,
-            autoplay: 2000
-          }).mount();
     }
 
 });

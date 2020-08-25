@@ -24,7 +24,7 @@
     })
 </head>
 
-<body>
+<body class="bg-soft">
 
         @@include('./dashboard/_nav.html', {
             "path": "../.."
@@ -43,10 +43,6 @@
                     <main class="content">
 
                         @@include('./dashboard/_topbar.html', {
-                            "path": "../.."
-                        })
-
-                        @@include('./_preloader.html', {
                             "path": "../.."
                         })
 
@@ -291,13 +287,13 @@
                                                     <div class="modal-dialog modal-tertiary modal-dialog-centered" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header mx-auto">
-                                                                <p class="lead mb-0">You just unlocked a new badge</p>
+                                                                <p class="lead mb-0 text-white">You just unlocked a new badge</p>
                                                             </div>
                                                             <div class="modal-body">
                                                                 <div class="py-3 px-5 text-center">
                                                                     <span class="modal-icon display-1-lg"><span class="fas fa-medal"></span></span>
-                                                                    <h2 class="h3 modal-title mb-3">Author Level 5</h2>
-                                                                    <p class="mb-4">One Thousand Dollars! Well done mate - heads are turning your way.</p>
+                                                                    <h2 class="h3 modal-title mb-3 text-white">Author Level 5</h2>
+                                                                    <p class="mb-4 text-white">One Thousand Dollars! Well done mate - heads are turning your way.</p>
                                                                     <div class="progress-wrapper">
                                                                         <div class="progress">
                                                                             <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>

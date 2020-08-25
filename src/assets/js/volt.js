@@ -72,6 +72,12 @@ d.addEventListener("DOMContentLoaded", function(event) {
         el.style.background = 'url(' + el.getAttribute('data-background') + ')';
     });
 
+    [].slice.call(d.querySelectorAll('[data-background-lg]')).map(function(el) {
+        if(document.body.clientWidth > breakpoints.lg) {
+            el.style.background = 'url(' + el.getAttribute('data-background-lg') + ')';
+        }
+    });
+
     [].slice.call(d.querySelectorAll('[data-background-color]')).map(function(el) {
         el.style.background = 'url(' + el.getAttribute('data-background-color') + ')';
     });

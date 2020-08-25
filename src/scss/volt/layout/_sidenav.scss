@@ -2,12 +2,15 @@
  * Sidebar
 */
 .sidebar {
+	display: block;
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	z-index: 100;
+	height: auto;
 	width: 100%;
+	overflow-y: auto;
 	
 	@include media-breakpoint-up(md) {
 		width: 100%;
@@ -71,13 +74,9 @@
 	}
 }
 
-.sidebar-sticky {
+.sidebar-inner {
 	position: relative;
-	top: 0;
-	height: 100vh;
-	padding-top: .5rem;
-	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 
 .sidebar-heading {
@@ -93,13 +92,6 @@
 	.sidebar {
 		width: 100%;
 	}
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
 }
 
 .content {

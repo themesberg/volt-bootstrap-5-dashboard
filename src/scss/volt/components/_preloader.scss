@@ -10,11 +10,9 @@
     z-index: 9999;
 
     .loader-element {
-        opacity: 1;
-        transition: opacity .5s linear;
 
         &.hide {
-            opacity: 0 !important;
+            display: none !important;
         }
     }
 

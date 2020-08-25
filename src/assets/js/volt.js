@@ -27,16 +27,16 @@ d.addEventListener("DOMContentLoaded", function(event) {
         xl: 1140
     };
 
-    // var preloader = d.querySelector('.preloader');
-    // if(preloader) {
-    //     setTimeout(function() {
-    //         preloader.classList.add('show');
+    var preloader = d.querySelector('.preloader');
+    if(preloader) {
+        setTimeout(function() {
+            preloader.classList.add('show');
 
-    //         setTimeout(function() {
-    //             d.querySelector('.loader-element').classList.add('hide');
-    //         }, 200);
-    //     }, 1000);
-    // }
+            setTimeout(function() {
+                d.querySelector('.loader-element').classList.add('hide');
+            }, 200);
+        }, 1000);
+    }
 
     var iconNotifications = d.querySelector('.icon-notifications');
     if(iconNotifications) {
@@ -70,6 +70,12 @@ d.addEventListener("DOMContentLoaded", function(event) {
 
     [].slice.call(d.querySelectorAll('[data-background]')).map(function(el) {
         el.style.background = 'url(' + el.getAttribute('data-background') + ')';
+    });
+
+    [].slice.call(d.querySelectorAll('[data-background-lg]')).map(function(el) {
+        if(document.body.clientWidth > breakpoints.lg) {
+            el.style.background = 'url(' + el.getAttribute('data-background-lg') + ')';
+        }
     });
 
     [].slice.call(d.querySelectorAll('[data-background-color]')).map(function(el) {

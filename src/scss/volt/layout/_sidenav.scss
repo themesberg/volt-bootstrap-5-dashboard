@@ -10,7 +10,7 @@
 	z-index: 100;
 	max-height: 100%;
 	width: 100%;
-	overflow-y: scroll;
+	overflow-y: auto;
 	
 	@include media-breakpoint-up(md) {
 		width: 100%;
@@ -76,7 +76,7 @@
 
 .sidebar-inner {
 	position: relative;
-	overflow-y: scroll;
+	overflow-y: hidden;
 }
 
 .sidebar-heading {

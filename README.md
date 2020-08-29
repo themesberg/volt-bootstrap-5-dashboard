@@ -40,6 +40,7 @@ This product is built using the following widely used technologies:
 * [File Structure](#file-structure)
 * [Browser Support](#browser-support)
 * [Resources](#resources)
+* [Upgrade to PRO](#upgrade-to-pro)
 * [Reporting Issues](#reporting-issues)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)

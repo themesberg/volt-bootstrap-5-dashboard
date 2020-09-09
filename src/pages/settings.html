@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     @@include('./_head.html', {
         "path": "..",
         "title": "Volt Bootstrap 5 Dashboard - Settings"
@@ -29,16 +29,16 @@
         @@include('./dashboard/_nav.html', {
             "path": ".."
         })
-        
+
         <div class="container-fluid bg-soft">
             <div class="row">
                 <div class="col-12">
-                    
+
                     @@include('./dashboard/_sidenav.html', {
                         "path": "..",
                         "page": "settings"
                     })
-                
+
                     <main class="content">
 
                         @@include('./dashboard/_topbar.html', {
@@ -98,7 +98,7 @@
                                                 <label for="birthday">Birthday</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text"><span class="far fa-calendar-alt"></span></span>
-                                                    <input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>                                               
+                                                    <input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>
                                                  </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -194,7 +194,7 @@
                                                           </div>
                                                        </div>
                                                     </div>
-                                                 </div>                                        
+                                                 </div>
                                             </div>
                                         </div>
                                     </div>
@@ -213,7 +213,7 @@
     @@include('./_scripts.html', {
         "path": ".."
     })
-    
+
 </body>
 
 </html>

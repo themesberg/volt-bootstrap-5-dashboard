@@ -8,7 +8,7 @@
 
 Volt is a free and open source Bootstrap 5 Admin Dashboard featuring over 100 components, 11 example pages and 3 customized plugins. Volt **does not require jQuery** as a dependency meaning that every library and script's are jQuery free.
 
-## Bootstrap 5 and Vanilla Javascript
+## Bootstrap 5 and Vanilla JavaScript
 
 Volt is built using the latest version of Bootstrap 5 and because [jQuery is no longer required as a dependency](https://themesberg.com/blog/tutorial/bootstrap-5-tutorial), Volt has been built using only Vanilla JS.
 
@@ -90,15 +90,15 @@ While the gulp command is running, files in the `assets/scss/`, `assets/js/` and
 
 Hit `CTRL+C` to terminate the gulp command. This will stop the local server from running.
 
-## Theme without Sass, Gulp or Npm
+## Theme without Sass, Gulp or npm
 
-If you'd like to get a version of our theme without Sass, Gulp or Npm, we've got you covered. Run the following command:
+If you'd like to get a version of our theme without Sass, Gulp or npm, we've got you covered. Run the following command:
 
 ```
 gulp build:dev
 ```
 
-This will generate a folder `html&css` which will have unminified CSS, Html and Javascript.
+This will generate a folder `html&css` which will have unminified CSS, HTML and JavaScript.
 
 ## Minified version
 
@@ -108,7 +108,7 @@ If you'd like to compile the code and get a minified version of the HTML and CSS
 gulp build:dist
 ```
 
-This will generate a folder `dist` which will have minified CSS, Html and Javascript.
+This will generate a folder `dist` which will have minified CSS, HTML and JavaScript.
 
 ## Documentation
 The documentation for Volt is hosted on our [website](https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/).

@@ -60,6 +60,10 @@
 .btn-upgrade-pro {
     position: fixed;
     bottom: 15px;
-    left: 35px;
+    right: 15px;
     width: 190px;
+
+    @include media-breakpoint-up(md) {
+        left: 35px;
+    }
 }

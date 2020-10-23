@@ -27,7 +27,7 @@
     },
     "license": "https://github.com/themesberg/volt-bootstrap-5-dashboard/blob/master/LICENSE.md",
     "devDependencies": {
-        "browser-sync": "2.26.7",
+        "browser-sync": "^2.26.13",
         "del": "4.1.1",
         "gulp": "4.0.2",
         "gulp-autoprefixer": "6.1.0",

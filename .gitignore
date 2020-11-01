@@ -3,3 +3,5 @@ node_modules/
 html&css/
 dist/
 *.zip
+docs/
+.DS_Store

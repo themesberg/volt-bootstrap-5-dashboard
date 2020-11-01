@@ -1,6 +1,6 @@
 {
     "name": "@themesberg/volt-bootstrap-5-dashboard",
-    "version": "1.0.1",
+    "version": "1.2.0",
     "description": "Volt - Bootstrap 5 Dashboard",
     "main": "gulpfile.js",
     "author": "Themesberg",
@@ -47,7 +47,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.11.2",
-        "bootstrap": "5.0.0-alpha1",
+        "bootstrap": "5.0.0-alpha2",
         "chartist": "^0.11.4",
         "chartist-plugin-tooltips": "0.0.17",
         "countup.js": "^2.0.6",

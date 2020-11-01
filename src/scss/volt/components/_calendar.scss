@@ -63,3 +63,9 @@
 .fc-daygrid-day-number{
     font-weight: $font-weight-bold;
 }
+
+@include media-breakpoint-down(md) {
+    .fc .fc-toolbar-title {
+        font-size: 1rem;
+    }
+}

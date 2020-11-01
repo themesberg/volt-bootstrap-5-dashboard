@@ -19,10 +19,9 @@
     width: 2.575rem;
     height: 2.575rem;
     padding: 0;
-
-    &a {
-        line-height: 2.5;
-    }
+    @include display-flex();
+    @include justify-content(center);
+    @include align-items(center);
 
     &.btn-xs {
         width: 1.7rem;
@@ -54,5 +53,16 @@
 				color: $value;
 			}
 		}
+    }
+}
+
+.btn-upgrade-pro {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 190px;
+
+    @include media-breakpoint-up(md) {
+        left: 35px;
     }
 }

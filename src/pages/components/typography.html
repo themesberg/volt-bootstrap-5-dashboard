@@ -1,11 +1,12 @@
 <!--
 
 =========================================================
-* Volt - Bootstrap 5 Admin Dashboard
+* Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
 * Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
 
@@ -20,227 +21,224 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Bootstrap 5 Dashboard - Typography"
+        "title": "Volt Premium Bootstrap Dashboard - Typography"
     })
 </head>
 
-<body class="bg-soft">
+<body>
 
         @@include('./dashboard/_nav.html', {
             "path": "../.."
         })
 
-        <div class="container-fluid bg-soft">
+        @@include('./dashboard/_sidenav.html', {
+            "path": "../..",
+            "page": "typography",
+            "page_group": "components"
+        })
+    
+        <main class="content">
+
+            @@include('./dashboard/_topbar.html', {
+                "path": "../.."
+            })
+
+            @@include('./_preloader.html', {
+                "path": "../.."
+            })
+
+            <div class="py-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                        <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
+                        <li class="breadcrumb-item"><a href="#">Components</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Typography</li>
+                    </ol>
+                </nav>
+                <div class="d-flex justify-content-between w-100 flex-wrap">
+                    <div class="mb-3 mb-lg-0">
+                        <h1 class="h4">Typography</h1>
+                        <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
+                    </div>
+                    <div>
+                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/typography/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Typography Docs</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-12">
-
-                    @@include('./dashboard/_sidenav.html', {
-                        "path": "../..",
-                        "page": "typography",
-                        "page_group": "components"
-                    })
-                
-                    <main class="content">
-
-                        @@include('./dashboard/_topbar.html', {
-                            "path": "../.."
-                        })
-
-                        <div class="py-4">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-                                    <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
-                                    <li class="breadcrumb-item"><a href="#">Components</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Typography</li>
-                                </ol>
-                            </nav>
-                            <div class="d-flex justify-content-between w-100 flex-wrap">
-                                <div class="mb-3 mb-lg-0">
-                                    <h1 class="h4">Typography</h1>
-                                    <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
+                <div class="col-12 mb-4">
+                    <div class="card border-light shadow-sm components-section">
+                        <div class="card-body">     
+                            <div class="row mb-4 mb-lg-5">                                           
+                                <div class="col-12 col-md-6">
+                                    <h2 class="h5 mb-3">Headings</h2>
+                                    <h1>h1. Themesberg heading</h1>
+                                    <h2>h2. Themesberg heading</h2>
+                                    <h3>h3. Themesberg heading</h3>
+                                    <h4>h4. Themesberg heading</h4>
+                                    <h5>h5. Themesberg heading</h5>
+                                    <h6>h6. Themesberg heading</h6>
                                 </div>
-                                <div>
-                                    <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/foundation/typography/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Typography Docs</a>
+                                <div class="col-12 col-md-6">
+                                    <h2 class="h5 mb-3">Display Headings</h2>
+                                    <h1 class="display-1">Display 1</h1>
+                                    <h1 class="display-2">Display 2</h1>
+                                    <h1 class="display-3">Display 3</h1>
+                                    <h1 class="display-4">Display 4</h1>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12 mb-4">
-                                <div class="card border-light shadow-sm components-section">
-                                    <div class="card-body">     
-                                        <div class="row mb-4 mb-lg-5">                                           
-                                            <div class="col-12 col-md-6">
-                                                <h2 class="h5 mb-3">Headings</h2>
-                                                <h1>h1. Themesberg heading</h1>
-                                                <h2>h2. Themesberg heading</h2>
-                                                <h3>h3. Themesberg heading</h3>
-                                                <h4>h4. Themesberg heading</h4>
-                                                <h5>h5. Themesberg heading</h5>
-                                                <h6>h6. Themesberg heading</h6>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <h2 class="h5 mb-3">Display Headings</h2>
-                                                <h1 class="display-1">Display 1</h1>
-                                                <h1 class="display-2">Display 2</h1>
-                                                <h1 class="display-3">Display 3</h1>
-                                                <h1 class="display-4">Display 4</h1>
-                                            </div>
-                                        </div>
-                                        <!-- Title  -->
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-5">
-                                                    <h2 class="h5 mb-3">Paragraphs</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End of Title -->
-                                        <div class="row mb-4 mb-lg-5">
-                                            <div class="col-md-6">
-                                                <div class="mb-3">
-                                                    <span class="h6 font-weight-bold">Simple paragraph</span>
-                                                </div>
-                                                <p>Start your development with a Pixel Design System for Bootstrap 4. Themesberg makes beautiful products to help people with creative ideas succeed.Our company empowers millions of people.
-                                                </p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="mt-5 mb-3 mt-sm-0">
-                                                    <span class="h6 font-weight-bold">Lead paragraph</span>
-                                                </div>
-                                                <p class="lead">Start your development with a Pixel Design System for Bootstrap 4.Themesberg makes beautiful products to help people with creative ideas succeed.Our company empowers millions of people.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-4 mb-3 align-items-center">
-                                            <div class="col-sm-2">
-                                                <small class="text-uppercase text-muted">Dark text</small>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <p class="text-dark mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row py-3 align-items-center">
-                                            <div class="col-sm-2">
-                                                <small class="text-uppercase text-muted">Primary text</small>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <p class="text-primary mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row py-3 align-items-center">
-                                            <div class="col-sm-2">
-                                                <small class="text-uppercase text-muted">Secondary text</small>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <p class="text-secondary mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row py-3 align-items-center">
-                                            <div class="col-sm-2">
-                                                <small class="text-uppercase text-muted">Tertiary text</small>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <p class="text-tertiary mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row py-3 align-items-center">
-                                            <div class="col-sm-2">
-                                                <small class="text-uppercase text-muted">Info text</small>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <p class="text-info mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row py-3 align-items-center">
-                                            <div class="col-sm-2">
-                                                <small class="text-uppercase text-muted">Danger text</small>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <p class="text-danger mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row py-3 align-items-center">
-                                            <div class="col-sm-2">
-                                                <small class="text-uppercase text-muted">Success text</small>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <p class="text-success mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
-                                            </div>
-                                        </div>
-                                        <!-- Title  -->
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mt-6 mb-5">
-                                                    <span class="h6">Blockquote</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End of Title -->
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <blockquote class="blockquote text-center">
-                                                    Themesberg makes beautiful products to help people with creative ideas succeed. Our company empowers millions of people.
-                                                    <footer class="blockquote-footer mt-3 text-primary">Zoltan Szőgyényi</footer>
-                                                </blockquote>
-                                            </div>
-                                        </div>
-                                        <!-- Title  -->
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mt-6 mb-5">
-                                                    <span class="h6">Lists</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End of Title -->
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="mb-3">
-                                                    <span class="h6">Unordered</span>
-                                                </div>
-                                                <ul>
-                                                    <li>Minutes of the last meeting</li>
-                                                    <li>Do we need yet more meetings?</li>
-                                                    <li>Any other business
-                                                        <ul>
-                                                            <li>Programming</li>
-                                                            <li>Web Design</li>
-                                                            <li>Database</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>Something funny</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="mt-5 mb-3 mt-sm-0">
-                                                    <span class="h6 font-weight-bold">Ordered</span>
-                                                </div>
-                                                <ol>
-                                                    <li>Minutes of the last meeting</li>
-                                                    <li>Do we need yet more meetings?</li>
-                                                    <li>Any other business
-                                                        <ol>
-                                                            <li>Programming</li>
-                                                            <li>Web Design</li>
-                                                            <li>Database</li>
-                                                        </ol>
-                                                    </li>
-                                                    <li>Something funny</li>
-                                                </ol>
-                                            </div>
-                                        </div>
+                            <!-- Title  -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-5">
+                                        <h2 class="h5 mb-3">Paragraphs</h2>
                                     </div>
                                 </div>
                             </div>
+                            <!-- End of Title -->
+                            <div class="row mb-4 mb-lg-5">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <span class="h6 font-weight-bold">Simple paragraph</span>
+                                    </div>
+                                    <p>Start your development with a Pixel Design System for Bootstrap 4. Themesberg makes beautiful products to help people with creative ideas succeed.Our company empowers millions of people.
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mt-5 mb-3 mt-sm-0">
+                                        <span class="h6 font-weight-bold">Lead paragraph</span>
+                                    </div>
+                                    <p class="lead">Start your development with a Pixel Design System for Bootstrap 4.Themesberg makes beautiful products to help people with creative ideas succeed.Our company empowers millions of people.</p>
+                                </div>
+                            </div>
+                            <div class="row mt-4 mb-3 align-items-center">
+                                <div class="col-sm-2">
+                                    <small class="text-uppercase text-muted">Dark text</small>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p class="text-dark mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
+                                </div>
+                            </div>
+                            <div class="row py-3 align-items-center">
+                                <div class="col-sm-2">
+                                    <small class="text-uppercase text-muted">Primary text</small>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p class="text-primary mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
+                                </div>
+                            </div>
+                            <div class="row py-3 align-items-center">
+                                <div class="col-sm-2">
+                                    <small class="text-uppercase text-muted">Secondary text</small>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p class="text-secondary mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
+                                </div>
+                            </div>
+                            <div class="row py-3 align-items-center">
+                                <div class="col-sm-2">
+                                    <small class="text-uppercase text-muted">Tertiary text</small>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p class="text-tertiary mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
+                                </div>
+                            </div>
+                            <div class="row py-3 align-items-center">
+                                <div class="col-sm-2">
+                                    <small class="text-uppercase text-muted">Info text</small>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p class="text-info mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
+                                </div>
+                            </div>
+                            <div class="row py-3 align-items-center">
+                                <div class="col-sm-2">
+                                    <small class="text-uppercase text-muted">Danger text</small>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p class="text-danger mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
+                                </div>
+                            </div>
+                            <div class="row py-3 align-items-center">
+                                <div class="col-sm-2">
+                                    <small class="text-uppercase text-muted">Success text</small>
+                                </div>
+                                <div class="col-sm-10">
+                                    <p class="text-success mb-0">Design is not just what it looks like and feels like. Design is how it works.</p>
+                                </div>
+                            </div>
+                            <!-- Title  -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mt-6 mb-5">
+                                        <span class="h6">Blockquote</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of Title -->
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <blockquote class="blockquote text-center">
+                                        Themesberg makes beautiful products to help people with creative ideas succeed. Our company empowers millions of people.
+                                        <footer class="blockquote-footer mt-3 text-primary">Zoltan Szőgyényi</footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <!-- Title  -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mt-6 mb-5">
+                                        <span class="h6">Lists</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of Title -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <span class="h6">Unordered</span>
+                                    </div>
+                                    <ul>
+                                        <li>Minutes of the last meeting</li>
+                                        <li>Do we need yet more meetings?</li>
+                                        <li>Any other business
+                                            <ul>
+                                                <li>Programming</li>
+                                                <li>Web Design</li>
+                                                <li>Database</li>
+                                            </ul>
+                                        </li>
+                                        <li>Something funny</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mt-5 mb-3 mt-sm-0">
+                                        <span class="h6 font-weight-bold">Ordered</span>
+                                    </div>
+                                    <ol>
+                                        <li>Minutes of the last meeting</li>
+                                        <li>Do we need yet more meetings?</li>
+                                        <li>Any other business
+                                            <ol>
+                                                <li>Programming</li>
+                                                <li>Web Design</li>
+                                                <li>Database</li>
+                                            </ol>
+                                        </li>
+                                        <li>Something funny</li>
+                                    </ol>
+                                </div>
+                            </div>
                         </div>
-                        @@include('./dashboard/_footer.html', {
-                            "path": "../..",
-                            "classes": "bg-primary text-white"
-                        })
-                    </main>
+                    </div>
                 </div>
             </div>
-        </div>
+            @@include('./dashboard/_footer.html', {
+                "path": "../..",
+                "classes": "bg-primary text-white"
+            })
+        </main>
 
     @@include('./_scripts.html', {
         "path": "../.."

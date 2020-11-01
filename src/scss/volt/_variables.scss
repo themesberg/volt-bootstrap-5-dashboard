@@ -367,7 +367,7 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white;
+$body-bg:                   $soft;
 $body-color:                $gray-900;
 $body-text-align:           null;
 
@@ -441,7 +441,7 @@ $gutters: $spacers;
 
 // Container padding
 
-$container-padding-x: 1rem;
+$container-padding-x: 2rem;
 
 
 // Components
@@ -1149,7 +1149,7 @@ $navbar-brand-font-size:            $font-size-lg;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 4;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2;
+$navbar-brand-padding-y:            0;
 $navbar-brand-margin-right:         1rem;
 
 $navbar-toggler-padding-y:          .4rem;
@@ -1204,8 +1204,8 @@ $dropdown-link-color:               $gray-900;
 $dropdown-link-hover-color:         darken($gray-900, 5%);
 $dropdown-link-hover-bg:            $gray-200;
 
-$dropdown-link-active-color:        $component-active-color;
-$dropdown-link-active-bg:           $component-active-bg;
+$dropdown-link-active-color:        $gray-900;
+$dropdown-link-active-bg:           $gray-400;
 
 $dropdown-link-disabled-color:      $gray-600;
 
@@ -1575,7 +1575,7 @@ $spinner-height:          $spinner-width;
 $spinner-border-width:    .25em;
 $spinner-animation-speed: .75s;
 
-$spinner-width-sm:        1rem;
+$spinner-width-sm:        1.2rem;
 $spinner-height-sm:       $spinner-width-sm;
 $spinner-border-width-sm: .2em;
 

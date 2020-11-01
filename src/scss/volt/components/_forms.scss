@@ -1,8 +1,10 @@
 .form-control{
     box-shadow:none;
 
-    &.form-control-lg{
-        padding: $inpu-lg-padding-y $input-padding-x;
+    @include media-breakpoint-up(lg) {
+        &.form-control-lg{
+            padding: $inpu-lg-padding-y $input-padding-x;
+        }
     }
 
 }
@@ -19,12 +21,8 @@
 
 .search-bar {
     .form-control {
-        width: 200px;
+        width: 280px;
         transition: width .2s ease-in-out;
-
-        &:focus {
-            width: 300px;
-        }
 
         @include media-breakpoint-down(sm) {
             width: 120px;
@@ -71,12 +69,12 @@
 //Add File Alternative Style
 
 .file-field input[type="file"] {
+    max-width: 230px;
     position: absolute;
     cursor: pointer;
     filter: alpha(opacity=0);
     opacity: 0;
     padding-bottom: 30px;
-    width: 200px;
 }
 .file-field span {
     cursor: pointer;

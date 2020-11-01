@@ -391,7 +391,7 @@
     width: auto;
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .navbar-nav {
         .nav-link {
             padding: .625rem 0;

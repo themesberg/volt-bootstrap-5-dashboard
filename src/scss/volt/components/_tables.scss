@@ -7,7 +7,7 @@
       padding-bottom: $table-head-spacer-y;
       font-size: $table-head-font-size;
       font-weight: $font-weight-bolder;
-      border-top: $table-border-width solid $table-border-color;
+      border-top: 0;
   }
 
   &.comparison-table{
@@ -194,7 +194,14 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+
+        .dataTable-info {
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 .dataTable-top {

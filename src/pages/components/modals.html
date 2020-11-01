@@ -1,11 +1,12 @@
 <!--
 
 =========================================================
-* Volt - Bootstrap 5 Admin Dashboard
+* Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
 * Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
 
@@ -20,345 +21,337 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Bootstrap 5 Dashboard - Modals"
+        "title": "Volt Premium Bootstrap Dashboard - Modals"
     })
 </head>
 
-<body class="bg-soft">
+<body>
 
         @@include('./dashboard/_nav.html', {
             "path": "../.."
         })
 
-        <div class="container-fluid bg-soft">
+        @@include('./dashboard/_sidenav.html', {
+            "path": "../..",
+            "page": "modals",
+            "page_group": "components"
+        })
+    
+        <main class="content">
+
+            @@include('./dashboard/_topbar.html', {
+                "path": "../.."
+            })
+
+            @@include('./_preloader.html', {
+                "path": "../.."
+            })
+
+            <div class="py-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                        <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
+                        <li class="breadcrumb-item"><a href="#">Components</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Modals</li>
+                    </ol>
+                </nav>
+                <div class="d-flex justify-content-between w-100 flex-wrap">
+                    <div class="mb-3 mb-lg-0">
+                        <h1 class="h4">Modals</h1>
+                        <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
+                    </div>
+                    <div>
+                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/modals/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Modals Docs</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-12">
-
-                    @@include('./dashboard/_sidenav.html', {
-                        "path": "../..",
-                        "page": "modals",
-                        "page_group": "components"
-                    })
-                
-                    <main class="content">
-
-                        @@include('./dashboard/_topbar.html', {
-                            "path": "../.."
-                        })
-
-                        <div class="py-4">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-                                    <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
-                                    <li class="breadcrumb-item"><a href="#">Components</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Modals</li>
-                                </ol>
-                            </nav>
-                            <div class="d-flex justify-content-between w-100 flex-wrap">
-                                <div class="mb-3 mb-lg-0">
-                                    <h1 class="h4">Modals</h1>
-                                    <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
-                                </div>
-                                <div>
-                                    <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/modals/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Modals Docs</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12 mb-4">
-                                <div class="card border-light shadow-sm">
-                                    <div class="card-body">     
-                                        <div class="row d-block mt-4">
-                                            <div class="col-md-4">
-                                                <!-- Button Modal -->
-                                                <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-default">Default</button>
-                                                <!-- Modal Content -->
-                                                <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h2 class="h6 modal-title">Terms of Service</h2>
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <p>With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.</p>
-                                                                <p>The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as
-                                                                    soon as possible of high-risk data breaches that could personally affect them.</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-secondary">I Got It</button>
-                                                                <button type="button" class="btn btn-link text-danger ml-auto" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                <div class="col-12 mb-4">
+                    <div class="card border-light shadow-sm">
+                        <div class="card-body">     
+                            <div class="row d-block mt-4">
+                                <div class="col-lg-4">
+                                    <!-- Button Modal -->
+                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-default">Default</button>
+                                    <!-- Modal Content -->
+                                    <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h2 class="h6 modal-title">Terms of Service</h2>
+                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                 </div>
-                                                <!-- End of Modal Content -->
-                                            </div>
-                                            <div class="col-md-4">
-                                                <!-- Button Modal -->
-                                                <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-notification">Notification</button>
-                                                <!-- Modal Content -->
-                                                <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
-                                                    <div class="modal-dialog modal-info modal-dialog-centered" role="document">
-                                                        <div class="modal-content bg-gradient-secondary">
-                                                            <div class="modal-header">
-                                                                <p class="modal-title" id="modal-title-notification">A new experience, personalized for you.</p>
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">×</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <div class="py-3 text-center">
-                                                                    <span class="modal-icon display-1-lg"><span class="far fa-envelope-open"></span></span>
-                                                                    <h2 class="h4 modal-title my-3">Important message!</h2>
-                                                                    <p>Do you know that you can assign status and relation to a company right in the visit list?.</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-white">Go to Inbox</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div class="modal-body">
+                                                    <p>With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.</p>
+                                                    <p>The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as
+                                                        soon as possible of high-risk data breaches that could personally affect them.</p>
                                                 </div>
-                                                <!-- End of Modal Content -->
-                                            </div>
-                                            <div class="col-md-4">
-                                                <!-- Button Modal -->
-                                                <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-form">Sign
-                                                    In</button>
-                                                <!-- Modal Content -->
-                                                <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-body p-0">
-                                                                <div class="card border-light p-4">
-                                                                    <div class="card-header border-0 text-center pb-0">
-                                                                        <h2 class="h4">Sign in to our platform</h2>
-                                                                        <span>Login here using your username and password</span>   
-                                                                    </div>
-                                                                    <div class="card-body">
-                                                                        <form action="#" class="mt-4">
-                                                                            <!-- Form -->
-                                                                            <div class="form-group mb-4">
-                                                                                <label for="exampleInputEmailCard1">Your Email</label>
-                                                                                <div class="input-group">
-                                                                                    <span class="input-group-text" id="basic-addon1"><span class="fas fa-envelope"></span></span>
-                                                                                    <input type="email" class="form-control" placeholder="example@company.com" id="exampleInputEmailCard1">
-                                                                                </div>  
-                                                                            </div>
-                                                                            <!-- End of Form -->
-                                                                            <div class="form-group">
-                                                                                <!-- Form -->
-                                                                                <div class="form-group mb-4">
-                                                                                    <label for="exampleInputPasswordCard1">Your Password</label>
-                                                                                    <div class="input-group">
-                                                                                        <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
-                                                                                        <input type="password" placeholder="Password" class="form-control" id="exampleInputPasswordCard1">
-                                                                                    </div>  
-                                                                                </div>
-                                                                                <!-- End of Form -->
-                                                                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                                                                    <div class="form-check">
-                                                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                                                                                        <label class="form-check-label" for="defaultCheck5">
-                                                                                          Remember me
-                                                                                        </label>
-                                                                                    </div>
-                                                                                    <div><a href="#" class="small text-right">Lost password?</a></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <button type="submit" class="btn btn-block btn-primary">Sign in</button>
-                                                                        </form>
-                                                                        <div class="mt-3 mb-4 text-center">
-                                                                            <span class="font-weight-normal">or login with</span>
-                                                                        </div>
-                                                                        <div class="btn-wrapper my-4 text-center">
-                                                                            <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
-                                                                                <span aria-hidden="true" class="fab fa-facebook-f"></span>
-                                                                            </button>
-                                                                            <button class="btn btn-icon-only btn-pill btn-outline-light text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
-                                                                                <span aria-hidden="true" class="fab fa-twitter"></span>
-                                                                            </button>
-                                                                            <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
-                                                                                <span aria-hidden="true" class="fab fa-github"></span>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
-                                                                            <span class="font-weight-normal">
-                                                                                Not registered?
-                                                                                <a href="#" class="font-weight-bold">Create account</a>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary">Accept</button>
+                                                    <button type="button" class="btn btn-link text-gray ml-auto" data-dismiss="modal">Close</button>
                                                 </div>
-                                                <!-- End of Modal Content -->
-                                            </div>
-                                            <div class="col-md-4">
-                                                <!-- Button Modal -->
-                                                <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-form-signup">Sign Up</button>
-                                                <!-- Modal Content -->
-                                                <div class="modal fade" id="modal-form-signup" tabindex="-1" role="dialog" aria-labelledby="modal-form-signup" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-body p-0">
-                                                                <div class="card border-light p-4">
-                                                                    <div class="card-header text-center pb-0">
-                                                                        <h2 class="mb-0 h5">Create Account</h2>                               
-                                                                    </div>
-                                                                    <div class="card-body">
-                                                                        <form action="#">
-                                                                            <!-- Form -->
-                                                                            <div class="form-group mb-4">
-                                                                                <label for="exampleInputEmailCard3">Your Email</label>
-                                                                                <div class="input-group">
-                                                                                    <span class="input-group-text" id="basic-addon3"><span class="fas fa-envelope"></span></span>
-                                                                                    <input type="email" class="form-control" placeholder="example@company.com" id="exampleInputEmailCard3">
-                                                                                </div>  
-                                                                            </div>
-                                                                            <!-- End of Form -->
-                                                                            <div class="form-group">
-                                                                                <!-- Form -->
-                                                                                <div class="form-group mb-4">
-                                                                                    <label for="exampleInputPasswordCard4">Your Password</label>
-                                                                                    <div class="input-group">
-                                                                                        <span class="input-group-text" id="basic-addon4"><span class="fas fa-unlock-alt"></span></span>
-                                                                                        <input type="password" placeholder="Password" class="form-control" id="exampleInputPasswordCard4">
-                                                                                    </div>  
-                                                                                </div>
-                                                                                <!-- End of Form -->
-                                                                                <!-- Form -->
-                                                                                <div class="form-group mb-4">
-                                                                                    <label for="exampleInputPasswordCard4">Confirm Password</label>
-                                                                                    <div class="input-group">
-                                                                                        <span class="input-group-text" id="basic-addon5"><span class="fas fa-unlock-alt"></span></span>
-                                                                                        <input type="password" placeholder="Confirm Password" class="form-control" id="exampleInputPasswordCard5">
-                                                                                    </div>  
-                                                                                </div>
-                                                                                <!-- End of Form -->
-                                                                                <div class="form-check mb-4">
-                                                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
-                                                                                    <label class="form-check-label" for="defaultCheck6">
-                                                                                        I agree to the <a href="#">terms and conditions</a>
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <button type="submit" class="btn btn-block btn-primary">Sign in</button>
-                                                                        </form>
-                                                                        <div class="mt-3 mb-4 text-center">
-                                                                            <span class="font-weight-normal">or</span>
-                                                                        </div>
-                                                                        <div class="btn-wrapper my-4 text-center">
-                                                                            <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
-                                                                                <span aria-hidden="true" class="fab fa-facebook-f"></span>
-                                                                            </button>
-                                                                            <button class="btn btn-icon-only btn-pill btn-outline-light text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
-                                                                                <span aria-hidden="true" class="fab fa-twitter"></span>
-                                                                            </button>
-                                                                            <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
-                                                                                <span aria-hidden="true" class="fab fa-github"></span>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
-                                                                            <span class="font-weight-normal">
-                                                                                Already have an account?
-                                                                                <a href="#" class="font-weight-bold">Login here</a>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End of Modal Content -->
-                                            </div>
-                                            <div class="col-md-4">
-                                                <!-- Button Modal -->
-                                                <button type="button" class="btn btn-block btn-tertiary mb-3" data-toggle="modal" data-target="#modal-achievement">Achievement</button>
-                                                <!-- Modal Content -->
-                                                <div class="modal fade" id="modal-achievement" tabindex="-1" role="dialog" aria-labelledby="modal-achievement" aria-hidden="true">
-                                                    <div class="modal-dialog modal-tertiary modal-dialog-centered" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header mx-auto">
-                                                                <p class="lead mb-0 text-white">You just unlocked a new badge</p>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <div class="py-3 px-5 text-center">
-                                                                    <span class="modal-icon display-1-lg"><span class="fas fa-medal"></span></span>
-                                                                    <h2 class="h3 modal-title mb-3 text-white">Author Level 5</h2>
-                                                                    <p class="mb-4 text-white">One Thousand Dollars! Well done mate - heads are turning your way.</p>
-                                                                    <div class="progress-wrapper">
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-white text-tertiary">All badges</button>
-                                                                <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">×</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End of Modal Content -->
-                                            </div>
-                                            <div class="col-md-4">
-                                                <!-- Button Modal -->
-                                                <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-subscribe">Subscribe</button>
-                                                <!-- Modal Content -->
-                                                <div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="modal-subscribe" aria-hidden="true">
-                                                    <div class="modal-dialog modal-tertiary modal-dialog-centered modal-lg" role="document">
-                                                        <div class="modal-content bg-dark text-white">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">×</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="modal-body text-center py-3">
-                                                                <span class="modal-icon display-1-lg"><span class="fas fa-envelope-open-text"></span></span>
-                                                                <h3 class="modal-title mb-3">Join our 1,360,462 subscribers</h3>
-                                                                <p class="mb-4 lead">Get exclusive access to freebies, premium products and news.</p>
-                                                                <div class="form-group px-5">
-                                                                    <div class="d-sm-flex flex-column flex-sm-row mb-3 justify-content-center">
-                                                                        <input type="text" id="modalInputSubscribe7" class="mr-sm-1 mb-2 mb-sm-0 form-control form-control-lg" placeholder="example@company.com">
-                                                                        <button type="submit" class="ml-sm-1 btn btn-lg btn-tertiary">Subscribe</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-footer z-2 mx-auto text-center">
-                                                                <p class="text-white">
-                                                                    We’ll never share your details with third parties.
-                                                                    <br class="visible-md">View our <a href="#">Privacy Policy</a> for more info.
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End of Modal Content -->
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- End of Modal Content -->
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- Button Modal -->
+                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-notification">Notification</button>
+                                    <!-- Modal Content -->
+                                    <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+                                        <div class="modal-dialog modal-info modal-dialog-centered" role="document">
+                                            <div class="modal-content bg-gradient-secondary">
+                                                <div class="modal-header">
+                                                    <p class="modal-title" id="modal-title-notification">A new experience, personalized for you.</p>
+                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="py-3 text-center">
+                                                        <span class="modal-icon display-1-lg"><span class="far fa-envelope-open"></span></span>
+                                                        <h2 class="h4 modal-title my-3">Important message!</h2>
+                                                        <p>Do you know that you can assign status and relation to a company right in the visit list?.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-sm btn-white">Go to Inbox</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Modal Content -->
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- Button Modal -->
+                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-form">Sign
+                                        In</button>
+                                    <!-- Modal Content -->
+                                    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body p-0">
+                                                    <div class="card border-light p-4">
+                                                        <button type="button" class="btn-close ml-auto" data-dismiss="modal" aria-label="Close"></button>
+                                                        <div class="card-header border-0 text-center pb-0">
+                                                            <h2 class="h4">Sign in to our platform</h2>
+                                                            <span>Login here using your username and password</span>   
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <form action="#" class="mt-4">
+                                                                <!-- Form -->
+                                                                <div class="form-group mb-4">
+                                                                    <label for="login_email">Your Email</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-text" id="basic-addon1"><span class="fas fa-envelope"></span></span>
+                                                                        <input type="email" class="form-control" placeholder="example@company.com" id="login_email" required>
+                                                                    </div>  
+                                                                </div>
+                                                                <!-- End of Form -->
+                                                                <div class="form-group">
+                                                                    <!-- Form -->
+                                                                    <div class="form-group mb-4">
+                                                                        <label for="login_password">Your Password</label>
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
+                                                                            <input type="password" placeholder="Password" class="form-control" id="login_password" required>
+                                                                        </div>  
+                                                                    </div>
+                                                                    <!-- End of Form -->
+                                                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="checkbox" value="" id="remember">
+                                                                            <label class="form-check-label" for="remember">
+                                                                              Remember me
+                                                                            </label>
+                                                                        </div>
+                                                                        <div><a href="#" class="small text-right">Lost password?</a></div>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+                                                            </form>
+                                                            <div class="mt-3 mb-4 text-center">
+                                                                <span class="font-weight-normal">or login with</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-center my-4">
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
+                                                                    <span aria-hidden="true" class="fab fa-facebook-f"></span>
+                                                                </a>
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
+                                                                    <span aria-hidden="true" class="fab fa-twitter"></span>
+                                                                </a>
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
+                                                                    <span aria-hidden="true" class="fab fa-github"></span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
+                                                                <span class="font-weight-normal">
+                                                                    Not registered?
+                                                                    <a href="#" class="font-weight-bold">Create account</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Modal Content -->
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- Button Modal -->
+                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-form-signup">Sign Up</button>
+                                    <!-- Modal Content -->
+                                    <div class="modal fade" id="modal-form-signup" tabindex="-1" role="dialog" aria-labelledby="modal-form-signup" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body p-0">
+                                                    <div class="card p-4">
+                                                        <button type="button" class="btn-close ml-auto" data-dismiss="modal" aria-label="Close"></button>
+                                                        <div class="card-header border-0 text-center pb-0">
+                                                            <h2 class="mb-0 h5">Create Account</h2>                               
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <form action="#">
+                                                                <!-- Form -->
+                                                                <div class="form-group mb-4">
+                                                                    <label for="email">Your Email</label>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-text" id="basic-addon3"><span class="fas fa-envelope"></span></span>
+                                                                        <input type="email" class="form-control" placeholder="example@company.com" id="email" required>
+                                                                    </div>  
+                                                                </div>
+                                                                <!-- End of Form -->
+                                                                <div class="form-group">
+                                                                    <!-- Form -->
+                                                                    <div class="form-group mb-4">
+                                                                        <label for="password">Your Password</label>
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-text" id="basic-addon4"><span class="fas fa-unlock-alt"></span></span>
+                                                                            <input type="password" placeholder="Password" class="form-control" id="password" required>
+                                                                        </div>  
+                                                                    </div>
+                                                                    <!-- End of Form -->
+                                                                    <!-- Form -->
+                                                                    <div class="form-group mb-4">
+                                                                        <label for="password_confirm">Confirm Password</label>
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-text" id="basic-addon5"><span class="fas fa-unlock-alt"></span></span>
+                                                                            <input type="password" placeholder="Confirm Password" class="form-control" id="password_confirm" required>
+                                                                        </div>  
+                                                                    </div>
+                                                                    <!-- End of Form -->
+                                                                    <div class="form-check mb-4">
+                                                                        <input class="form-check-input" type="checkbox" value="" id="terms">
+                                                                        <label class="form-check-label" for="terms">
+                                                                            I agree to the <a href="#">terms and conditions</a>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="submit" class="btn btn-block btn-primary">Sign up</button>
+                                                            </form>
+                                                            <div class="mt-3 mb-4 text-center">
+                                                                <span class="font-weight-normal">or</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-center my-4">
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
+                                                                    <span aria-hidden="true" class="fab fa-facebook-f"></span>
+                                                                </a>
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
+                                                                    <span aria-hidden="true" class="fab fa-twitter"></span>
+                                                                </a>
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
+                                                                    <span aria-hidden="true" class="fab fa-github"></span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
+                                                                <span class="font-weight-normal">
+                                                                    Already have an account?
+                                                                    <a href="#" class="font-weight-bold">Login here</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Modal Content -->
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- Button Modal -->
+                                    <button type="button" class="btn btn-block btn-tertiary mb-3" data-toggle="modal" data-target="#modal-achievement">Achievement</button>
+                                    <!-- Modal Content -->
+                                    <div class="modal fade" id="modal-achievement" tabindex="-1" role="dialog" aria-labelledby="modal-achievement" aria-hidden="true">
+                                        <div class="modal-dialog modal-tertiary modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header mx-auto">
+                                                    <p class="lead mb-0 text-white">You just unlocked a new badge</p>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="py-3 px-5 text-center">
+                                                        <span class="modal-icon display-1"><span class="fas fa-medal"></span></span>
+                                                        <h2 class="h3 modal-title mb-3 text-white">Author Level 5</h2>
+                                                        <p class="mb-4 text-white">One Thousand Dollars! Well done mate - heads are turning your way.</p>
+                                                        <div class="progress-wrapper">
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-sm btn-white text-tertiary" data-dismiss="modal">Awesome!</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Modal Content -->
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- Button Modal -->
+                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-subscribe">Subscribe</button>
+                                    <!-- Modal Content -->
+                                    <div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="modal-subscribe" aria-hidden="true">
+                                        <div class="modal-dialog modal-tertiary modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content bg-dark text-white">
+                                                <div class="modal-header">
+                                                    <button type="button" class="btn-close btn-close-white text-white" data-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body text-center py-3">
+                                                    <span class="modal-icon display-1"><span class="fas fa-envelope-open-text"></span></span>
+                                                    <h3 class="modal-title mb-3">Join our 1,360,462 subscribers</h3>
+                                                    <p class="mb-4 lead">Get exclusive access to freebies, premium products and news.</p>
+                                                    <div class="form-group px-lg-5">
+                                                        <div class="d-flex mb-3 justify-content-center">
+                                                            <input type="text" id="subscribe" class="mr-sm-1 mb-2 mb-sm-0 form-control" placeholder="example@company.com">
+                                                            <div>
+                                                                <button type="submit" class="ml-2 btn btn-lg btn-tertiary">Subscribe</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer z-2 mx-auto text-center">
+                                                    <p class="text-white font-small">
+                                                        We’ll never share your details with third parties.
+                                                        <br class="visible-md">View our <a href="#">Privacy Policy</a> for more info.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Modal Content -->
                                 </div>
                             </div>
                         </div>
-                        @@include('./dashboard/_footer.html', {
-                            "path": "../..",
-                            "classes": "bg-primary text-white"
-                        })
-                    </main>
+                    </div>
                 </div>
             </div>
-        </div>
+            @@include('./dashboard/_footer.html', {
+                "path": "../..",
+                "classes": "bg-primary text-white"
+            })
+        </main>
 
     @@include('./_scripts.html', {
         "path": "../.."

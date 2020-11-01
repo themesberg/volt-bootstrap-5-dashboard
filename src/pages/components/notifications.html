@@ -30,63 +30,56 @@
             "path": "../.."
         })
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
+        @@include('./dashboard/_sidenav.html', {
+            "path": "../..",
+            "page": "notifications",
+            "page_group": "components"
+        })
+    
+        <main class="content">
 
-                    @@include('./dashboard/_sidenav.html', {
-                        "path": "../..",
-                        "page": "notifications",
-                        "page_group": "components"
-                    })
-                
-                    <main class="content">
+            @@include('./dashboard/_topbar.html', {
+                "path": "../.."
+            })
 
-                        @@include('./dashboard/_topbar.html', {
-                            "path": "../.."
-                        })
-
-                        <div class="py-4">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-                                    <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
-                                    <li class="breadcrumb-item"><a href="#">Components</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Notifications</li>
-                                </ol>
-                            </nav>
-                            <div class="d-flex justify-content-between w-100 flex-wrap">
-                                <div class="mb-3 mb-lg-0">
-                                    <h1 class="h4">Notifications</h1>
-                                    <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h2 class="h4 mb-0">Notyf</h2>
-                                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Documentation</a>
-                                    </div>
-                                    <div class="card-body">
-                                        <button class="btn btn-info" id="notifyTopLeft">Top left info</button>
-                                        <button class="btn btn-danger" id="notifyTopRight">Top right danger</button>
-                                        <button class="btn btn-warning" id="notifyBottomLeft">Bottom left warning</button>
-                                        <button class="btn btn-primary" id="notifyBottomRight">Primary bottom right</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        @@include('./dashboard/_footer.html', {
-                            "path": "../..",
-                            "classes": "bg-primary text-white"
-                        })
-                    </main>
+            <div class="py-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                        <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
+                        <li class="breadcrumb-item"><a href="#">Components</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Notifications</li>
+                    </ol>
+                </nav>
+                <div class="d-flex justify-content-between w-100 flex-wrap">
+                    <div class="mb-3 mb-lg-0">
+                        <h1 class="h4">Notifications</h1>
+                        <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h2 class="h4 mb-0">Notyf</h2>
+                            <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Documentation</a>
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-info" id="notifyTopLeft">Top left info</button>
+                            <button class="btn btn-danger" id="notifyTopRight">Top right danger</button>
+                            <button class="btn btn-warning" id="notifyBottomLeft">Bottom left warning</button>
+                            <button class="btn btn-primary" id="notifyBottomRight">Primary bottom right</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./dashboard/_footer.html', {
+                "path": "../..",
+                "classes": "bg-primary text-white"
+            })
+        </main>
 
     @@include('./_scripts.html', {
         "path": "../.."

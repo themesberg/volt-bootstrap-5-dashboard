@@ -55,7 +55,7 @@
         min-width:  $user-avatar-width-lg;
         font-size: $font-size-xs;
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
             height: 2rem;
 		    width:  2rem;
             min-height: 2rem;

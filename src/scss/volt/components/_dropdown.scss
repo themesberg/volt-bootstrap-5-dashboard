@@ -71,7 +71,7 @@
     min-width: 350px;
     border-radius: $border-radius-lg;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
         min-width: 285px;
         transform: translateX(15%);
     }
@@ -80,4 +80,9 @@
 .dropdown-menu-xl {
     min-width: 450px;
     border-radius: $border-radius-lg;
+
+    @include media-breakpoint-down(xl) {
+        min-width: 285px;
+        transform: translateX(15%);
+    }
 }

@@ -9,12 +9,17 @@
 	left: 0;
 	z-index: 100;
 	max-height: 100%;
-	width: 100%;
 	overflow-y: auto;
+	width: 100%;
+	@include transition(max-width .3s);
 	
 	@include media-breakpoint-up(md) {
 		width: 100%;
 		max-width: 260px;
+	}
+
+	.nav {
+		white-space: nowrap;
 	}
 
 	.nav-item {
@@ -22,7 +27,6 @@
 			& > .nav-link {
 				color: $light;
 				background-color: #2e3650;
-				@include border-radius($border-radius);
 			}
 		}
 		.nav-link {
@@ -31,7 +35,6 @@
 			&:hover {
 				color: $light;
 				background-color: #2e3650;
-				@include border-radius($border-radius);
 			}
 		}
 		margin-bottom: .2rem;
@@ -45,6 +48,7 @@
 		font-size: $font-size-base;
 		vertical-align: middle;
 		padding: 0.55rem 0.75rem;
+		@include border-radius($border-radius);
 
 		.sidebar-icon {
 			margin-right: .5rem;
@@ -72,6 +76,79 @@
 			padding-left: 45px;
 		}
 	}
+
+	.sidebar-text,
+	.link-arrow,
+	.badge,
+	.notification-count {
+		opacity: 1;
+		@include transition(opacity .3s);
+	}
+
+	.sidebar-text-contracted {
+		display: none;
+		@include transition(opacity .3s);
+	}
+
+	&.contracted {
+		.sidebar-text,
+		.link-arrow,
+		.badge {
+			opacity: 0;
+		}
+
+		.notification-count {
+			opacity: 1;
+			position: absolute;
+			top: 0;
+			left: 40px;
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			font-size: .7rem;
+			padding: .2rem;
+		}
+
+		.nav-item {
+			position: relative;
+			&.active {
+				& > .nav-link {
+					background-color: $primary;
+				}
+			}
+			.nav-link {
+				&:hover {
+					background-color: $primary;
+				}
+			}
+		}
+
+		.sidebar-text-contracted {
+			display: inline;
+		}
+
+		.multi-level .nav-link {
+			padding-left: 17px;
+		}
+
+		.nav-item {
+			white-space: nowrap;
+		}
+
+		.sidebar-icon {
+			text-align: center;
+		}
+
+
+		@include media-breakpoint-up(md) {
+			& + .content {
+				margin-left: 95px;
+				
+			}
+		}
+
+		max-width: 95px;
+	}
 }
 
 .sidebar-inner {
@@ -97,8 +174,22 @@
 .content {
 
 	overflow: visible;
+	padding: 0 $spacer 0 $spacer;
+	@include transition(all .3s);
 
 	@include media-breakpoint-up(md) {
 		margin-left: 260px;
 	}
+}
+
+.sidebar-toggle {
+	font-size: 1.3rem;
+
+	&:hover,
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		background: $gray-400;
+	}
+
 }

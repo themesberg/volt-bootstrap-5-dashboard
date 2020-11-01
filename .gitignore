@@ -4,3 +4,4 @@ html&css/
 dist/
 *.zip
 docs/
+.DS_Store

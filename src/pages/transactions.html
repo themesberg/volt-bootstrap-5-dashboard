@@ -1,11 +1,12 @@
 <!--
 
 =========================================================
-* Volt - Bootstrap 5 Admin Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
 * Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
 
@@ -20,7 +21,7 @@
 <head> 
     @@include('./_head.html', {
         "path": "..",
-        "title": "Volt Bootstrap 5 Dashboard - Transactions"
+        "title": "Volt Free Bootstrap Dashboard - Transactions"
     })
 </head>
 
@@ -68,25 +69,25 @@
                             <input type="text" class="form-control" id="exampleInputIconLeft" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
                         </div>
                     </div>
-                    <div class="col-4 col-md-2 col-xl-1 pl-md-0 text-right">
+                    <div class="col-4 col-md-2 col-xl-1 ps-md-0 text-right">
                         <div class="btn-group">
-                            <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="icon icon-sm icon-gray">
+                            <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="icon icon-sm icon-gray pt-1">
                                     <span class="fas fa-cog"></span>
                                 </span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-right">
-                                <span class="dropdown-item font-weight-bold text-dark">Show</span>
-                                <a class="dropdown-item d-flex font-weight-bold" href="#">10 <span class="icon icon-small ml-auto"><span class="fas fa-check"></span></span></a>
-                                <a class="dropdown-item font-weight-bold" href="#">20</a>
-                                <a class="dropdown-item font-weight-bold" href="#">30</a>
+                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end pb-0">
+                                <span class="small ps-3 fw-bold text-dark">Show</span>
+                                <a class="dropdown-item d-flex fw-bold" href="#">10 <span class="icon icon-small ms-auto"><span class="fas fa-check"></span></span></a>
+                                <a class="dropdown-item fw-bold" href="#">20</a>
+                                <a class="dropdown-item fw-bold" href="#">30</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card card-body border-light shadow-sm table-wrapper table-responsive pt-0">
+            <div class="card card-body shadow-sm table-wrapper table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -103,29 +104,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456478
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Platinum Subscription Plan</span>
+                                <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 May 2020</span></td>                        
-                            <td><span class="font-weight-normal">1 Jun 2020</span></td>
-                            <td><span class="font-weight-bold">$799,00</span></td>
-                            <td><span class="font-weight-bold text-warning">Due</span></td>
+                            <td><span class="fw-normal">1 May 2020</span></td>                        
+                            <td><span class="fw-normal">1 Jun 2020</span></td>
+                            <td><span class="fw-bold">$799,00</span></td>
+                            <td><span class="fw-bold text-warning">Due</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -133,29 +134,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456423
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Platinum Subscription Plan</span>
+                                <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Apr 2020</span></td>                        
-                            <td><span class="font-weight-normal">1 May 2020</span></td>
-                            <td><span class="font-weight-bold">$799,00</span></td>
-                            <td><span class="font-weight-bold text-success">Paid</span></td>
+                            <td><span class="fw-normal">1 Apr 2020</span></td>                        
+                            <td><span class="fw-normal">1 May 2020</span></td>
+                            <td><span class="fw-bold">$799,00</span></td>
+                            <td><span class="fw-bold text-success">Paid</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -163,29 +164,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456420
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Platinum Subscription Plan</span>
+                                <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Mar 2020</span></td>                        
-                            <td><span class="font-weight-normal">1 Apr 2020</span></td>
-                            <td><span class="font-weight-bold">$799,00</span></td>
-                            <td><span class="font-weight-bold text-success">Paid</span></td>
+                            <td><span class="fw-normal">1 Mar 2020</span></td>                        
+                            <td><span class="fw-normal">1 Apr 2020</span></td>
+                            <td><span class="fw-bold">$799,00</span></td>
+                            <td><span class="fw-bold text-success">Paid</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -193,29 +194,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456421
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Platinum Subscription Plan</span>
+                                <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Feb 2020</span></td>                        
-                            <td><span class="font-weight-normal">1 Mar 2020</span></td>
-                            <td><span class="font-weight-bold">$799,00</span></td>
-                            <td><span class="font-weight-bold text-success">Paid</span></td>
+                            <td><span class="fw-normal">1 Feb 2020</span></td>                        
+                            <td><span class="fw-normal">1 Mar 2020</span></td>
+                            <td><span class="fw-bold">$799,00</span></td>
+                            <td><span class="fw-bold text-success">Paid</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -223,29 +224,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456420
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Platinum Subscription Plan</span>
+                                <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Jan 2020</span></td>                        
-                            <td><span class="font-weight-normal">1 Feb 2020</span></td>
-                            <td><span class="font-weight-bold">$799,00</span></td>
-                            <td><span class="font-weight-bold text-success">Paid</span></td>
+                            <td><span class="fw-normal">1 Jan 2020</span></td>                        
+                            <td><span class="fw-normal">1 Feb 2020</span></td>
+                            <td><span class="fw-bold">$799,00</span></td>
+                            <td><span class="fw-bold text-success">Paid</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -253,29 +254,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456479
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Platinum Subscription Plan</span>
+                                <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Dec 2019</span></td>                        
-                            <td><span class="font-weight-normal">1 Jan 2020</span></td>
-                            <td><span class="font-weight-bold">$799,00</span></td>
-                            <td><span class="font-weight-bold text-success">Paid</span></td>
+                            <td><span class="fw-normal">1 Dec 2019</span></td>                        
+                            <td><span class="fw-normal">1 Jan 2020</span></td>
+                            <td><span class="fw-bold">$799,00</span></td>
+                            <td><span class="fw-bold text-success">Paid</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -284,29 +285,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456478
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Platinum Subscription Plan</span>
+                                <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Nov 2019</span></td>                        
-                            <td><span class="font-weight-normal">1 Dec 2019</span></td>
-                            <td><span class="font-weight-bold">$799,00</span></td>
-                            <td><span class="font-weight-bold text-success">Paid</span></td>
+                            <td><span class="fw-normal">1 Nov 2019</span></td>                        
+                            <td><span class="fw-normal">1 Dec 2019</span></td>
+                            <td><span class="fw-bold">$799,00</span></td>
+                            <td><span class="fw-bold text-success">Paid</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -314,29 +315,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     453673
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Gold Subscription Plan</span>
+                                <span class="fw-normal">Gold Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Oct 2019</span></td>                        
-                            <td><span class="font-weight-normal">1 Nov 2019</span></td>
-                            <td><span class="font-weight-bold">$533,42</span></td>
-                            <td><span class="font-weight-bold text-danger">Canceled</span></td>
+                            <td><span class="fw-normal">1 Oct 2019</span></td>                        
+                            <td><span class="fw-normal">1 Nov 2019</span></td>
+                            <td><span class="fw-bold">$533,42</span></td>
+                            <td><span class="fw-bold text-danger">Canceled</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -344,29 +345,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456468
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Gold Subscription Plan</span>
+                                <span class="fw-normal">Gold Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Sep 2019</span></td>                        
-                            <td><span class="font-weight-normal">1 Oct 2019</span></td>
-                            <td><span class="font-weight-bold">$533,42</span></td>
-                            <td><span class="font-weight-bold text-success">Paid</span></td>
+                            <td><span class="fw-normal">1 Sep 2019</span></td>                        
+                            <td><span class="fw-normal">1 Oct 2019</span></td>
+                            <td><span class="fw-bold">$533,42</span></td>
+                            <td><span class="fw-bold text-success">Paid</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -374,29 +375,29 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="font-weight-bold">
+                                <a href="../invoice.html" class="fw-bold">
                                     456478
                                 </a>
                             </td>
                             <td>
-                                <span class="font-weight-normal">Flexible Subscription Plan</span>
+                                <span class="fw-normal">Flexible Subscription Plan</span>
                             </td>
-                            <td><span class="font-weight-normal">1 Aug 2019</span></td>                        
-                            <td><span class="font-weight-normal">1 Sep 2019</span></td>
-                            <td><span class="font-weight-bold">$233,42</span></td>
-                            <td><span class="font-weight-bold text-success">Paid</span></td>
+                            <td><span class="fw-normal">1 Aug 2019</span></td>                        
+                            <td><span class="fw-normal">1 Sep 2019</span></td>
+                            <td><span class="fw-bold">$233,42</span></td>
+                            <td><span class="fw-bold text-success">Paid</span></td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="icon icon-sm">
                                             <span class="fas fa-ellipsis-h icon-dark"></span>
                                         </span>
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../invoice.html"><span class="fas fa-eye mr-2"></span>View Details</a>
-                                        <a class="dropdown-item" href="#"><span class="fas fa-edit mr-2"></span>Edit</a>
-                                        <a class="dropdown-item text-danger" href="#"><span class="fas fa-trash-alt mr-2"></span>Remove</a>
+                                    <div class="dropdown-menu py-0">
+                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
+                                        <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
                                 </div>
                             </td>
@@ -429,7 +430,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="font-weight-bold small">Showing <b>5</b> out of <b>25</b> entries</div>
+                    <div class="fw-bold small">Showing <b>5</b> out of <b>25</b> entries</div>
                 </div>
             </div>
             @@include('./dashboard/_footer.html', {

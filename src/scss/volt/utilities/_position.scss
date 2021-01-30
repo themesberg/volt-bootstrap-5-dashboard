@@ -6,13 +6,13 @@
 	.top-#{$size} {
 		top: $value;
 	}
-	.right-#{$size} {
+	.end-#{$size} {
 		right: $value;
 	}
 	.bottom-#{$size} {
 		bottom: $value;
 	}
-	.left-#{$size} {
+	.start-#{$size} {
 		left: $value;
 	}
 }

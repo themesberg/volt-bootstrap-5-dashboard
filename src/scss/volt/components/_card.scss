@@ -19,43 +19,6 @@
         height: 200px;
     }
 
-    @include media-breakpoint-up(lg) {
-        &.timeline-card{
-            &:before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 0;
-                margin-left: .75rem;
-                border: 8px solid $black;
-                border-color: transparent #e0e6ec #e0e6ec transparent;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                -webkit-transform-origin: 0 0;
-                transform-origin: 0 0;
-                @include transform(rotate(135deg));
-                @include box-shadow($box-shadow);
-            }
-        }
-    
-        &.left-timeline-card {
-            &:after{
-                content: "";
-                position: absolute;
-                top: 50%;
-                right: 0;
-                margin-right: -5px;;
-                border: 8px solid $black;
-                border-color: transparent #e0e6ec #e0e6ec transparent;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                -webkit-transform-origin: 0 0;
-                transform-origin: 0 0;
-                @include transform(rotate(-45deg));
-                @include box-shadow($box-shadow); 
-            }
-        }
-    }
 }
 
 .message-wrapper,
@@ -81,69 +44,6 @@
             transform-origin: 0 0;
             @include transform(rotate(135deg));
             @include box-shadow($box-shadow);
-        }
-    }
-}
-
-.profile-page {
-    .card-profile {
-        margin-top: -150px;
-
-        .card-profile-image {
-            position: relative;
-
-            img {
-                max-width: 180px;
-                @include border-radius($border-radius);
-                transform: translate(-50%,-30%);
-                position: absolute;
-                left: 50%;
-                transition: $transition-base;
-
-                &:hover {
-                    transform: translate(-50%, -33%);
-                }
-            }
-        }
-
-        .card-profile-stats {
-            padding: 1rem 0;
-
-            > div {
-                text-align: center;
-                margin-right: 1rem;
-                padding: .875rem;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                .heading {
-                    display: block;
-                    font-size: 1.1rem;
-                    font-weight: bold;
-                }
-                .description {
-                    font-size: .875rem;
-                    color: $gray-500;
-                }
-            }
-        }
-
-        .card-profile-actions {
-            padding: .875rem;
-        }
-
-        @include media-breakpoint-down(xs) {
-            .card-profile-actions {
-                margin-top: 110px;
-            } 
-        }
-
-        @include media-breakpoint-between(sm, md) {
-            .card-profile-stats {
-                margin-top: 30px;
-            }
         }
     }
 }
@@ -177,12 +77,6 @@
 
 // Animated cards
 
-.card-lift-hover {
-    &:hover {
-        transform: translateY(-20px);
-        @include transition($transition-base);
-    }
-}
 
 .page-preview {
 
@@ -194,8 +88,8 @@
         bottom: -25px;
         background: rgba($dark, .85);
         padding: 10px 0;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius:1.5rem;
         width: calc(100% + 28px);
         left: -14px;
         opacity: 0;
@@ -215,5 +109,34 @@
             z-index: 99;
             opacity: 1;
         }
+    }
+}
+
+.theme-settings {
+    z-index: 99;
+    position: fixed;
+    right: 15px;
+    bottom: 0;
+    
+    &, .card-body {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.theme-settings-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: .65rem;
+}
+
+.theme-settings-expand {
+    right: 15px;
+    bottom: 0;
+
+    &:hover {
+        background: $gray-200;
+        cursor: pointer;
     }
 }

@@ -20,7 +20,7 @@
 }
 
 @for $nr from 1 to 40 {
-	.fw-#{$nr*50} {
+	.font-weight-#{$nr*50} {
 		width: #{$nr*50}px !important;
 	}
 }

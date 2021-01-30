@@ -1,5 +1,5 @@
 .form-control{
-    box-shadow:none;
+
 
     @include media-breakpoint-up(lg) {
         &.form-control-lg{
@@ -8,8 +8,6 @@
     }
 
 }
-
-
 
 .form-check-input {
     &.round-check{

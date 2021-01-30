@@ -7,15 +7,15 @@
 
 // Shades of grey
 $white:    #ffffff;
-$gray-100: #f3f7fa;
-$gray-200: #f5f8fb;
-$gray-300: #F0F3F6;
-$gray-400: #eaedf2;
-$gray-500: #d1d7e0;
-$gray-600: #93a5be;   
-$gray-700: #66799e;   
-$gray-800: #506690;   
-$gray-900: #4A5073;
+$gray-100: #F9FAFB;
+$gray-200: #F3F4F6;
+$gray-300: #E5E7EB;
+$gray-400: #D1D5DB;
+$gray-500: #9CA3AF;
+$gray-600: #6B7280;   
+$gray-700: #4B5563;   
+$gray-800: #374151;    
+$gray-900: #29313d;
 $dark    : #262B40; 
 $black   : #2e3650;
 
@@ -68,19 +68,17 @@ $colors: (
 // scss-docs-end colors-map
 
 // Color scheme
-$default:       #262B40;
 $primary:       #262B40;
-$secondary:     #F8BD7A;
-$tertiary:      #1B998B;
-$quaternary:    #0948B3;
+$secondary:     #f3b773;
+$tertiary:      #2CA58D;
 
 // Series names and colors. This can be extended or customized as desired. Just add more series and colors.
 $ct-series-names: (a, b, c, d, e, f, g) !default;
 $ct-series-colors: (
-  #0948B3,
+  #262B40,
   #F8BD7A,
-  #1B998B,
-  #404E7C,
+  #2CA58D,
+  #31316A,
   #C96480,
   #ffffff,
   #F8BD7A,
@@ -142,27 +140,16 @@ $theme-colors: map-merge((
   "primary":       $primary,
   "secondary":     $secondary,
   "tertiary":      $tertiary,
-  "quaternary":    $quaternary,
-  "primary-app":   $primary-app,
-  "secondary-app": $secondary-app,
-  "light":         $light,
-  "lighten":       $lighten,
+  "dark":          $dark,
   "success":       $success,
   "info":         $info,
   "warning":      $warning,
   "danger":       $danger,
   "white":        $white,
-  "gray":         $gray,
-  "neutral":      $white,
-  "dark":         $dark,
-  "soft":         $soft,
   "black":        $black,
-  "blue":         $blue,
   "pink":         $pink,
-  "cyan":         $cyan,
+  "indigo":       $indigo,
   "purple":       $purple,
-  "soft-indigo":  $soft-indigo,
-  "soft-green":   $soft-green,
   "gray-100":     $gray-100,
   "gray-200":     $gray-200,
   "gray-300":     $gray-300,
@@ -173,18 +160,13 @@ $theme-colors: map-merge((
   "gray-800":     $gray-800,
   "facebook":     $facebook,
   "twitter":      $twitter,
-  "google":       $google,
-  "instagram":    $instagram,
-  "pinterest":    $pinterest,
-  "youtube":      $youtube,
-  "slack":        $slack,
-  "dribbble":     $dribbble,
-  "dropbox":      $dropbox,
-  "twitch":       $twitch,
-  "paypal":       $paypal,
-  "behance":      $behance,
-  "reddit" :      $reddit,  
   "github":       $github
+), $theme-colors);
+
+// Navbar colors
+$navbar-colors: ();
+$navbar-colors: map-merge((
+  "primary":       $primary,
 ), $theme-colors);
 
 
@@ -367,7 +349,7 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $soft;
+$body-bg:                   $gray-100;
 $body-color:                $gray-900;
 $body-text-align:           null;
 
@@ -378,10 +360,10 @@ $body-text-align:           null;
 
 $link-color:                              $primary;
 $link-decoration:                         none;
-$link-hover-color:                        darken($link-color, 15%);
-$link-hover-decoration:                   null;
+$link-hover-color:                        darken($link-color, 50%);
+$link-hover-decoration:                   none;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 15%;
+$emphasized-link-hover-darken-percentage: 10%;
 
 $stretched-link-pseudo-element:           after;
 $stretched-link-z-index:                  1;
@@ -453,16 +435,15 @@ $border-width-md:             0.125rem;
 $border-width-lg:             0.25rem;
 $border-width-xl:             0.375rem;
 $border-color-white:          $white;
-$border-color:                $light;
+$border-color:                $gray-300;
 
-$border-radius:               .5rem;
-$border-radius-xl:            .875rem;
-$border-radius-lg:            .3rem;
-$border-radius-md:            .2rem;
-$border-radius-sm:            .1rem;
-$border-radius-pill:           2rem;
-$circle-radius:                50%;
-$organic-radius:               63% 37% 30% 70% / 50% 45% 55% 50%;
+
+$border-radius:               1rem;
+$border-radius-sm:            .6rem;
+$border-radius-lg:            2.25rem;
+$border-radius-xl:            3rem;
+$border-radius-pill:          50rem;
+$circle-radius:               50%;
 
 $component-active-color:        $white;
 $component-active-bg:           $primary;
@@ -475,7 +456,7 @@ $component-hover-border-color: $gray-300;
 $rounded-pill:                50rem;
 
 $box-shadow:                  0 .5rem 1rem rgba($black, .15);
-$box-shadow-sm:               0 2px 18px rgba(0, 0, 0, 0.02);
+$box-shadow-sm:               0 2px 5px rgba(140,152,164,.2);
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175);
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075);
 
@@ -538,11 +519,11 @@ $font-size-lg:                ($font-size-base * 1.25);
 $font-size-xl:                ($font-size-base * 1.5);
 $font-size-xxl:               ($font-size-base * 2);
 
+$font-weight-lighter:         lighter;
 $font-weight-light:           300;
 $font-weight-normal:          400;
 $font-weight-bold:            600;
-$font-weight-bolder:          700;
-$font-weight-extreme:         800;
+$font-weight-bolder:          bolder;
 
 $font-weight-base:            $font-weight-normal;
 
@@ -661,7 +642,7 @@ $table-group-seperator-color: $light;
 
 $table-caption-color:         $text-muted;
 
-$table-bg-level:              -9;
+$table-bg-scale:              -80%;
 
 $table-head-spacer-y:         .75rem;
 $table-head-spacer-x:         1rem;
@@ -670,17 +651,44 @@ $table-head-text-transform:   uppercase;
 $table-body-font-size:        $font-size-sm;
 
 $table-variants: (
-  "primary":    color-level($primary, $table-bg-level),
-  "secondary":  color-level($secondary, $table-bg-level),
-  "success":    color-level($success, $table-bg-level),
-  "info":       color-level($info, $table-bg-level),
-  "warning":    color-level($warning, $table-bg-level),
-  "danger":     color-level($danger, $table-bg-level),
+  "primary":    shift-color($primary, $table-bg-scale),
+  "secondary":  shift-color($secondary, $table-bg-scale),
+  "success":    shift-color($success, $table-bg-scale),
+  "info":       shift-color($info, $table-bg-scale),
+  "warning":    shift-color($warning, $table-bg-scale),
+  "danger":     shift-color($danger, $table-bg-scale),
   "light":      $light,
   "dark":       $dark,
 );
-// scss-docs-end table-variables
 
+// Accordion
+$accordion-padding-y:                     1rem;
+$accordion-padding-x:                     1.25rem;
+$accordion-color:                         $body-color;
+$accordion-bg:                            transparent;
+$accordion-border-width:                  $border-width;
+$accordion-border-color:                  $gray-400;
+$accordion-border-radius:                 $border-radius;
+
+$accordion-body-padding-y:                $accordion-padding-y;
+$accordion-body-padding-x:                $accordion-padding-x;
+
+$accordion-button-padding-y:              $accordion-padding-y;
+$accordion-button-padding-x:              $accordion-padding-x;
+$accordion-button-color:                  $accordion-color;
+$accordion-button-bg:                     $accordion-bg;
+$accordion-button-active-bg:              $light;
+$accordion-button-active-color:           shade-color($primary, 10%);
+
+
+$accordion-icon-width:                    1.25rem !default;
+$accordion-icon-color:                    $accordion-color !default;
+$accordion-icon-active-color:             $accordion-button-active-color !default;
+$accordion-icon-transition:               transform .2s ease-in-out !default;
+$accordion-icon-transform:                rotate(180deg) !default;
+
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 
 // Buttons + Forms
 //
@@ -693,7 +701,7 @@ $input-btn-font-size:         $font-size-base;
 $input-btn-line-height:       $line-height-base;
 
 $input-btn-focus-width:         .2rem;
-$input-btn-focus-color-opacity: .25;
+$input-btn-focus-color-opacity: .2;
 $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity);
 $input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
@@ -748,7 +756,7 @@ $btn-block-spacing-y:         .5rem;
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           $border-radius;
 $btn-border-radius-sm:        $border-radius;
-$btn-border-radius-lg:        $border-radius-lg;
+$btn-border-radius-lg:        $border-radius;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
@@ -783,18 +791,18 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg;
 $input-padding-x-lg:                    $input-btn-padding-x-lg;
 $input-font-size-lg:                    $input-btn-font-size-lg;
 
-$input-bg:                              $white;
+$input-bg:                              $gray-100;
 $input-disabled-bg:                     $gray-200;
 $input-disabled-border-color:           null;
 
 $input-color:                           $gray-700;
-$input-border-color:                    $gray-500;
+$input-border-color:                    $gray-400;
 $input-border-width:                    $input-btn-border-width;
 $input-box-shadow:                      $box-shadow-inset;
 
 $input-border-radius:                   $border-radius;
-$input-border-radius-sm:                $border-radius-sm;
-$input-border-radius-lg:                $border-radius-lg;
+$input-border-radius-sm:                $border-radius;
+$input-border-radius-lg:                $border-radius;
 
 $input-focus-bg:                        $input-bg;
 $input-focus-border-color:              lighten($component-active-bg, 25%);
@@ -914,13 +922,12 @@ $form-switch-checked-bg-position: right center;
 $form-check-inline-margin-right:        1rem;
 
 $input-group-addon-color:               $input-color;
-$input-group-addon-bg:                  $white;
 $input-group-addon-border-color:        $input-border-color;
 
 // Input groups
 
 $input-group-addon-color:               $input-placeholder-color;
-$input-group-addon-bg:                  $input-bg;
+$input-group-addon-bg:                  $gray-200;
 $input-group-addon-border-color:        $input-border-color;
 
 $input-group-addon-focus-color:               $input-focus-color;
@@ -1310,13 +1317,13 @@ $step-icon-size:                    $icon-size-xl;
 
 $tooltip-font-size:                 $font-size-sm;
 $tooltip-max-width:                 200px;
-$tooltip-color:                     $black;
-$tooltip-bg:                        $white;
+$tooltip-color:                     $white;
+$tooltip-bg:                        $dark;
 $tooltip-border-radius:             $border-radius;
-$tooltip-opacity:                   .9;
-$tooltip-padding-y:                 $spacer / 4;
-$tooltip-padding-x:                 $spacer / 2;
-$tooltip-margin:                    0;
+$tooltip-opacity:                   .99;
+$tooltip-padding-y:                 .75rem;
+$tooltip-padding-x:                 .55rem;
+$tooltip-margin:                    2rem;
 
 $tooltip-arrow-width:               .8rem;
 $tooltip-arrow-height:              .4rem;
@@ -1408,7 +1415,7 @@ $modal-content-color:               null;
 $modal-content-bg:                  $white;
 $modal-content-border-color:        rgba($black, .2);
 $modal-content-border-width:        $border-width;
-$modal-content-border-radius:       $border-radius-lg;
+$modal-content-border-radius:       $border-radius;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width);
 $modal-content-box-shadow-xs:       $box-shadow-sm;
 $modal-content-box-shadow-sm-up:    $box-shadow;
@@ -1460,7 +1467,7 @@ $progress-bg:                       $gray-200;
 $progress-border-radius:            $border-radius;
 $progress-box-shadow:               $box-shadow-inset;
 $progress-bar-color:                $white;
-$progress-bar-bg:                   $primary;
+$progress-bar-bg:                   $dark;
 $progress-bar-animation-timing:     1s linear infinite;
 $progress-bar-transition:           width .6s ease;
 

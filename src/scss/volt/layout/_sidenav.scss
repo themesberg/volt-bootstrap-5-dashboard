@@ -11,7 +11,7 @@
 	max-height: 100%;
 	overflow-y: auto;
 	width: 100%;
-	@include transition(max-width .3s);
+	@include transition(ease-out .1s);
 	
 	@include media-breakpoint-up(md) {
 		width: 100%;
@@ -31,7 +31,7 @@
 		}
 		.nav-link {
 			color: $light;
-
+			cursor: pointer;
 			&:hover {
 				color: $light;
 				background-color: #2e3650;
@@ -62,13 +62,13 @@
 			font-size: $font-size-sm;
 		}
 
-		&[data-toggle=collapse][aria-expanded=true] .link-arrow{
+		&[data-bs-toggle=collapse][aria-expanded=true] .link-arrow{
 			@include transform(rotate(90deg));
 			transition: $transition-base;
 		}
 	}
 	.nav-link.active {
-		color: $primary;
+		color: #363c54;
 	}
 
 	.multi-level{
@@ -85,70 +85,6 @@
 		@include transition(opacity .3s);
 	}
 
-	.sidebar-text-contracted {
-		display: none;
-		@include transition(opacity .3s);
-	}
-
-	&.contracted {
-		.sidebar-text,
-		.link-arrow,
-		.badge {
-			opacity: 0;
-		}
-
-		.notification-count {
-			opacity: 1;
-			position: absolute;
-			top: 0;
-			left: 40px;
-			width: 18px;
-			height: 18px;
-			border-radius: 50%;
-			font-size: .7rem;
-			padding: .2rem;
-		}
-
-		.nav-item {
-			position: relative;
-			&.active {
-				& > .nav-link {
-					background-color: $primary;
-				}
-			}
-			.nav-link {
-				&:hover {
-					background-color: $primary;
-				}
-			}
-		}
-
-		.sidebar-text-contracted {
-			display: inline;
-		}
-
-		.multi-level .nav-link {
-			padding-left: 17px;
-		}
-
-		.nav-item {
-			white-space: nowrap;
-		}
-
-		.sidebar-icon {
-			text-align: center;
-		}
-
-
-		@include media-breakpoint-up(md) {
-			& + .content {
-				margin-left: 95px;
-				
-			}
-		}
-
-		max-width: 95px;
-	}
 }
 
 .sidebar-inner {

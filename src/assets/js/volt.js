@@ -27,6 +27,27 @@ d.addEventListener("DOMContentLoaded", function(event) {
         buttonsStyling: false
     });
 
+    var themeSettingsEl = document.getElementById('theme-settings');
+    var themeSettingsExpandEl = document.getElementById('theme-settings-expand');
+
+    if(themeSettingsEl) {
+        var themeSettingsCollapse = new bootstrap.Collapse(themeSettingsEl, {
+            show: true,
+            toggle: false
+        });
+        
+        themeSettingsEl.addEventListener('hidden.bs.collapse', function () {
+            themeSettingsExpandEl.classList.add('show');
+        });
+
+        themeSettingsExpandEl.addEventListener('click', function () {
+            themeSettingsExpandEl.classList.remove('show');
+            setTimeout(function() {
+                themeSettingsCollapse.show();
+            }, 300);
+        });
+    }
+
     // options
     const breakpoints = {
         sm: 540,

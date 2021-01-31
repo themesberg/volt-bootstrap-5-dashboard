@@ -1,11 +1,12 @@
 <!--
 
 =========================================================
-* Volt - Bootstrap 5 Admin Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
 * Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
 
@@ -17,24 +18,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
     @@include('./_head.html', {
         "path": "..",
-        "title": "Volt Bootstrap 5 Dashboard - Settings"
+        "title": "Volt Free Bootstrap Dashboard - Settings"
     })
 </head>
 
 <body>
 
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics-body.html')
+        }
+
         @@include('./dashboard/_nav.html', {
             "path": ".."
         })
-
+        
         @@include('./dashboard/_sidenav.html', {
             "path": "..",
             "page": "settings"
         })
-
+    
         <main class="content">
 
             @@include('./dashboard/_topbar.html', {
@@ -43,36 +49,36 @@
 
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
                 <div>
-                    <button class="btn btn-secondary text-dark mr-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="fas fa-plus mr-2"></span>New
+                    <button class="btn btn-secondary text-dark me-2 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="fas fa-plus me-2"></span>New
                     </button>
-                    <div class="dropdown-menu dashboard-dropdown dropdown-menu-left mt-2">
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="far fa-file-alt mr-2"></span>Document</a>
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="far fa-comment-dots mr-2"></span>Message</a>
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-box-open mr-2"></span>Product</a>
-                        <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-rocket text-danger mr-2"></span>Subscription Plan</a>
+                    <div class="dropdown-menu dashboard-dropdown dropdown-menu-start mt-2 py-0">
+                        <a class="dropdown-item fw-normal rounded-top" href="#"><span class="far fa-file-alt me-2"></span>Document</a>
+                        <a class="dropdown-item fw-normal" href="#"><span class="far fa-comment-dots me-2"></span>Message</a>
+                        <a class="dropdown-item fw-normal" href="#"><span class="fas fa-box-open me-2"></span>Product</a>
+                        <div role="separator" class="dropdown-divider my-0"></div>
+                        <a class="dropdown-item fw-normal rounded-bottom" href="#"><span class="fas fa-rocket text-danger me-2"></span>My Plan</a>
                     </div>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary mr-2"><span class="fas fa-calendar-alt"></span></button>
-                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="fas fa-clipboard mr-2"></span>Reports
-                        <span class="icon icon-small ml-1"><span class="fas fa-chevron-down"></span></span>
+                    <button type="button" class="btn btn-dark me-2"><span class="fas fa-calendar-alt"></span></button>
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="fas fa-clipboard me-2"></span>Reports
+                        <span class="icon icon-small ms-1"><span class="fas fa-chevron-down"></span></span>
                     </button>
-                    <div class="dropdown-menu dashboard-dropdown dropdown-menu-left mt-2">
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-box-open mr-2"></span>Products</a>
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-store mr-2"></span>Customers</a>
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-cart-arrow-down mr-2"></span>Orders</a>
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-chart-pie mr-2"></span>Console</a>
-                        <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-rocket text-success mr-2"></span>All Reports</a>
+                    <div class="dropdown-menu dashboard-dropdown dropdown-menu-start mt-2 py-0">
+                        <a class="dropdown-item fw-normal rounded-top" href="#"><span class="fas fa-box-open"></span>Products</a>
+                        <a class="dropdown-item fw-normal" href="#"><span class="fas fa-store"></span>Customers</a>
+                        <a class="dropdown-item fw-normal" href="#"><span class="fas fa-cart-arrow-down"></span>Orders</a>
+                        <a class="dropdown-item fw-normal" href="#"><span class="fas fa-chart-pie"></span>Console</a>
+                        <div role="separator" class="dropdown-divider my-0"></div>
+                        <a class="dropdown-item fw-normal rounded-bottom" href="#"><span class="fas fa-rocket text-success"></span>All Reports</a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-xl-8">
-                    <div class="card card-body bg-white border-light shadow-sm mb-4">
+                    <div class="card card-body shadow-sm mb-4">
                         <h2 class="h5 mb-4">General information</h2>
                         <form>
                             <div class="row">
@@ -94,7 +100,7 @@
                                     <label for="birthday">Birthday</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><span class="far fa-calendar-alt"></span></span>
-                                        <input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>
+                                        <input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="dd/mm/yyyy" required>                                               
                                      </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
@@ -120,7 +126,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="h5 my-4">Adress</h2>
+                            <h2 class="h5 my-4">Location</h2>
                             <div class="row">
                                 <div class="col-sm-9 mb-3">
                                     <div class="form-group">
@@ -150,47 +156,112 @@
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <button type="submit" class="btn btn-primary">Save All</button>
+                                <button type="submit" class="btn btn-dark">Save All</button>
                             </div>
                         </form>
+                    </div>
+                    <div class="card card-body shadow-sm mb-4 mb-lg-0">
+                        <h2 class="h5 mb-4">Alerts & Notifications</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom">
+                                <div>
+                                    <h3 class="h6 mb-1">Company News</h3>
+                                    <p class="small pe-4">Get Rocket news, announcements, and product updates</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-1">
+                                        <label class="form-check-label" for="user-notification-1"></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom">
+                                <div>
+                                    <h3 class="h6 mb-1">Account Activity</h3>
+                                    <p class="small pe-4">Get important notifications about you or activity you've missed</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-2" checked>
+                                        <label class="form-check-label" for="user-notification-2"></label>
+                                    </div>                                            
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                <div>
+                                    <h3 class="h6 mb-1">Meetups Near You</h3>
+                                    <p class="small pe-4">Get an email when a Dribbble Meetup is posted close to my location</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-3" checked>
+                                        <label class="form-check-label" for="user-notification-3"></label>
+                                    </div> 
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-12 col-xl-4">
                     <div class="row">
                         <div class="col-12 mb-4">
-                            <div class="card border-light text-center p-0">
+                            <div class="card shadow-sm text-center p-0">
                                 <div class="profile-cover rounded-top" data-background="../assets/img/profile-cover.jpg"></div>
                                 <div class="card-body pb-5">
                                     <img src="../assets/img/team/profile-picture-1.jpg" class="user-avatar large-avatar rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
                                     <h4 class="h3">Neil Sims</h4>
-                                    <h5 class="font-weight-normal">Senior Software Engineer</h5>
+                                    <h5 class="fw-normal">Senior Software Engineer</h5>
                                     <p class="text-gray mb-4">New York, USA</p>
-                                    <a class="btn btn-sm btn-primary mr-2" href="#"><span class="fas fa-user-plus mr-1"></span> Connect</a>
+                                    <a class="btn btn-sm btn-dark me-2" href="#"><span class="fas fa-user-plus me-1"></span> Connect</a>
                                     <a class="btn btn-sm btn-secondary" href="#">Send Message</a>
                                 </div>
                              </div>
                         </div>
                         <div class="col-12">
-                            <div class="card card-body bg-white border-light shadow-sm mb-4">
+                            <div class="card card-body shadow-sm mb-4">
                                 <h2 class="h5 mb-4">Select profile photo</h2>
-                                <div class="d-xl-flex align-items-center">
-                                    <div>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
                                         <!-- Avatar -->
-                                        <div class="user-avatar xl-avatar mb-3">
+                                        <div class="user-avatar xl-avatar">
                                             <img class="rounded" src="../assets/img/team/profile-picture-3.jpg" alt="change avatar">
                                         </div>
                                     </div>
                                     <div class="file-field">
-                                        <div class="d-flex justify-content-xl-center ml-xl-3">
+                                        <div class="d-flex justify-content-xl-center ms-xl-3">
                                            <div class="d-flex">
-                                              <span class="icon icon-md"><span class="fas fa-paperclip mr-3"></span></span> <input type="file">
+                                              <span class="icon icon-md"><span class="fas fa-paperclip me-3"></span></span> <input type="file">
                                               <div class="d-md-block text-left">
-                                                 <div class="font-weight-normal text-dark mb-1">Choose Image</div>
+                                                 <div class="fw-normal text-dark mb-1">Choose Image</div>
                                                  <div class="text-gray small">JPG, GIF or PNG. Max size of 800K</div>
                                               </div>
                                            </div>
                                         </div>
-                                     </div>
+                                     </div>                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-12">
+                            <div class="card card-body shadow-sm mb-4">
+                                <h2 class="h5 mb-4">Select cover photo</h2>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <!-- Avatar -->
+                                        <div class="user-avatar xl-avatar">
+                                            <img class="rounded" src="../assets/img/profile-cover.jpg" alt="change cover photo">
+                                        </div>
+                                    </div>
+                                    <div class="file-field">
+                                        <div class="d-flex justify-content-xl-center ms-xl-3">
+                                           <div class="d-flex">
+                                              <span class="icon icon-md"><span class="fas fa-paperclip me-3"></span></span> <input type="file">
+                                              <div class="d-md-block text-left">
+                                                 <div class="fw-normal text-dark mb-1">Choose Image</div>
+                                                 <div class="text-gray small">JPG, GIF or PNG. Max size of 800K</div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>                                        
                                 </div>
                             </div>
                         </div>
@@ -206,7 +277,7 @@
     @@include('./_scripts.html', {
         "path": ".."
     })
-
+    
 </body>
 
 </html>

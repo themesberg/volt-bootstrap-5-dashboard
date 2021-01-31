@@ -1,7 +1,7 @@
 <!--
 
 =========================================================
-* Volt Pro - Premium Bootstrap 5 Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
 * Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
@@ -21,11 +21,16 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Premium Bootstrap Dashboard - Modals"
+        "title": "Volt Free Bootstrap Dashboard - Modals"
     })
 </head>
 
 <body>
+
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics-body.html')
+        }
 
         @@include('./dashboard/_nav.html', {
             "path": "../.."
@@ -43,10 +48,6 @@
                 "path": "../.."
             })
 
-            @@include('./_preloader.html', {
-                "path": "../.."
-            })
-
             <div class="py-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
@@ -61,7 +62,7 @@
                         <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
                     </div>
                     <div>
-                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/modals/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Modals Docs</a>
+                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/modals/" class="btn btn-outline-gray"><i class="far fa-question-circle me-1"></i> Modals Docs</a>
                     </div>
                 </div>
             </div>
@@ -73,14 +74,14 @@
                             <div class="row d-block mt-4">
                                 <div class="col-lg-4">
                                     <!-- Button Modal -->
-                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-default">Default</button>
+                                    <button type="button" class="btn btn-block btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#modal-default">Default</button>
                                     <!-- Modal Content -->
                                     <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h2 class="h6 modal-title">Terms of Service</h2>
-                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <p>With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.</p>
@@ -89,7 +90,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary">Accept</button>
-                                                    <button type="button" class="btn btn-link text-gray ml-auto" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-link text-gray ms-auto" data-bs-dismiss="modal">Close</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,14 +99,14 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <!-- Button Modal -->
-                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-notification">Notification</button>
+                                    <button type="button" class="btn btn-block btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#modal-notification">Notification</button>
                                     <!-- Modal Content -->
                                     <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
                                         <div class="modal-dialog modal-info modal-dialog-centered" role="document">
                                             <div class="modal-content bg-gradient-secondary">
                                                 <div class="modal-header">
                                                     <p class="modal-title" id="modal-title-notification">A new experience, personalized for you.</p>
-                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="py-3 text-center">
@@ -124,20 +125,20 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <!-- Button Modal -->
-                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-form">Sign
+                                    <button type="button" class="btn btn-block btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#modal-form">Sign
                                         In</button>
                                     <!-- Modal Content -->
                                     <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body p-0">
-                                                    <div class="card border-light p-4">
-                                                        <button type="button" class="btn-close ml-auto" data-dismiss="modal" aria-label="Close"></button>
+                                                    <div class="card border-light p-3 p-lg-4">
+                                                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         <div class="card-header border-0 text-center pb-0">
                                                             <h2 class="h4">Sign in to our platform</h2>
                                                             <span>Login here using your username and password</span>   
                                                         </div>
-                                                        <div class="card-body">
+                                                        <div class="card-body p-0 pl-g-3">
                                                             <form action="#" class="mt-4">
                                                                 <!-- Form -->
                                                                 <div class="form-group mb-4">
@@ -161,33 +162,35 @@
                                                                     <div class="d-flex justify-content-between align-items-center mb-4">
                                                                         <div class="form-check">
                                                                             <input class="form-check-input" type="checkbox" value="" id="remember">
-                                                                            <label class="form-check-label" for="remember">
+                                                                            <label class="form-check-label mb-0" for="remember">
                                                                               Remember me
                                                                             </label>
                                                                         </div>
                                                                         <div><a href="#" class="small text-right">Lost password?</a></div>
                                                                     </div>
                                                                 </div>
-                                                                <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+                                                                <div class="d-grid">
+                                                                    <button type="submit" class="btn btn-dark">Sign in</button>
+                                                                </div>
                                                             </form>
                                                             <div class="mt-3 mb-4 text-center">
-                                                                <span class="font-weight-normal">or login with</span>
+                                                                <span class="fw-normal">or login with</span>
                                                             </div>
                                                             <div class="d-flex justify-content-center my-4">
-                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook me-2" type="button" aria-label="facebook button" title="facebook button">
                                                                     <span aria-hidden="true" class="fab fa-facebook-f"></span>
                                                                 </a>
-                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-twitter me-2" type="button" aria-label="twitter button" title="twitter button">
                                                                     <span aria-hidden="true" class="fab fa-twitter"></span>
                                                                 </a>
                                                                 <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
                                                                     <span aria-hidden="true" class="fab fa-github"></span>
                                                                 </a>
                                                             </div>
-                                                            <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
-                                                                <span class="font-weight-normal">
+                                                            <div class="d-flex justify-content-center align-items-center mt-4">
+                                                                <span class="fw-normal">
                                                                     Not registered?
-                                                                    <a href="#" class="font-weight-bold">Create account</a>
+                                                                    <a href="#" class="fw-bold">Create account</a>
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -200,18 +203,18 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <!-- Button Modal -->
-                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-form-signup">Sign Up</button>
+                                    <button type="button" class="btn btn-block btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#modal-form-signup">Sign Up</button>
                                     <!-- Modal Content -->
                                     <div class="modal fade" id="modal-form-signup" tabindex="-1" role="dialog" aria-labelledby="modal-form-signup" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-body p-0">
-                                                    <div class="card p-4">
-                                                        <button type="button" class="btn-close ml-auto" data-dismiss="modal" aria-label="Close"></button>
+                                                    <div class="card p-3 p-lg-4">
+                                                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         <div class="card-header border-0 text-center pb-0">
                                                             <h2 class="mb-0 h5">Create Account</h2>                               
                                                         </div>
-                                                        <div class="card-body">
+                                                        <div class="card-body p-0 p-lg-3">
                                                             <form action="#">
                                                                 <!-- Form -->
                                                                 <div class="form-group mb-4">
@@ -243,31 +246,33 @@
                                                                     <!-- End of Form -->
                                                                     <div class="form-check mb-4">
                                                                         <input class="form-check-input" type="checkbox" value="" id="terms">
-                                                                        <label class="form-check-label" for="terms">
+                                                                        <label class="form-check-label mb-0" for="terms">
                                                                             I agree to the <a href="#">terms and conditions</a>
                                                                         </label>
                                                                     </div>
                                                                 </div>
-                                                                <button type="submit" class="btn btn-block btn-primary">Sign up</button>
+                                                                <div class="d-grid">
+                                                                    <button type="submit" class="btn btn-dark">Sign up</button>
+                                                                </div>
                                                             </form>
                                                             <div class="mt-3 mb-4 text-center">
-                                                                <span class="font-weight-normal">or</span>
+                                                                <span class="fw-normal">or</span>
                                                             </div>
                                                             <div class="d-flex justify-content-center my-4">
-                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook me-2" type="button" aria-label="facebook button" title="facebook button">
                                                                     <span aria-hidden="true" class="fab fa-facebook-f"></span>
                                                                 </a>
-                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
+                                                                <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-twitter me-2" type="button" aria-label="twitter button" title="twitter button">
                                                                     <span aria-hidden="true" class="fab fa-twitter"></span>
                                                                 </a>
                                                                 <a href="#" class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
                                                                     <span aria-hidden="true" class="fab fa-github"></span>
                                                                 </a>
                                                             </div>
-                                                            <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
-                                                                <span class="font-weight-normal">
+                                                            <div class="d-flex justify-content-center align-items-center mt-4">
+                                                                <span class="fw-normal">
                                                                     Already have an account?
-                                                                    <a href="#" class="font-weight-bold">Login here</a>
+                                                                    <a href="#" class="fw-bold">Login here</a>
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -280,7 +285,7 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <!-- Button Modal -->
-                                    <button type="button" class="btn btn-block btn-tertiary mb-3" data-toggle="modal" data-target="#modal-achievement">Achievement</button>
+                                    <button type="button" class="btn btn-block btn-tertiary mb-3" data-bs-toggle="modal" data-bs-target="#modal-achievement">Achievement</button>
                                     <!-- Modal Content -->
                                     <div class="modal fade" id="modal-achievement" tabindex="-1" role="dialog" aria-labelledby="modal-achievement" aria-hidden="true">
                                         <div class="modal-dialog modal-tertiary modal-dialog-centered" role="document">
@@ -290,18 +295,16 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="py-3 px-5 text-center">
-                                                        <span class="modal-icon display-1"><span class="fas fa-medal"></span></span>
+                                                        <span class="modal-icon display-1 text-white"><span class="fas fa-medal"></span></span>
                                                         <h2 class="h3 modal-title mb-3 text-white">Author Level 5</h2>
                                                         <p class="mb-4 text-white">One Thousand Dollars! Well done mate - heads are turning your way.</p>
-                                                        <div class="progress-wrapper">
-                                                            <div class="progress">
-                                                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
+                                                        <div class="progress mb-0">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="modal-footer d-flex justify-content-center">
-                                                    <button type="button" class="btn btn-sm btn-white text-tertiary" data-dismiss="modal">Awesome!</button>
+                                                <div class="modal-footer d-flex justify-content-center pt-0 pb-3">
+                                                    <button type="button" class="btn btn-sm btn-white text-tertiary" data-bs-dismiss="modal">Awesome!</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -310,13 +313,13 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <!-- Button Modal -->
-                                    <button type="button" class="btn btn-block btn-primary mb-3" data-toggle="modal" data-target="#modal-subscribe">Subscribe</button>
+                                    <button type="button" class="btn btn-block btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#modal-subscribe">Subscribe</button>
                                     <!-- Modal Content -->
                                     <div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="modal-subscribe" aria-hidden="true">
                                         <div class="modal-dialog modal-tertiary modal-dialog-centered modal-lg" role="document">
                                             <div class="modal-content bg-dark text-white">
                                                 <div class="modal-header">
-                                                    <button type="button" class="btn-close btn-close-white text-white" data-dismiss="modal" aria-label="Close"></button>
+                                                    <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body text-center py-3">
                                                     <span class="modal-icon display-1"><span class="fas fa-envelope-open-text"></span></span>
@@ -324,9 +327,9 @@
                                                     <p class="mb-4 lead">Get exclusive access to freebies, premium products and news.</p>
                                                     <div class="form-group px-lg-5">
                                                         <div class="d-flex mb-3 justify-content-center">
-                                                            <input type="text" id="subscribe" class="mr-sm-1 mb-2 mb-sm-0 form-control" placeholder="example@company.com">
+                                                            <input type="text" id="subscribe" class="me-sm-1 mb-sm-0 form-control form-control-lg" placeholder="example@company.com">
                                                             <div>
-                                                                <button type="submit" class="ml-2 btn btn-lg btn-tertiary">Subscribe</button>
+                                                                <button type="submit" class="ms-2 btn large-form-btn btn-tertiary">Subscribe</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -349,7 +352,7 @@
             </div>
             @@include('./dashboard/_footer.html', {
                 "path": "../..",
-                "classes": "bg-primary text-white"
+                "classes": "bg-dark text-white"
             })
         </main>
 

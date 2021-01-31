@@ -71,25 +71,4 @@
     top: -2px;
 }
 
-@include media-breakpoint-up(sm){
-    .effect-img-2 {
-        position: absolute;
-        right: 5rem;
-        top: 19%;
-        z-index: 2;
-        margin: 0;
-    }
 
-    .effect-img-1, .effect-img-2 {
-        margin: 0 0 3rem;
-        width: 350px;
-        height: auto;
-    }
-}
-
-@include media-breakpoint-down(md){
-    .effect-img-2{
-        right:.425rem;
-        top:0;
-    }
-}

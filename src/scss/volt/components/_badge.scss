@@ -78,15 +78,15 @@
 
 .pixel-pro-badge{
     position: relative;
-    font-size: 1.25rem;
+    font-size: $font-size-sm;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
-    right: -20px;
-    padding: 5px 14px;
-    top: -46px;
+    right: -11px;
+    padding: 4px 12px;
+    top: -30px;
     background: $white;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow-sm;
+    @include border-radius($border-radius-sm);
+    @include box-shadow($box-shadow-sm);
     @include media-breakpoint-down(sm){
         font-size: $font-size-base;
         right: -13px;

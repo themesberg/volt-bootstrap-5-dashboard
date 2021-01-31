@@ -13,10 +13,9 @@
 }
 
 .progress {
-    height: 4px;
+    height: 6px;
     margin-bottom: $spacer;
     overflow: hidden;
-    border-radius: $border-radius-sm;
     background-color: $progress-bg;
     font-size: $font-size-xs;
     font-weight: $font-weight-bold;

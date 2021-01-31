@@ -46,6 +46,13 @@ a, .text-action {
 	font-size: $font-size-sm;
 }
 
+// underline on hover
+
+.hover\:underline{
+	&:hover{
+		text-decoration: underline;
+	}
+}
 // Headings
 
 .heading {

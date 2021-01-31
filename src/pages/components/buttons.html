@@ -1,7 +1,7 @@
 <!--
 
 =========================================================
-* Volt Pro - Premium Bootstrap 5 Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
 * Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
@@ -21,11 +21,16 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Premium Bootstrap Dashboard - Buttons"
+        "title": "Volt Free Bootstrap Dashboard - Buttons"
     })
 </head>
 
 <body>
+
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics-body.html')
+        }
 
         @@include('./dashboard/_nav.html', {
             "path": "../.."
@@ -43,10 +48,6 @@
                 "path": "../.."
             })
 
-            @@include('./_preloader.html', {
-                "path": "../.."
-            })
-
             <div class="py-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
@@ -61,7 +62,7 @@
                         <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
                     </div>
                     <div>
-                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/buttons/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Buttons Docs</a>
+                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/buttons/" class="btn btn-outline-gray"><i class="far fa-question-circle me-1"></i> Buttons Docs</a>
                     </div>
                 </div>
             </div>
@@ -74,19 +75,19 @@
                                     <h2 class="h5">Sizes</h2>
                                 </div>
                                 <!--Buttons-->
-                                <button class="btn btn-sm btn-primary" type="button">Small</button>
-                                <button class="btn btn-primary" type="button">Regular</button>
-                                <button class="btn btn-lg btn-primary" type="button">Large Button</button>
+                                <button class="btn btn-sm btn-dark" type="button">Small</button>
+                                <button class="btn btn-dark" type="button">Regular</button>
+                                <button class="btn btn-lg btn-dark" type="button">Large Button</button>
 
-                                <h2 class="h5 font-weight-bold mt-4 mb-3">With Icons</h2>
-                                <button class="btn btn-primary" type="button"><span class="far fa-paper-plane mr-2"></span>Left Icon</button>
-                                <button class="btn btn-primary" type="button">Right Icon<span class="fas fa-angle-right ml-2"></span> </button>
+                                <h2 class="h5 fw-bold mt-4 mb-3">With Icons</h2>
+                                <button class="btn btn-dark" type="button"><span class="far fa-paper-plane me-2"></span>Left Icon</button>
+                                <button class="btn btn-dark" type="button">Right Icon<span class="fas fa-angle-right ms-2"></span> </button>
 
-                                <h2 class="h5 font-weight-bold mt-4 mb-3">Dropdown buttons</h2>
+                                <h2 class="h5 fw-bold mt-4 mb-3">Dropdown buttons</h2>
                                 <div class="dropdown">
-                                    <div class="btn-group mr-2 mb-2">
-                                        <button type="button" class="btn btn-primary">Primary</button>
-                                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="btn-group me-2 mb-2">
+                                        <button type="button" class="btn btn-dark">Primary</button>
+                                        <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class="fas fa-angle-down dropdown-arrow"></span>
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
@@ -98,8 +99,8 @@
                                             <a class="dropdown-item" href="#">Separated link</a>
                                         </div>
                                     </div>
-                                    <div class="btn-group mb-2 mr-2">
-                                        <button type="button" class="btn btn-tertiary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="btn-group mb-2 me-2">
+                                        <button type="button" class="btn btn-tertiary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class="fas fa-angle-down dropdown-arrow"></span>
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
@@ -116,14 +117,14 @@
                                     <h2 class="h5">Link Buttons</h2>
                                 </div>
                                 <!--Buttons-->
-                                <a href="#" class="text-default font-weight-bold mr-3">Primary</a>
-                                <a href="#" class="text-primary mr-3">
-                                    <span class="mr-1"><span class="fas fa-link"></span></span>
+                                <a href="#" class="text-default fw-bold me-3">Primary</a>
+                                <a href="#" class="text-primary me-3">
+                                    <span class="me-1"><span class="fas fa-link"></span></span>
                                     Icon Left
                                 </a>
                                 <a href="#" class="text-primary">
                                     Icon Right
-                                    <span class="ml-1"><span class="fas fa-link"></span></span>
+                                    <span class="ms-1"><span class="fas fa-link"></span></span>
                                 </a>
                                 <!--End of Buttons-->
                                 <!-- Button colors -->
@@ -131,10 +132,10 @@
                                     <h2 class="h5">Choose your color</h2>
                                 </div>
                                 <div class="mb-3 mt-5">
-                                    <small class="text-uppercase font-weight-bold">Main</small>
+                                    <small class="text-uppercase fw-bold">Main</small>
                                 </div>
                                 <!--Buttons-->
-                                <button class="btn btn-primary" type="button">Primary</button>
+                                <button class="btn btn-dark" type="button">Primary</button>
                                 <button class="btn btn-secondary" type="button">Secondary</button>
                                 <button class="btn btn-tertiary" type="button">Tertiary</button>
                                 <button class="btn btn-info" type="button">Info</button>
@@ -147,7 +148,7 @@
                                 <button class="btn btn-white" type="button">White</button>
                                 <!--End Of Buttons-->
                                 <div class="mb-3 mt-5">
-                                    <small class="text-uppercase font-weight-bold">Outline</small>
+                                    <small class="text-uppercase fw-bold">Outline</small>
                                 </div>
                                 <!--Buttons-->
                                 <button class="btn btn-outline-primary" type="button">Primary</button>
@@ -160,7 +161,7 @@
                                 <button class="btn btn-outline-gray" type="button">Gray</button>
                                 <!--End Of Buttons-->
                                 <div class="mb-3 mt-5">
-                                    <small class="text-uppercase font-weight-bold">Round Outline</small>
+                                    <small class="text-uppercase fw-bold">Round Outline</small>
                                 </div>
                                 <!--Buttons-->
                                 <button class="btn btn-pill btn-outline-primary" type="button">Primary</button>
@@ -174,17 +175,17 @@
                                 <!--End Of Buttons-->
                                 <!-- Button links -->
                                 <div class="mb-3 mt-5">
-                                    <small class="text-uppercase font-weight-bold">Links</small>
+                                    <small class="text-uppercase fw-bold">Links</small>
                                 </div>
                                 <!--Buttons-->
-                                <a href="#" class="text-default mr-3">Default</a>
-                                <a href="#" class="text-primary mr-3">Primary</a>
-                                <a href="#" class="text-secondary mr-3">Secondary</a>
-                                <a href="#" class="text-tertiary mr-3">Tertiary</a>
-                                <a href="#" class="text-info mr-3">Info</a>
-                                <a href="#" class="text-success mr-3">Success</a>
-                                <a href="#" class="text-danger mr-3">Danger</a>
-                                <a href="#" class="text-dark mr-3">Dark</a>
+                                <a href="#" class="text-default me-3">Default</a>
+                                <a href="#" class="text-primary me-3">Primary</a>
+                                <a href="#" class="text-secondary me-3">Secondary</a>
+                                <a href="#" class="text-tertiary me-3">Tertiary</a>
+                                <a href="#" class="text-info me-3">Info</a>
+                                <a href="#" class="text-success me-3">Success</a>
+                                <a href="#" class="text-danger me-3">Danger</a>
+                                <a href="#" class="text-dark me-3">Dark</a>
                                 <a href="#" class="text-gray">Gray</a>
                                 <!--End Of Buttons-->
                             
@@ -192,40 +193,40 @@
                                 <div class="col-lg-4 col-md-6">
                                     <!-- Button Social -->
                                     <div class="mb-4 mt-5">
-                                        <h2 class="h5 font-weight-bold">Social Buttons</h2>
+                                        <h2 class="h5 fw-bold">Social Buttons</h2>
                                     </div>
                                     <button class="btn btn-facebook" type="button">
-                                        <span class="mr-1"><span class="fab fa-facebook-f"></span></span>
+                                        <span class="me-1"><span class="fab fa-facebook-f"></span></span>
                                         Login with Facebook
                                     </button>
                                     <br>
                                     <button class="btn btn-pinterest" type="button">
-                                        <span class="mr-1"><span class="fab fa-pinterest-p"></span></span>
+                                        <span class="me-1"><span class="fab fa-pinterest-p"></span></span>
                                         Share on Pinterest
                                     </button>
                                     <br>
                                     <button class="btn btn-youtube" type="button">
-                                        <span class="mr-1"><span class="fab fa-youtube"></span></span>
+                                        <span class="me-1"><span class="fab fa-youtube"></span></span>
                                         Watch on YouTube
                                     </button>
                                     <br>
                                     <button class="btn btn-github" type="button">
-                                        <span class="mr-1"><span class="fab fa-github-alt"></span></span>
+                                        <span class="me-1"><span class="fab fa-github-alt"></span></span>
                                         Login with GitHub
                                     </button>
                                     <br>
                                     <button class="btn btn-twitch" type="button">
-                                        <span class="mr-1"><span class="fab fa-twitch"></span></span>
+                                        <span class="me-1"><span class="fab fa-twitch"></span></span>
                                         Subscribe Now
                                     </button>
                                     <br>
                                     <button class="btn btn-paypal" type="button">
-                                        <span class="mr-1"><span class="fab fa-paypal"></span></span>
+                                        <span class="me-1"><span class="fab fa-paypal"></span></span>
                                         Donate with PayPal
                                     </button>
                                     <br>
                                     <button class="btn btn-behance" type="button">
-                                        <span class="mr-1"><span class="fab fa-behance"></span></span>
+                                        <span class="me-1"><span class="fab fa-behance"></span></span>
                                         Follow us
                                     </button>
                                 </div>
@@ -263,7 +264,7 @@
             </div>
             @@include('./dashboard/_footer.html', {
                 "path": "../..",
-                "classes": "bg-primary text-white"
+                "classes": "bg-dark text-white"
             })
         </main>
 

@@ -1,11 +1,12 @@
 <!--
 
 =========================================================
-* Volt - Bootstrap 5 Admin Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
 * Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
 
@@ -20,11 +21,16 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Bootstrap 5 Dashboard - Forms"
+        "title": "Volt Free Bootstrap Dashboard - Forms"
     })
 </head>
 
-<body class="bg-soft">
+<body>
+
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics-body.html')
+        }
 
         @@include('./dashboard/_nav.html', {
             "path": "../.."
@@ -56,7 +62,7 @@
                         <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
                     </div>
                     <div>
-                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/forms/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Forms Docs</a>
+                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/forms/" class="btn btn-outline-gray"><i class="far fa-question-circle me-1"></i> Forms Docs</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +123,7 @@
                                     <div class="my-4">
                                         <label for="textarea">Example textarea</label>
                                         <textarea class="form-control" placeholder="Enter your message..." id="textarea" rows="4"></textarea>
-                                      </div>
+                                    </div>
                                     <!-- End of Form -->
                                     <!-- Form -->
                                     <div class="mb-4">
@@ -151,7 +157,7 @@
                                     <!-- End of Form -->
                                     <!-- Form -->
                                     <div class="mb-4">
-                                        <label class="my-1 mr-2" for="country">Country</label>
+                                        <label class="my-1 me-2" for="country">Country</label>
                                         <select class="form-select" id="country" aria-label="Default select example">
                                             <option selected>Open this select menu</option>
                                             <option value="1">One</option>
@@ -161,12 +167,9 @@
                                     </div>
                                     <!-- End of Form -->
                                     <!-- Form -->
-                                    <div class="form-file mb-3">
-                                        <input type="file" class="form-file-input" id="customFile">
-                                        <label class="form-file-label" for="customFile">
-                                            <span class="form-file-text">Choose file...</span>
-                                            <span class="form-file-button">Browse</span>
-                                        </label>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Default file input example</label>
+                                        <input class="form-control" type="file" id="formFile">
                                     </div>
                                     <!-- End of Form -->
                                 </div>
@@ -175,7 +178,7 @@
                                 <div class="col-lg-3 col-md-6">
                                     <!-- Checkboxes -->
                                     <div class="mb-3">
-                                        <span class="h6 font-weight-bold">Checkboxes Round</span>
+                                        <span class="h6 fw-bold">Checkboxes Round</span>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
@@ -217,7 +220,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6 mt-4 mt-md-0">
                                     <div class="mb-3">
-                                        <span class="h6 font-weight-bold">Switches</span>
+                                        <span class="h6 fw-bold">Switches</span>
                                     </div>
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
@@ -240,7 +243,7 @@
                             <div class="row justify-content-between">
                                 <div class="col-12 col-md-5">
                                     <div class="mb-6">
-                                        <span class="h6 font-weight-bold">Simple Range Slider</span>
+                                        <span class="h6 fw-bold">Simple Range Slider</span>
                                     </div>
                                     <!-- Simple slider -->
                                     <div class="input-slider-container">
@@ -257,7 +260,7 @@
                                 <!-- Range slider -->
                                 <div class="col-12 col-md-5">
                                     <div class="mb-6">
-                                        <span class="h6 font-weight-bold">Range Slider with numbers</span>
+                                    <span class="h6 fw-bold">Range Slider with numbers</span>
                                     </div>
                                     <!-- Range slider container -->
                                     <div id="input-slider-range" data-range-value-min="100" data-range-value-max="500"></div>
@@ -280,14 +283,14 @@
 
             @@include('./dashboard/_footer.html', {
                 "path": "../..",
-                "classes": "bg-primary text-white"
+                "classes": "bg-dark text-white"
             })
         </main>
 
     @@include('./_scripts.html', {
         "path": "../.."
     })
-
+    
 </body>
 
 </html>

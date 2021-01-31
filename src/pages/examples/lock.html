@@ -1,7 +1,7 @@
 <!--
 
 =========================================================
-* Volt Pro - Premium Bootstrap 5 Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
 * Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
@@ -21,23 +21,29 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Premium Bootstrap Dashboard - Lock Page"
+        "title": "Volt Free Bootstrap Dashboard - Lock Page"
     })
 </head>
 
 <body>
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    @@if (environment === 'production') {
+        @@include('./_analytics-body.html')
+    }
+
     <main>
 
         <!-- Section -->
         <section class="vh-lg-100 bg-soft d-flex align-items-center my-4">
             <div class="container">
-                <p class="text-center"><a href="../dashboard/dashboard.html" class="text-gray-700"><i class="fas fa-angle-left mr-2"></i> Back to homepage</a></p>
+                <p class="text-center"><a href="../dashboard/dashboard.html" class="text-gray-700"><i class="fas fa-angle-left me-2"></i> Back to homepage</a></p>
                 <div class="row justify-content-center form-bg-image" data-background-lg="../../assets/img/illustrations/signin.svg">
                     <div class="col-12 d-flex align-items-center justify-content-center">
                         <div class="bg-white shadow-soft border border-light rounded p-4 p-lg-5 w-100 fmxw-500">
                             <div class="text-center text-md-center mb-4 mt-md-0">
                                 <div class="user-avatar large-avatar mx-auto mb-3 border-dark p-2"><img class="rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg"></div>
-                                <h1 class="mb-3 h3">Bonnie Green</h1>
+                                <h1 class="h3">Bonnie Green</h1>
                                 <p class="text-gray">Better to be safe than sorry.</p>
                             </div>
                             <form class="mt-5">
@@ -46,11 +52,10 @@
                                     <div class="input-group">
                                         <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
                                         <input type="password" placeholder="Password" class="form-control" id="exampleInputPasswordCard4">
-                                        <span class="input-group-text"><span class="far fa-eye"></span></span>
                                     </div>  
                                 </div>
-                                <div class="mt-3">
-                                    <button type="submit" class="btn btn-block btn-primary">Unlock</button>
+                                <div class="d-grid mt-3">
+                                    <button type="submit" class="btn btn-dark">Unlock</button>
                                 </div>
                             </form>
                         </div>

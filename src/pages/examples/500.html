@@ -1,7 +1,7 @@
 <!--
 
 =========================================================
-* Volt Pro - Premium Bootstrap 5 Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
 * Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
@@ -21,11 +21,17 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Premium Bootstrap Dashboard - 500 Server Error Page"
+        "title": "Volt Free Bootstrap Dashboard - 500 Server Error Page"
     })
 </head>
 
 <body>
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    @@if (environment === 'production') {
+        @@include('./_analytics-body.html')
+    }
+
     <main>
         <section class="vh-100 d-flex align-items-center justify-content-center">
             <div class="container">
@@ -33,7 +39,7 @@
                     <div class="col-12 col-lg-5 order-2 order-lg-1 text-center text-lg-left">
                         <h1 class="mt-5">Something has gone <span class="text-primary">seriously</span> wrong</h1>
                         <p class="lead my-4">It's always time for a coffee break. We should be back by the time you finish your coffee.</p>
-                        <a class="btn btn-primary animate-hover" href="../dashboard/dashboard.html"><i class="fas fa-chevron-left mr-3 pl-2 animate-left-3"></i>Go back home</a>
+                        <a class="btn btn-dark animate-hover" href="../dashboard/dashboard.html"><i class="fas fa-chevron-left me-3 ps-2 animate-left-3"></i>Go back home</a>
                     </div>
                     <div class="col-12 col-lg-7 order-1 order-lg-2 text-center d-flex align-items-center justify-content-center">
                         <img class="img-fluid w-75" src="../../assets/img/illustrations/500.svg" alt="500 Server Error">

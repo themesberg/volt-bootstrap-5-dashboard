@@ -189,79 +189,6 @@
 
 }
 
-// Theme color variants
-// eg. navbar-theme-primary, navbar-theme-secondary
-@each $color, $value in $theme-colors {
-    .navbar-theme-#{$color}:not(.headroom) {
-        background-color: $value;
-    }
-
-    .navbar-theme-#{$color}.navbar-light:not(.headroom) .navbar-nav {
-        .dropdown-item,
-        .list-group-item {
-            &.active, &:hover {
-                color: $primary;
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-
-            .nav-link, 
-            .show > .nav-link, 
-            .dropdown-item,
-            .list-group-item {
-                &, &:focus, &.active, &:hover {
-                    color: $primary;
-                }
-            }
-        }
-    }
-    
-    .navbar-theme-#{$color} .navbar-nav {
-
-        .dropdown-item,
-        .list-group-item {
-            &.active, &:hover {
-                color: $primary;
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-
-            .nav-link, 
-            .show > .nav-link, 
-            .dropdown-item,
-            .list-group-item {
-                &, &:focus, &.active, &:hover {
-                    color: $value;
-                    background: transparent;
-                }
-
-                &.disabled {
-                    color: $navbar-light-disabled-color;
-                }
-            }
-
-            .dropdown .dropdown-menu {
-                padding: 0;
-            }
-
-            .dropdown-item {
-                padding-right: 0;
-            }
-
-            .dropdown:not(.mega-dropdown) {
-                .dropdown-item {
-                    padding-left: 0;
-                }
-            }
-
-        }
-
-    }
-
-}
-
 .dropdown-menu {
     top: 100%;
     span{
@@ -313,7 +240,7 @@
             border-radius: $dropdown-border-radius;
         }
 
-        .dropdown-menu-right {
+        .dropdown-menu-end {
             &:before {
                 right: 20px;
                 left: auto;
@@ -481,4 +408,14 @@
         right: -5px;
         top: -5px;
     }
+}
+
+
+// Theme color variants
+// eg. navbar-theme-primary, navbar-theme-secondary
+@each $color, $value in $navbar-colors {
+    .navbar-theme-#{$color}:not(.headroom) {
+        background-color: $value;
+    }
+
 }

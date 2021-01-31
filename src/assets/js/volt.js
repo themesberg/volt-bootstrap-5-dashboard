@@ -1,23 +1,63 @@
 /*
 
 =========================================================
-* Volt - Bootstrap 5 Admin Dashboard
+* Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
 * Copyright 2020 Themesberg (https://www.themesberg.com)
 
 * Designed and coded by https://themesberg.com
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal. Contact us if you want to remove it.
 
 */
 
 "use strict";
 const d = document;
 d.addEventListener("DOMContentLoaded", function(event) {
+
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-primary me-3',
+            cancelButton: 'btn btn-gray'
+        },
+        buttonsStyling: false
+    });
+
+    var themeSettingsEl = document.getElementById('theme-settings');
+    var themeSettingsExpandEl = document.getElementById('theme-settings-expand');
+
+    if(themeSettingsEl) {
+
+        var themeSettingsCollapse = new bootstrap.Collapse(themeSettingsEl, {
+            show: true,
+            toggle: false
+        });
+
+        if (window.localStorage.getItem('settings_expanded') === 'true') {
+            themeSettingsCollapse.show();
+            themeSettingsExpandEl.classList.remove('show');
+        } else {
+            themeSettingsCollapse.hide();
+            themeSettingsExpandEl.classList.add('show');
+        }
+        
+        themeSettingsEl.addEventListener('hidden.bs.collapse', function () {
+            themeSettingsExpandEl.classList.add('show');
+            window.localStorage.setItem('settings_expanded', false);
+        });
+
+        themeSettingsExpandEl.addEventListener('click', function () {
+            themeSettingsExpandEl.classList.remove('show');
+            window.localStorage.setItem('settings_expanded', true);
+            setTimeout(function() {
+                themeSettingsCollapse.show();
+            }, 300);
+        });
+    }
 
     // options
     const breakpoints = {
@@ -26,17 +66,6 @@ d.addEventListener("DOMContentLoaded", function(event) {
         lg: 960,
         xl: 1140
     };
-
-    var preloader = d.querySelector('.preloader');
-    if(preloader) {
-        setTimeout(function() {
-            preloader.classList.add('show');
-
-            setTimeout(function() {
-                d.querySelector('.loader-element').classList.add('hide');
-            }, 200);
-        }, 1000);
-    }
 
     var sidebar = document.getElementById('sidebarMenu')
     if(sidebar && d.body.clientWidth < breakpoints.lg) {
@@ -96,17 +125,19 @@ d.addEventListener("DOMContentLoaded", function(event) {
         el.style.color = 'url(' + el.getAttribute('data-color') + ')';
     });
 
-    // Tooltips
-    var tooltipTriggerList = [].slice.call(d.querySelectorAll('[data-toggle="tooltip"]'))
+    //Tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
+    return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 
+
     // Popovers
-    var popoverTriggerList = [].slice.call(d.querySelectorAll('[data-toggle="popover"]'))
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl)
+      return new bootstrap.Popover(popoverTriggerEl)
     })
+    
 
     // Datepicker
     var datepickers = [].slice.call(d.querySelectorAll('[data-datepicker]'))
@@ -281,6 +312,69 @@ d.addEventListener("DOMContentLoaded", function(event) {
 
     if(d.querySelector('.current-year')){
         d.querySelector('.current-year').textContent = new Date().getFullYear();
+    }
+
+    // Glide JS
+
+    if (d.querySelector('.glide')) {
+        new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 3
+          }).mount();
+    }
+
+    if (d.querySelector('.glide-testimonials')) {
+        new Glide('.glide-testimonials', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 1,
+            autoplay: 2000
+          }).mount();
+    }
+
+    if (d.querySelector('.glide-clients')) {
+        new Glide('.glide-clients', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 5,
+            autoplay: 2000
+          }).mount();
+    }
+
+    if (d.querySelector('.glide-news-widget')) {
+        new Glide('.glide-news-widget', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 1,
+            autoplay: 2000
+          }).mount();
+    }
+
+    if (d.querySelector('.glide-autoplay')) {
+        new Glide('.glide-autoplay', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 3,
+            autoplay: 2000
+          }).mount();
+    }
+
+    // Pricing countup
+    var billingSwitchEl = d.getElementById('billingSwitch');
+    if(billingSwitchEl) {
+        const countUpStandard = new countUp.CountUp('priceStandard', 99, { startVal: 199 });
+        const countUpPremium = new countUp.CountUp('pricePremium', 199, { startVal: 299 });
+        
+        billingSwitchEl.addEventListener('change', function() {
+            if(billingSwitch.checked) {
+                countUpStandard.start();
+                countUpPremium.start();
+            } else {
+                countUpStandard.reset();
+                countUpPremium.reset();
+            }
+        });
     }
 
 });

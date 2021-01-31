@@ -1,7 +1,7 @@
 <!--
 
 =========================================================
-* Volt Pro - Premium Bootstrap 5 Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
 * Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
@@ -21,11 +21,17 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Premium Bootstrap Dashboard - 404 Not Found Page"
+        "title": "Volt Free Bootstrap Dashboard - 404 Not Found Page"
     })
 </head>
 
 <body>
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    @@if (environment === 'production') {
+        @@include('./_analytics-body.html')
+    }
+
     <main>
         <section class="vh-100 d-flex align-items-center justify-content-center">
             <div class="container">
@@ -33,10 +39,10 @@
                     <div class="col-12 text-center d-flex align-items-center justify-content-center">
                         <div>
                             <img class="img-fluid w-75" src="../../assets/img/illustrations/404.svg" alt="404 not found">
-                            <h1 class="mt-5">Page not <span class="font-weight-bolder text-primary">found</span></h1>
+                            <h1 class="mt-5">Page not <span class="fw-bolder text-primary">found</span></h1>
                             <p class="lead my-4">Oops! Looks like you followed a bad link. If you think this is a
                                 problem with us, please tell us.</p>
-                            <a class="btn btn-primary animate-hover" href="../dashboard/dashboard.html"><i class="fas fa-chevron-left mr-3 pl-2 animate-left-3"></i>Go back home</a>
+                            <a class="btn btn-dark animate-hover" href="../dashboard/dashboard.html"><i class="fas fa-chevron-left me-3 ps-2 animate-left-3"></i>Go back home</a>
                         </div>
                     </div>
                 </div>

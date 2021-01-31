@@ -18,7 +18,7 @@
 			border-top-color: $background;
 		}
 	}
-	&.bs-popover-right {
+	&.bs-popover-end {
 		.arrow::after {
 			border-right-color: $background;
 		}
@@ -28,7 +28,7 @@
 			border-bottom-color: $background;
 		}
 	}
-	&.bs-popover-left {
+	&.bs-popover-start {
 		.arrow::after {
 			border-left-color: $background;
 		}

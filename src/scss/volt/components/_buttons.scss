@@ -10,10 +10,18 @@
         padding: 0.65rem 1.25rem;
     }
     &.btn-xs{
-        padding: 0.175rem 0.45rem;
-        font-size: 0.7rem;
+        padding: .2rem 0.35rem;
+        font-size: 0.55rem;
+        box-shadow: none;
+    }
+    &.large-form-btn{
+        padding: 1.2rem 1rem;
+    }
+    &.dashed-outline {
+        border-style: dashed;
     }
 }
+
 
 .btn-icon-only {
     width: 2.575rem;
@@ -31,6 +39,27 @@
         width: 2rem;
         height: 2rem;
     }
+}
+
+.btn-upgrade-pro {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 190px;
+
+    @include media-breakpoint-up(md) {
+        left: 35px;
+    }
+}
+
+// Fix for darken background color
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        &:hover{
+           background-color:  darken( $value, 5% );
+           border-color: darken( $value, 5% );
+        }
+    }   
 }
 
 // Brand (social) buttons 
@@ -53,16 +82,5 @@
 				color: $value;
 			}
 		}
-    }
-}
-
-.btn-upgrade-pro {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 190px;
-
-    @include media-breakpoint-up(md) {
-        left: 35px;
     }
 }

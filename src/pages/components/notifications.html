@@ -1,11 +1,12 @@
 <!--
 
 =========================================================
-* Volt - Bootstrap 5 Admin Dashboard
+* Volt Free - Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
 * Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
 
@@ -20,11 +21,16 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Bootstrap 5 Dashboard - Notifications"
+        "title": "Volt Free Bootstrap Dashboard - Notifications"
     })
 </head>
 
-<body class="bg-soft">
+<body>
+
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics-body.html')
+        }
 
         @@include('./dashboard/_nav.html', {
             "path": "../.."
@@ -59,17 +65,33 @@
             </div>
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h2 class="h4 mb-0">Sweet alerts</h2>
+                            <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/sweet-alerts/" class="btn btn-outline-gray"><i class="far fa-question-circle me-1"></i> Documentation</a>
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-dark" id="basicAlert">Basic alert</button>
+                            <button class="btn btn-info" id="infoAlert">Info alert</button>
+                            <button class="btn btn-success" id="successAlert">Success alert</button>
+                            <button class="btn btn-danger" id="dangerAlert">Danger alert</button>
+                            <button class="btn btn-warning" id="warningAlert">Warning alert</button>
+                            <button class="btn btn-gray" id="questionAlert">Question</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h2 class="h4 mb-0">Notyf</h2>
-                            <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Documentation</a>
+                            <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/" class="btn btn-outline-gray"><i class="far fa-question-circle me-1"></i> Documentation</a>
                         </div>
                         <div class="card-body">
                             <button class="btn btn-info" id="notifyTopLeft">Top left info</button>
                             <button class="btn btn-danger" id="notifyTopRight">Top right danger</button>
                             <button class="btn btn-warning" id="notifyBottomLeft">Bottom left warning</button>
-                            <button class="btn btn-primary" id="notifyBottomRight">Primary bottom right</button>
+                            <button class="btn btn-dark" id="notifyBottomRight">Primary bottom right</button>
                         </div>
                     </div>
                 </div>
@@ -77,7 +99,7 @@
 
             @@include('./dashboard/_footer.html', {
                 "path": "../..",
-                "classes": "bg-primary text-white"
+                "classes": "bg-dark text-white"
             })
         </main>
 
@@ -87,7 +109,56 @@
 
     <script>
 
-        // Bootstrap Notify
+        // SweetAlert 2
+        document.getElementById('basicAlert').addEventListener('click', function () {
+            Swal.fire(
+                'Basic alert',
+                'You clicked the button!'
+            )
+        });
+
+        document.getElementById('infoAlert').addEventListener('click', function () {
+            Swal.fire(
+                'Info alert',
+                'You clicked the button!',
+                'info'
+            )
+        });
+
+        document.getElementById('successAlert').addEventListener('click', function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        });
+
+        document.getElementById('warningAlert').addEventListener('click', function () {
+            Swal.fire(
+                'Warning alert',
+                'You clicked the button!',
+                'warning'
+            )
+        });
+
+        document.getElementById('dangerAlert').addEventListener('click', function () {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href>Why do I have this issue?</a>'
+            })
+        });
+
+        document.getElementById('questionAlert').addEventListener('click', function () {
+            Swal.fire(
+                'The Internet?',
+                'That thing is still around?',
+                'question'
+            );
+        });
+
         document.getElementById('notifyTopLeft').addEventListener('click', function (){
             const notyf = new Notyf({
                 position: {
@@ -122,7 +193,7 @@
                 types: [
                     {
                         type: 'error',
-                        background: '#FA5151',
+                        background: '#FA5252',
                         icon: {
                             className: 'fas fa-times',
                             tagName: 'span',

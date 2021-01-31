@@ -51,7 +51,7 @@
 
 // remove the caret from Bootstrap by default
 .dropdown-toggle {
-    &:after, .dropright &:after, .dropleft &:before, .dropup &:after {
+    &:after, .dropend &:after, .dropstart &:before, .dropup &:after {
         display: none;
     }
 }

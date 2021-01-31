@@ -27,6 +27,11 @@
 
 <body>
 
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics_body.html')
+        }
+
         @@include('./dashboard/_nav.html', {
             "path": ".."
         })
@@ -104,7 +109,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456478
                                 </a>
                             </td>
@@ -124,7 +129,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -134,7 +139,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456423
                                 </a>
                             </td>
@@ -154,7 +159,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -164,7 +169,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456420
                                 </a>
                             </td>
@@ -184,7 +189,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -194,7 +199,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456421
                                 </a>
                             </td>
@@ -214,7 +219,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -224,7 +229,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456420
                                 </a>
                             </td>
@@ -244,7 +249,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -254,7 +259,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456479
                                 </a>
                             </td>
@@ -274,7 +279,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -285,7 +290,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456478
                                 </a>
                             </td>
@@ -305,7 +310,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -315,7 +320,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     453673
                                 </a>
                             </td>
@@ -335,7 +340,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -345,7 +350,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456468
                                 </a>
                             </td>
@@ -365,7 +370,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>
@@ -375,7 +380,7 @@
                         <!-- Item -->
                         <tr>
                             <td>
-                                <a href="../invoice.html" class="fw-bold">
+                                <a href="#" class="fw-bold">
                                     456478
                                 </a>
                             </td>
@@ -395,7 +400,7 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu py-0">
-                                        <a class="dropdown-item rounded-top" href="../invoice.html"><span class="fas fa-eye me-2"></span>View Details</a>
+                                        <a class="dropdown-item rounded-top" href="#"><span class="fas fa-eye me-2"></span>View Details</a>
                                         <a class="dropdown-item" href="#"><span class="fas fa-edit me-2"></span>Edit</a>
                                         <a class="dropdown-item text-danger rounded-bottom" href="#"><span class="fas fa-trash-alt me-2"></span>Remove</a>
                                     </div>

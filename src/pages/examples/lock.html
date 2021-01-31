@@ -26,6 +26,12 @@
 </head>
 
 <body>
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    @@if (environment === 'production') {
+        @@include('./_analytics_body.html')
+    }
+
     <main>
 
         <!-- Section -->

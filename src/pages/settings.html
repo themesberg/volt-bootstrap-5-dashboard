@@ -27,6 +27,10 @@
 
 <body>
 
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics_body.html')
+        }
 
         @@include('./dashboard/_nav.html', {
             "path": ".."
@@ -216,8 +220,8 @@
                         <div class="col-12">
                             <div class="card card-body shadow-sm mb-4">
                                 <h2 class="h5 mb-4">Select profile photo</h2>
-                                <div class="d-xl-flex align-items-center">
-                                    <div>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
                                         <!-- Avatar -->
                                         <div class="user-avatar xl-avatar">
                                             <img class="rounded" src="../assets/img/team/profile-picture-3.jpg" alt="change avatar">
@@ -240,8 +244,8 @@
                         <div class="col-12 col-sm-6 col-xl-12">
                             <div class="card card-body shadow-sm mb-4">
                                 <h2 class="h5 mb-4">Select cover photo</h2>
-                                <div class="d-xl-flex align-items-center">
-                                    <div>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
                                         <!-- Avatar -->
                                         <div class="user-avatar xl-avatar">
                                             <img class="rounded" src="../assets/img/profile-cover.jpg" alt="change cover photo">

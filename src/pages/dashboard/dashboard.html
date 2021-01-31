@@ -27,6 +27,11 @@
 
 <body>
 
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+        @@if (environment === 'production') {
+            @@include('./_analytics_body.html')
+        }
+
         @@include('./dashboard/_nav.html', {
             "path": "../.."
         })
@@ -165,7 +170,7 @@
                                         <h2 class="h5">Page visits</h2>
                                         </div>
                                         <div class="col text-right">
-                                            <a href="./traffic-sources.html" class="btn btn-sm btn-secondary">See all</a>
+                                            <a href="#" class="btn btn-sm btn-secondary">See all</a>
                                         </div>
                                     </div>
                                 </div>
@@ -259,7 +264,7 @@
                             <div class="card border-light shadow-sm">
                                 <div class="card-header border-bottom border-light d-flex justify-content-between">
                                    <h2 class="h5 mb-0">Team members</h2>
-                                    <a href="../users.html" class="btn btn-sm btn-secondary">See all</a>
+                                    <a href="#" class="btn btn-sm btn-secondary">See all</a>
                                 </div>
                                 <div class="card-body">
                                     <ul class="list-group list-group-flush list my--3">
@@ -279,7 +284,7 @@
                                                 <small>Online</small>
                                             </div>
                                             <div class="col text-right">
-                                                <a href="../calendar.html" class="btn btn-sm btn-tertiary"><i class="fas fa-calendar-check me-1"></i> Invite</a>
+                                                <a href="#" class="btn btn-sm btn-tertiary"><i class="fas fa-calendar-check me-1"></i> Invite</a>
                                             </div>
                                             </div>
                                         </li>
@@ -287,7 +292,7 @@
                                             <div class="row align-items-center">
                                                 <div class="col-auto">
                                                     <!-- Avatar -->
-                                                    <a href="../users.html" class="user-avatar">
+                                                    <a href="#" class="user-avatar">
                                                         <img class="rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-2.jpg">
                                                     </a>
                                                 </div>
@@ -299,7 +304,7 @@
                                                     <small>In a meeting</small>
                                                 </div>
                                                 <div class="col text-right">
-                                                    <a href="../single-message.html" class="btn btn-sm btn-tertiary"><i class="fas fa-comment me-1"></i> Message</a>
+                                                    <a href="#" class="btn btn-sm btn-tertiary"><i class="fas fa-comment me-1"></i> Message</a>
                                                 </div>
                                             </div>
                                         </li>
@@ -319,7 +324,7 @@
                                                     <small>Offline</small>
                                                 </div>
                                                 <div class="col text-right">
-                                                    <a href="../calendar.html" class="btn btn-sm btn-tertiary"><i class="fas fa-calendar-check me-1"></i> Invite</a>
+                                                    <a href="#" class="btn btn-sm btn-tertiary"><i class="fas fa-calendar-check me-1"></i> Invite</a>
                                                 </div>
                                             </div>
                                         </li>
@@ -339,7 +344,7 @@
                                                 <small>Online</small>
                                                 </div>
                                                 <div class="col text-right">
-                                                    <a href="../single-message.html" class="btn btn-sm btn-tertiary"><i class="fas fa-comment me-1"></i> Message</a>
+                                                    <a href="#" class="btn btn-sm btn-tertiary"><i class="fas fa-comment me-1"></i> Message</a>
                                                 </div>
                                             </div>
                                         </li>

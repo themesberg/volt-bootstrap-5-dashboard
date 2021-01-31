@@ -134,6 +134,12 @@
 .theme-settings-expand {
     right: 15px;
     bottom: 0;
+    height: 0;
+    @include transition(.3s height);
+
+    &.show {
+        height: 40px;
+    }
 
     &:hover {
         background: $gray-200;

@@ -1,20 +1,34 @@
-<div class="theme-settings card pt-2">
+<div class="theme-settings card pt-2 collapse show" id="theme-settings">
     <div class="card-body pt-4">
-        <button type="button" class="btn-close theme-settings-close" aria-label="Close"></button>
+        <button type="button" class="btn-close theme-settings-close" aria-label="Close" data-bs-toggle="collapse"
+            href="#theme-settings" role="button" aria-expanded="false" aria-controls="theme-settings"></button>
         <div class="d-flex justify-content-between align-items-center mb-3">
             <p class="m-0 mb-1 me-4 fs-7">Open source <span role="img" aria-label="gratitude">💛</span></p>
-            <a class="github-button" href="https://github.com/themesberg/volt-bootstrap-5-dashboard" data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themesberg/volt-bootstrap-5-dashboard on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/themesberg/volt-bootstrap-5-dashboard"
+                data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star"
+                data-size="large" data-show-count="true"
+                aria-label="Star themesberg/volt-bootstrap-5-dashboard on GitHub">Star</a>
         </div>
-        <button href="https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard" target="_blank" class="btn btn-primary mb-3 w-100">Download <i class="fas fa-download ms-2"></i></button>
+        <button href="https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard" target="_blank"
+            class="btn btn-primary mb-3 w-100">Download <i class="fas fa-download ms-2"></i></button>
         <p class="fs-7 text-gray-700 text-center">Available in the following technologies:</p>
         <div class="d-flex justify-content-center">
-            <a class="me-3" href="https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard" target="_blank">
+            <a class="me-3" href="https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard"
+                target="_blank">
                 <img src="../../assets/img/technologies/bootstrap-5-logo.svg" class="image image-xs">
             </a>
             <a href="https://demo.themesberg.com/volt-react-dashboard/#/" target="_blank">
                 <img src="../../assets/img/technologies/react-logo.svg" class="image image-xs">
             </a>
         </div>
+    </div>
+</div>
+
+<div class="card theme-settings theme-settings-expand" id="theme-settings-expand">
+    <div class="card-body p-3 py-2">
+        <span class="fw-bold h6">
+            <i class="fas fa-cogs ms-2 me-1 fs-7"></i> Settings
+        </span>
     </div>
 </div>
 

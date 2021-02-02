@@ -73,7 +73,7 @@ const paths = {
 
 // Compile SCSS
 gulp.task('scss', function () {
-    return gulp.src([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/volt.scss'])
+    return gulp.src([paths.src.scss + '/custom/**/*.scss', paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/volt.scss'])
         .pipe(wait(500))
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -127,7 +127,7 @@ gulp.task('serve', gulp.series('scss', 'html', 'index', 'assets', 'vendor', func
         server: paths.temp.base
     });
 
-    gulp.watch([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/volt.scss'], gulp.series('scss'));
+    gulp.watch([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/custom/**/*.scss', paths.src.scss + '/volt.scss'], gulp.series('scss'));
     gulp.watch([paths.src.html, paths.src.base + '*.html', paths.src.partials], gulp.series('html', 'index'));
     gulp.watch([paths.src.assets], gulp.series('assets'));
     gulp.watch([paths.src.vendor], gulp.series('vendor'));
@@ -193,7 +193,7 @@ gulp.task('clean:dev', function () {
 
 // Compile and copy scss/css
 gulp.task('copy:dist:css', function () {
-    return gulp.src([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/volt.scss'])
+    return gulp.src([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/custom/**/*.scss', paths.src.scss + '/volt.scss'])
         .pipe(wait(500))
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -205,7 +205,7 @@ gulp.task('copy:dist:css', function () {
 });
 
 gulp.task('copy:dev:css', function () {
-    return gulp.src([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/volt.scss'])
+    return gulp.src([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/custom/**/*.scss', paths.src.scss + '/volt.scss'])
         .pipe(wait(500))
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))

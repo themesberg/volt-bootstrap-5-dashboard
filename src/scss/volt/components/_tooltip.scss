@@ -2,11 +2,6 @@
 
 .tooltip-inner {
     @include box-shadow($box-shadow);
-    margin-bottom:20px;
-}
-
-.tooltip-arrow{
-    margin-bottom:20px;
 }
 
 .chartist-tooltip {

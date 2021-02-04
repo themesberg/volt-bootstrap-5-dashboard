@@ -85,28 +85,19 @@
 
     .show-on-hover {
         position: absolute;
-        bottom: -25px;
+        bottom: -0;
         background: rgba($dark, .85);
         padding: 10px 0;
-        border-bottom-left-radius: 1.5rem;
-        border-bottom-right-radius:1.5rem;
-        width: calc(100% + 28px);
-        left: -14px;
+        width: 100%;
+        left: 0;
         opacity: 0;
         @include transition(.2s);
     }
 
-    &.page-preview-lg {
-        .show-on-hover {
-            left: -30px;
-            width: calc(100% + 60px);
-            bottom: -20px;
-        }
-    }
-
     &:hover {
+        z-index: 1;
+        
         .show-on-hover {
-            z-index: 99;
             opacity: 1;
         }
     }

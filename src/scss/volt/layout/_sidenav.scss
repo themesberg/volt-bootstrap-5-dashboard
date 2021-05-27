@@ -11,7 +11,7 @@
 	max-height: 100%;
 	overflow-y: auto;
 	width: 100%;
-	@include transition(ease-out .1s);
+	@include transition(max-width .1s);
 	
 	@include media-breakpoint-up(md) {
 		width: 100%;
@@ -25,16 +25,16 @@
 	.nav-item {
 		&.active {
 			& > .nav-link {
-				color: $light;
-				background-color: #2e3650;
+				color: $gray-100;
+				background-color: $gray-700;
 			}
 		}
 		.nav-link {
-			color: $light;
+			color: $white;
 			cursor: pointer;
 			&:hover {
-				color: $light;
-				background-color: #2e3650;
+				color: $gray-100;
+				background-color: $gray-700;
 			}
 		}
 		margin-bottom: .2rem;
@@ -52,10 +52,7 @@
 
 		.sidebar-icon {
 			margin-right: .5rem;
-			color: $white;
-			span{
-				min-width: 22px;
-			}
+			color: $gray-400;
 		}
 
 		.link-arrow{
@@ -68,12 +65,12 @@
 		}
 	}
 	.nav-link.active {
-		color: #363c54;
+		color: $gray-100;
 	}
 
 	.multi-level{
 		.nav-link{
-			padding-left: 45px;
+			padding-left: 53px;
 		}
 	}
 
@@ -82,9 +79,72 @@
 	.badge,
 	.notification-count {
 		opacity: 1;
-		@include transition(opacity .3s);
 	}
 
+	.sidebar-text-contracted {
+		display: none;
+	}
+
+	&.contracted {
+		.sidebar-text,
+		.link-arrow,
+		.badge {
+			opacity: 0;
+		}
+
+		.notification-count {
+			opacity: 1;
+			position: absolute;
+			top: 0;
+			left: 40px;
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			font-size: .7rem;
+			padding: .2rem;
+		}
+
+		.nav-item {
+			position: relative;
+			&.active {
+				& > .nav-link {
+					background-color: #363c54;
+					width: 44px;
+				}
+			}
+			.nav-link {
+				&:hover {
+					background-color: $primary;
+				}
+			}
+		}
+
+		.sidebar-text-contracted {
+			display: inline;
+		}
+
+		.multi-level .nav-link {
+			padding-left: 17px;
+		}
+
+		.nav-item {
+			white-space: nowrap;
+		}
+
+		.sidebar-icon {
+			text-align: center;
+		}
+
+
+		@include media-breakpoint-up(md) {
+			& + .content {
+				margin-left: 95px;
+				
+			}
+		}
+
+		max-width: 95px;
+	}
 }
 
 .sidebar-inner {
@@ -109,11 +169,11 @@
 
 .content {
 
-	overflow: visible;
+	overflow: hidden;
 	padding: 0 $spacer 0 $spacer;
 	@include transition(all .3s);
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		margin-left: 260px;
 	}
 }
@@ -125,7 +185,7 @@
 	&:focus {
 		outline: none;
 		box-shadow: none;
-		background: $gray-400;
+		background: $gray-300;
 	}
 
 }

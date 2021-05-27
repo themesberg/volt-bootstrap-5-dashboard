@@ -1,0 +1,202 @@
+/**
+ * = Icon boxes
+ */
+
+ .icon {
+	height: $icon-size;
+
+	&.icon-xxs {
+		height: $icon-size-xxs;
+	}
+
+	&.icon-xs {
+		height: $icon-size-xs;
+	}
+	&.icon-sm {
+		height: $icon-size-sm;
+	}
+	&.icon-lg {
+		height: $icon-size-lg;
+	}
+	&.icon-xl {
+		height: $icon-size-xl;
+	}
+	&.icon-xxl {
+		height: $icon-size-xxl;
+	}
+
+	&.active-dot {
+		svg {
+			height: 0.7rem;
+		}
+	}
+}
+
+// Icons included in shapes
+.icon-shape {
+	width: $icon-shape;
+	height: $icon-shape;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		height: $icon-size;
+	}
+
+	&.icon-xxs {
+		width: $icon-shape-xxs;
+		height: $icon-shape-xxs;
+		svg {
+			height: $icon-size-xxs;
+		}
+	}
+
+	&.icon-xs {
+		width: $icon-shape-xs;
+		height: $icon-shape-xs;
+		svg {
+			height: $icon-size-xs;
+		}
+	}
+
+	&.icon-sm {
+		width: $icon-shape-sm;
+		height: $icon-shape-sm;
+		svg {
+			height: $icon-size-sm;
+		}
+	}
+
+	&.icon-lg {
+		width: $icon-shape-lg;
+		height: $icon-shape-lg;
+		svg {
+			height: $icon-size-lg;
+		}
+	}
+
+	&.icon-xl {
+		width: $icon-shape-xl;
+		height: $icon-shape-xl;
+		svg {
+			height: $icon-size-xl;
+		}
+	}
+
+	&.icon-xxl {
+		width: $icon-shape-xxl;
+		height: $icon-shape-xxl;
+		svg {
+			height: $icon-size-xxl;
+		}
+	}
+}
+
+// Inbox star Icons
+.rating-star {
+	&:hover {
+		cursor: pointer;
+		color: $warning;
+	}
+}
+
+.toggle-icon {
+	height: 1.875rem;
+}
+
+//Icons inside table fixed width
+.w--20 {
+	width: 20px;
+}
+
+//Calendar Icon
+
+.calendar {
+	width: 3.125rem;
+	line-height: 1;
+	flex-direction: column;
+	text-align: center;
+	border-radius: $border-radius;
+	.calendar-month {
+		background-color: $danger;
+		color: $white;
+		border-radius: $border-radius $border-radius 0 0;
+		padding: 0.275rem;
+		font-weight: $font-weight-bold;
+	}
+	.calendar-day {
+		font-size: $font-size-xl;
+		padding: 0.25rem;
+		background-color: $gray-100;
+		border-top: 0;
+		border-radius: 0 0 $border-radius $border-radius;
+		color: $dark;
+		font-weight: $font-weight-bold;
+	}
+}
+
+//Legend dot
+
+.dot {
+	width: 12px;
+	height: 12px;
+}
+
+//Bell notification dot
+.bell-dot {
+	display: inline-block;
+	position: absolute;
+	top: -11px;
+	right: 6px;
+	height: 10px;
+	width: 10px;
+	border: 2px solid $gray-100;
+}
+
+.notification-bell.unread {
+	&::before {
+		position: absolute;
+		content: "";
+		background-color: $danger;
+		right: 12px;
+		top: 7px;
+		height: 0.75rem;
+		width: 0.75rem;
+		border-radius: 50%;
+		border: 2px solid $gray-100;
+	}
+}
+
+//Index Big Icon
+.bootstrap-big-icon {
+	position: absolute;
+	opacity: 0.05;
+	transform: rotate(17deg);
+	@include media-breakpoint-up(lg) {
+		right: -20%;
+		bottom: 6%;
+	}
+
+	@include media-breakpoint-up(xl) {
+		right: -10%;
+		bottom: 6%;
+	}
+}
+
+.github-big-icon {
+	position: absolute;
+	right: 80px;
+	svg {
+		color: $gray-400;
+		height:800px;
+		opacity: 0.2;
+	}
+}
+
+//Colors for icons, shapes and svg's
+@each $color, $value in $theme-colors {
+	.icon-shape-#{$color} {
+		@include icon-shape-variant($value);
+	}
+}

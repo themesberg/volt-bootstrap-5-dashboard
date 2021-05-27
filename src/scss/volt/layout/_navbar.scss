@@ -338,6 +338,9 @@
         right: 0;
         left: auto;
         transform: translate(0, 0);
+        @include media-breakpoint-down(lg) {
+            transform: translateX(-75%);
+        }
     }
 
     .navbar-collapse {     
@@ -402,20 +405,10 @@
     border-radius: $border-radius;
 }
 
-.icon-notifications {
-    .unread-notifications {
-        position: absolute;
-        right: -5px;
-        top: -5px;
-    }
-}
-
-
 // Theme color variants
 // eg. navbar-theme-primary, navbar-theme-secondary
 @each $color, $value in $navbar-colors {
     .navbar-theme-#{$color}:not(.headroom) {
         background-color: $value;
     }
-
 }

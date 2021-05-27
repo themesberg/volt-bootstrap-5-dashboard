@@ -52,7 +52,7 @@
 
  .thead-dark {
       th {
-          background-color: $dark;
+          background-color: $gray-800;
           color: $white;
 
           a {
@@ -66,7 +66,7 @@
 
   .thead-light {
       th {
-          background-color: $soft;
+          background-color: $gray-100;
           color: $dark;
 
           a {

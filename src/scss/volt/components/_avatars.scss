@@ -2,79 +2,101 @@
  * = Avatars
  */
 
-.avatar + .avatar-content {
-	display: inline-block;
-	margin-left: .75rem;
+ .avatar + .avatar-content {
+    display: inline-block;
+    margin-left: 0.75rem;
 }
 
-.avatar-link {
-	img{
-		width: 4rem;
-		height: 4rem;
-	}
+.avatar-sm {
+    width: $avatar-sm-y;
+    height: $avatar-sm-x;
+
+    img {
+        width: $avatar-sm-y;
+        height: $avatar-sm-x;
+    }
 }
 
-.avatar-md{
-	img{
-		height: 2rem;
-	}
+.avatar {
+    width: $avatar-y;
+    height: $avatar-x;
+
+    img {
+        width: $avatar-y;
+        height: $avatar-x;
+    }
 }
 
-.user-avatar {
-    height: $user-avatar-height;
-    width:  $user-avatar-width;
-    min-height: $user-avatar-height;
-    min-width:  $user-avatar-width;
-    color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: $font-weight-bold;
-    @include border-radius($circle-radius);
-    &.xs-avatar{
-        height: $user-avatar-height-xs;
-        width:  $user-avatar-width-xs;
-        img{
-            height: $user-avatar-height-xs;
-            width:  $user-avatar-width-xs;
-        }
+.avatar-md {
+    width: $avatar-md-y;
+    height: $avatar-md-x;
+
+    img {
+        width: $avatar-md-y;
+        height: $avatar-md-x;
+    }
+}
+
+.avatar-lg {
+    width: $avatar-lg-y;
+    height: $avatar-lg-x;
+
+    img {
+        width: $avatar-lg-y;
+        height: $avatar-lg-x;
+    }
+}
+
+.avatar-xl {
+    width: $avatar-xl-y;
+    height: $avatar-xl-x;
+
+    @include media-breakpoint-down(lg) {
+        width: $avatar-lg-y;
+        height: $avatar-lg-x;
     }
 
-	.md-avatar{
-		height: 2rem;
-		width:  2rem;
-		min-height: 2rem;
-		min-width:  2rem;
-	}
+}
 
-    &.lg-avatar{
-        height: $user-avatar-height-lg;
-        width:  $user-avatar-width-lg;
-        min-height: $user-avatar-height-lg;
-        min-width:  $user-avatar-width-lg;
-        font-size: $font-size-xs;
 
-        @include media-breakpoint-down(lg) {
-            height: 2rem;
-		    width:  2rem;
-            min-height: 2rem;
-		    min-width:  2rem;
-        }
-    }
-
-    &.xl-avatar{
-        height: $user-avatar-height-xl;
-        width:  $user-avatar-width-xl;
-        min-height: $user-avatar-height-xl;
-        min-width:  $user-avatar-width-xl;
-    }
-
-    &.large-avatar{
+.avatar-offline,
+.avatar-online {
+    &::before {
+        position: absolute;
         border: 2px solid $white;
-        height: $user-avatar-height-xxl;
-        width:  $user-avatar-width-xxl;
-        min-height: $user-avatar-height-xxl;
-        min-width:  $user-avatar-width-xxl;
+        background-color: $success;
+        display: block;
+        top: 2px;
+        left: 39px;
+        content: "";
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
     }
 }
 
+.avatar-offline {
+    &::before {
+        background-color: $danger;
+    }
+}
+
+// Overlapped avatars
+.avatar-group {
+    .avatar {
+        position: relative;
+        z-index: 0;
+
+        img {
+            border: 2px solid $white;
+        }
+
+        &:hover {
+            z-index: 3;
+        }
+    }
+
+    .avatar + .avatar {
+        margin-left: -1rem;
+    }
+}

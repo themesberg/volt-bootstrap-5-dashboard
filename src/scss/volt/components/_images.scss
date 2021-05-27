@@ -1,7 +1,7 @@
 /**
  * = Images
  */
-.image-xl {
+ .image-xl {
     height: 20rem;
     img{
         height: 20rem;
@@ -43,25 +43,10 @@
     }
 }
 
-
-
-.img-thumbnail {
-    border-width: $border-width-md;
-    box-shadow: none;
-}
-
 .full-image{
     height:100%;
 }
 
-.gallery-feed{
-    img{
-        width: 20%;
-        margin-right: .5rem;
-        margin-bottom: .5rem;
-        float: left;
-    }
-}
 
 .language-flag{
     width: auto;
@@ -71,4 +56,12 @@
     top: -2px;
 }
 
+.home-pattern{
+    fill: $gray-100;
+}
+
+.form-bg-image {
+    background-repeat: no-repeat!important;
+    background-position: top center!important;
+}
 

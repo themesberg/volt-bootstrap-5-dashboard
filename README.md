@@ -191,7 +191,7 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Licensing
 
-- Copyright 2020 Themesberg (Crafty Dwarf LLC) (https://themesberg.com)
+- Copyright 2021 Themesberg (Crafty Dwarf LLC) (https://themesberg.com)
 - Themesberg [license](https://themesberg.com/licensing#mit) (MIT License)
 
 ## Useful Links

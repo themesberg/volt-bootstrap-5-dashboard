@@ -1,11 +1,11 @@
 <!--
 
 =========================================================
-* Volt Free - Bootstrap 5 Dashboard
+* Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
-* Copyright 2020 Themesberg (https://www.themesberg.com)
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
 * License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
@@ -18,107 +18,143 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     @@include('./_head.html', {
-        "path": "../..",
-        "title": "Volt Free Bootstrap Dashboard - Notifications"
+    "path": "../..",
+    "title": "Volt Premium Bootstrap Dashboard - Notifications"
     })
 </head>
 
 <body>
 
-        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-        @@if (environment === 'production') {
-            @@include('./_analytics-body.html')
-        }
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    @@if (environment === 'production') {
+    @@include('./_analytics_body.html')
+    }
 
-        @@include('./dashboard/_nav.html', {
-            "path": "../.."
+    @@include('./dashboard/_nav.html', {
+    "path": "../.."
+    })
+
+    @@include('./dashboard/_sidenav.html', {
+    "path": "../..",
+    "page": "notifications",
+    "page_group": "components"
+    })
+
+    <main class="content">
+
+        @@include('./dashboard/_topbar.html', {
+        "path": "../.."
         })
 
-        @@include('./dashboard/_sidenav.html', {
-            "path": "../..",
-            "page": "notifications",
-            "page_group": "components"
-        })
-    
-        <main class="content">
+        <div class="py-4">
+            <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                        <a href="#">
+                            <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="#">Volt</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Notifications</li>
+                </ol>
+            </nav>
+            <div class="d-flex justify-content-between w-100 flex-wrap">
+                <div class="mb-3 mb-lg-0">
+                    <h1 class="h4">Notifications</h1>
+                    <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            @@include('./dashboard/_topbar.html', {
-                "path": "../.."
-            })
-
-            <div class="py-4">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-                        <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span></a></li>
-                        <li class="breadcrumb-item"><a href="#">Components</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Notifications</li>
-                    </ol>
-                </nav>
-                <div class="d-flex justify-content-between w-100 flex-wrap">
-                    <div class="mb-3 mb-lg-0">
-                        <h1 class="h4">Notifications</h1>
-                        <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="card border-0 shadow">
+                    <div class="card-header border-gray-100 d-flex justify-content-between align-items-center">
+                        <h2 class="h4 mb-0">Sweet alerts</h2>
+                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/sweet-alerts/"
+                            class="btn btn-outline-gray-500 d-inline-flex align-items-center">
+                            <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Documentation
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-gray-800" id="basicAlert">Basic alert</button>
+                        <button class="btn btn-info" id="infoAlert">Info alert</button>
+                        <button class="btn btn-success" id="successAlert">Success alert</button>
+                        <button class="btn btn-danger" id="dangerAlert">Danger alert</button>
+                        <button class="btn btn-warning" id="warningAlert">Warning alert</button>
+                        <button class="btn btn-gray-200" id="questionAlert">Question</button>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <h2 class="h4 mb-0">Sweet alerts</h2>
-                            <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/sweet-alerts/" class="btn btn-outline-gray"><i class="far fa-question-circle me-1"></i> Documentation</a>
-                        </div>
-                        <div class="card-body">
-                            <button class="btn btn-dark" id="basicAlert">Basic alert</button>
-                            <button class="btn btn-info" id="infoAlert">Info alert</button>
-                            <button class="btn btn-success" id="successAlert">Success alert</button>
-                            <button class="btn btn-danger" id="dangerAlert">Danger alert</button>
-                            <button class="btn btn-warning" id="warningAlert">Warning alert</button>
-                            <button class="btn btn-gray" id="questionAlert">Question</button>
-                        </div>
+            <div class="col-12 col-lg-6">
+                <div class="card border-0 shadow">
+                    <div class="card-header border-gray-100 d-flex justify-content-between align-items-center">
+                        <h2 class="h4 mb-0">Notyf</h2>
+                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/"
+                            class="btn btn-outline-gray-500 d-inline-flex align-items-center">
+                            <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Documentation
+                        </a>
                     </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <h2 class="h4 mb-0">Notyf</h2>
-                            <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/plugins/notifications/" class="btn btn-outline-gray"><i class="far fa-question-circle me-1"></i> Documentation</a>
-                        </div>
-                        <div class="card-body">
-                            <button class="btn btn-info" id="notifyTopLeft">Top left info</button>
-                            <button class="btn btn-danger" id="notifyTopRight">Top right danger</button>
-                            <button class="btn btn-warning" id="notifyBottomLeft">Bottom left warning</button>
-                            <button class="btn btn-dark" id="notifyBottomRight">Primary bottom right</button>
-                        </div>
+                    <div class="card-body">
+                        <button class="btn btn-info" id="notifyTopLeft">Top left info</button>
+                        <button class="btn btn-danger" id="notifyTopRight">Top right danger</button>
+                        <button class="btn btn-warning" id="notifyBottomLeft">Bottom left warning</button>
+                        <button class="btn btn-gray-800" id="notifyBottomRight">Primary bottom right</button>
                     </div>
                 </div>
             </div>
+        </div>
 
-            @@include('./dashboard/_footer.html', {
-                "path": "../..",
-                "classes": "bg-dark text-white"
-            })
-        </main>
+        @@include('./dashboard/_footer.html', {
+        "path": "../..",
+        "classes": "bg-dark text-white"
+        })
+    </main>
 
     @@include('./_scripts.html', {
-        "path": "../.."
+    "path": "../.."
     })
 
     <script>
 
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-primary',
+                cancelButton: 'btn btn-gray'
+            },
+            buttonsStyling: false
+        });
+
         // SweetAlert 2
         document.getElementById('basicAlert').addEventListener('click', function () {
-            Swal.fire(
+            swalWithBootstrapButtons.fire(
                 'Basic alert',
                 'You clicked the button!'
             )
         });
 
         document.getElementById('infoAlert').addEventListener('click', function () {
-            Swal.fire(
+            swalWithBootstrapButtons.fire(
                 'Info alert',
                 'You clicked the button!',
                 'info'
@@ -126,16 +162,17 @@
         });
 
         document.getElementById('successAlert').addEventListener('click', function () {
-            Swal.fire({
+            swalWithBootstrapButtons.fire({
                 icon: 'success',
-                title: 'Your work has been saved',
-                showConfirmButton: false,
+                title: 'Success alert',
+                text: 'Your work has been saved',
+                showConfirmButton: true,
                 timer: 1500
             })
         });
 
         document.getElementById('warningAlert').addEventListener('click', function () {
-            Swal.fire(
+            swalWithBootstrapButtons.fire(
                 'Warning alert',
                 'You clicked the button!',
                 'warning'
@@ -143,7 +180,7 @@
         });
 
         document.getElementById('dangerAlert').addEventListener('click', function () {
-            Swal.fire({
+            swalWithBootstrapButtons.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Something went wrong!',
@@ -152,14 +189,14 @@
         });
 
         document.getElementById('questionAlert').addEventListener('click', function () {
-            Swal.fire(
+            swalWithBootstrapButtons.fire(
                 'The Internet?',
                 'That thing is still around?',
                 'question'
             );
         });
 
-        document.getElementById('notifyTopLeft').addEventListener('click', function (){
+        document.getElementById('notifyTopLeft').addEventListener('click', function () {
             const notyf = new Notyf({
                 position: {
                     x: 'left',
@@ -184,7 +221,7 @@
             });
         });
 
-        document.getElementById('notifyTopRight').addEventListener('click', function (){
+        document.getElementById('notifyTopRight').addEventListener('click', function () {
             const notyf = new Notyf({
                 position: {
                     x: 'right',
@@ -209,7 +246,7 @@
             });
         });
 
-        document.getElementById('notifyBottomLeft').addEventListener('click', function (){
+        document.getElementById('notifyBottomLeft').addEventListener('click', function () {
             const notyf = new Notyf({
                 position: {
                     x: 'left',
@@ -234,7 +271,7 @@
             });
         });
 
-        document.getElementById('notifyBottomRight').addEventListener('click', function (){
+        document.getElementById('notifyBottomRight').addEventListener('click', function () {
             const notyf = new Notyf({
                 position: {
                     x: 'right',
@@ -260,7 +297,7 @@
         });
 
     </script>
-    
+
 </body>
 
 </html>

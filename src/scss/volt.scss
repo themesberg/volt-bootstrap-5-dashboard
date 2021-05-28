@@ -4,8 +4,8 @@
 * Volt - Free Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
-* Copyright 2020 Themesberg (https://www.themesberg.com)
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
 
 * Designed and coded by https://themesberg.com
 
@@ -15,7 +15,7 @@
 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 // update variables here
 @import "custom/variables";
@@ -31,6 +31,9 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/utilities";
+
+// Modify utilities here
+@import "volt/utilities";
 
 // Bootstrap Layout & components
 @import "../../node_modules/bootstrap/scss/root";
@@ -74,13 +77,13 @@
 @import "volt/mixins";
 @import "volt/functions";
 
-// Utilities
-@import "volt/utilities";
-
 // Layout
 @import "volt/layout";
 
 // Components
 @import "volt/components";
+
+// Forms
+@import "volt/forms";
 
 // write your custom styles here!

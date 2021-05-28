@@ -1,8 +1,95 @@
-@import "utilities/backgrounds";
-@import "utilities/helper";
-@import "utilities/position";
-@import "utilities/sizing";
-@import "utilities/shadows";
-@import "utilities/text";
-@import "utilities/transform";
-@import "utilities/animations";
+// check docs https://v5.getbootstrap.com/docs/5.0/utilities/api/
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "blur": (
+      property: backdrop-filter,
+      class: blur,
+      values: (
+        0: blur(0),
+        1: blur(1px),
+        2: blur(2px),
+        3: blur(3px),
+        4: blur(4px),
+        5: blur(5px),
+        6: blur(6px),
+        7: blur(7px),
+        8: blur(8px),
+        9: blur(91px),
+        10: blur(10px),
+        11: blur(11px),
+        12: blur(12px),
+        13: blur(13px),
+        14: blur(14px),
+      ),
+    ),
+    "opacity": (
+      property: opacity,
+      class: o,
+      values: (
+        0: 0,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        100: 1,
+      ),
+    ),
+    "z-index": (
+      property: z-index,
+      class: z,
+      values: (
+        0: 0,
+        1: 1,
+        2: 2,
+        3: 3,
+        999: 999,
+      ),
+    ),
+    "viewport-height": (
+      property: height,
+      class: vh,
+      responsive: true,
+      values: (
+        100: 100vh,
+      ),
+    ),
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        light: $font-weight-light,
+        lighter: $font-weight-lighter,
+        normal: $font-weight-normal,
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder,
+        extrabold: $font-weight-extrabold,
+        black: $font-weight-black,
+      ),
+    ),
+    "max-width": (
+      property: max-width,
+      class: fmxw,
+      values: (
+        100: 100px,
+        200: 200px,
+        300: 300px,
+        400: 400px,
+        500: 500px,
+        999: 999px,
+      ),
+    ),
+    "min-height": (
+      property: min-height,
+      class: fmxh,
+      values: (
+        100: 100px,
+        200: 200px,
+        300: 300px,
+        400: 400px,
+        500: 500px,
+        999: 999px,
+      ),
+    ),
+  )
+);

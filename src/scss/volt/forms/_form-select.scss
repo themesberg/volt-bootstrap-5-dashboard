@@ -1,0 +1,23 @@
+.form-select {
+    .form-select-lg{
+        padding: $form-select-padding-y ($form-select-padding-x + $form-select-indicator-padding) $form-select-padding-y $form-select-padding-x;
+    }
+}
+
+//Add File Alternative Style
+
+.file-field input[type="file"] {
+    max-width: 230px;
+    position: absolute;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    padding-bottom: 30px;
+}
+.file-field svg {
+    cursor: pointer;
+}
+
+.datepicker-dropdown {
+    z-index: 9999;
+}

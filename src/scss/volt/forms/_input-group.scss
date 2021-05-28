@@ -1,0 +1,13 @@
+.input-group {
+    .form-control:focus {
+        border-color: $input-border-color;
+
+        & + .input-group-text {
+            border-color: $input-border-color; 
+        }
+    }
+}
+
+.input-group-text{
+    @include box-shadow($input-box-shadow);
+}

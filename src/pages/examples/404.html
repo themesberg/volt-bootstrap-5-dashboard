@@ -1,11 +1,11 @@
 <!--
 
 =========================================================
-* Volt Free - Bootstrap 5 Dashboard
+* Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
 
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
-* Copyright 2020 Themesberg (https://www.themesberg.com)
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
 * License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
@@ -21,7 +21,7 @@
 <head> 
     @@include('./_head.html', {
         "path": "../..",
-        "title": "Volt Free Bootstrap Dashboard - 404 Not Found Page"
+        "title": "Volt Premium Bootstrap Dashboard - 404 Not Found Page"
     })
 </head>
 
@@ -29,7 +29,7 @@
 
     <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
     @@if (environment === 'production') {
-        @@include('./_analytics-body.html')
+        @@include('./_analytics_body.html')
     }
 
     <main>
@@ -40,9 +40,11 @@
                         <div>
                             <img class="img-fluid w-75" src="../../assets/img/illustrations/404.svg" alt="404 not found">
                             <h1 class="mt-5">Page not <span class="fw-bolder text-primary">found</span></h1>
-                            <p class="lead my-4">Oops! Looks like you followed a bad link. If you think this is a
-                                problem with us, please tell us.</p>
-                            <a class="btn btn-dark animate-hover" href="../dashboard/dashboard.html"><i class="fas fa-chevron-left me-3 ps-2 animate-left-3"></i>Go back home</a>
+                            <p class="lead my-4">Oops! Looks like you followed a bad link. If you think this is a problem with us, please tell us.</p>
+                            <a href="../dashboard/dashboard.html" class="btn btn-gray-800 d-inline-flex align-items-center justify-content-center mb-4">
+                                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+                                Back to homepage
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -10,8 +10,8 @@
     opacity: 0;
     min-width: 5em;
     padding: .5em;
-    background: $soft;
-    border: 1px solid $light;
+    background: $gray-100;
+    border: 1px solid $gray-100;
     border-radius: $border-radius;
     color: $dark;
     font-weight: $font-weight-bold;
@@ -30,7 +30,7 @@
     height: 0;
     margin-left: -15px;
     border: 15px solid transparent;
-    border-top-color: $soft;
+    border-top-color: $gray-100;
 }
 
 .chartist-tooltip.tooltip-show {

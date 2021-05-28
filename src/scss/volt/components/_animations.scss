@@ -3,7 +3,7 @@
  * = Animations
  */
 
-@for $size from 1 to 10 {
+ @for $size from 1 to 10 {
     .animate-up-#{$size},
     .animate-right-#{$size},
     .animate-down-#{$size},
@@ -228,3 +228,7 @@
     -webkit-animation-name: jackInTheBox;
     animation-name: jackInTheBox;
   }
+
+[class*=shadow] {
+    transition: all .2s ease;
+}

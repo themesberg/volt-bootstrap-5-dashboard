@@ -1,0 +1,15 @@
+.form-check-input {
+    &.round-check{
+        &[type="checkbox"] {
+            @include border-radius($form-check-radio-border-radius);
+          }
+    }
+}
+
+.form-switch {
+    padding-left: $form-switch-padding-left;
+  
+    .form-check-input {
+        height: 1.275em;
+    }
+}

@@ -36,15 +36,11 @@
 }
 
 // Sizes
-.badge-md {
-    padding: .25rem .4rem;
+.badge-sm {
+    padding: .2rem .6rem;
 }
 
 .badge-lg {
-    padding: .35rem .85rem;
-}
-
-.badge-xl {
     font-size: $font-size-lg;
     padding: .35rem .85rem;
 }

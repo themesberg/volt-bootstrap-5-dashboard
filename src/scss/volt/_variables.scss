@@ -1195,7 +1195,7 @@ $dropdown-link-hover-color: darken($gray-900, 5%) !default;
 $dropdown-link-hover-bg   : $gray-100 !default;
 
 $dropdown-link-active-color: $gray-900 !default;
-$dropdown-link-active-bg   : $gray-400 !default;
+$dropdown-link-active-bg   : $gray-200 !default;
 
 $dropdown-link-disabled-color: $gray-600 !default;
 
@@ -1279,7 +1279,7 @@ $timeline-spacer-x         : 2.75rem !default;
 $icon-size-xxs:         1rem !default; 
 $icon-size-xs:          1.25rem !default; 
 $icon-size-sm:          1.5rem !default; 
-$icon-size:             2.875rem !default;  
+$icon-size:             2rem !default;  
 $icon-size-lg:          3.5rem !default;
 $icon-size-xl:          4.5rem !default;
 $icon-size-xxl:         6rem !default;
@@ -1373,7 +1373,7 @@ $toast-header-border-color    : rgba(0, 0, 0, .05) !default;
 
 $badge-font-size    : .75em !default;
 $badge-font-weight  : $font-weight-bolder !default;
-$badge-padding-y    : .1rem !default;
+$badge-padding-y    : .2rem !default;
 $badge-padding-x    : .4rem !default;
 $badge-color        : $white !default;
 $badge-border-radius: $border-radius !default;

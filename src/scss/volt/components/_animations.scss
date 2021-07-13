@@ -15,21 +15,21 @@
 
     .scale-up-#{$size} {
         &:hover {
-            transform: scale($size / 1.8);
+            transform: scale($size * 0.5555555556);
         }
     }
 
     .scale-up-hover-#{$size} {
         &:hover {
             & .scale {
-                transform: scale($size / 1.8);
+                transform: scale($size * 0.5555555556);
             }
         }
     }
 
     .scale-down-#{$size} {
         &:hover {
-            transform: scale($size / 2.5);
+            transform: scale($size * 0.4);
         }
     }
 

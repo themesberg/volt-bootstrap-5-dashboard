@@ -1,6 +1,3 @@
-# [Summer Sale 90% Off All Bootstrap Themes 🏖](https://themesberg.com/summer-sale?ref=github)
-[![Summer Sale 90% Off All Bootstrap Themes 🏖](https://themesberg.com/img/campaigns/summer-sale/thumbnail.png)](https://themesberg.com/summer-sale?ref=github)
-
 # [Volt - Bootstrap 5 Admin Dashboard](https://demo.themesberg.com/volt/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%2Fvolt-bootstrap-5-dashboard&via=themesberg&text=Volt%20-%20Open%20Source%20Bootstrap%205%20Admin%20Dashboard)
 
 [![version](https://img.shields.io/npm/v/@themesberg/volt-bootstrap-5-dashboard)](https://www.npmjs.com/package/@themesberg/volt-bootstrap-5-dashboard)

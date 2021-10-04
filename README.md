@@ -194,16 +194,6 @@ If you have questions or need help integrating the product please [contact us](h
 - Copyright 2021 Themesberg (Crafty Dwarf LLC) (https://themesberg.com)
 - Themesberg [license](https://themesberg.com/licensing#mit) (MIT License)
 
-
-### Donations
-
-If you want to help support this project you can send us Bitcoin or Ethereum to the following addresses:
-
-- Bitcoin address: **bc1qmxvck7jnvwmv0z9xv4lcjsf05dja973v2pn7f5**
-- Ethereum address: **0xcb97e23EBc2262B2ba93bfC5d1e423e08420cAF6**
-
-The money will be used to pay for the hosting plan and other costs that are included to maintain this project.
-
 ## Useful Links
 
 - [More themes](https://themesberg.com/themes) from Themesberg

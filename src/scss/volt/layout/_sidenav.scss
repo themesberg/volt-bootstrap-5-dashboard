@@ -168,7 +168,7 @@
 }
 
 .content {
-
+	min-height: 100vh;
 	overflow: hidden;
 	padding: 0 $spacer 0 $spacer;
 	@include transition(all .3s);

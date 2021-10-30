@@ -27,12 +27,12 @@ d.addEventListener("DOMContentLoaded", function(event) {
         buttonsStyling: false
     });
 
-    var themeSettingsEl = document.getElementById('theme-settings');
-    var themeSettingsExpandEl = document.getElementById('theme-settings-expand');
+    const themeSettingsEl = document.getElementById('theme-settings');
+    const themeSettingsExpandEl = document.getElementById('theme-settings-expand');
 
     if(themeSettingsEl) {
 
-        var themeSettingsCollapse = new bootstrap.Collapse(themeSettingsEl, {
+        const themeSettingsCollapse = new bootstrap.Collapse(themeSettingsEl, {
             show: true,
             toggle: false
         });
@@ -67,7 +67,7 @@ d.addEventListener("DOMContentLoaded", function(event) {
         xl: 1140
     };
 
-    var sidebar = document.getElementById('sidebarMenu')
+    const sidebar = document.getElementById('sidebarMenu')
     if(sidebar && d.body.clientWidth < breakpoints.lg) {
         sidebar.addEventListener('shown.bs.collapse', function () {
             document.querySelector('body').style.position = 'fixed';
@@ -77,7 +77,7 @@ d.addEventListener("DOMContentLoaded", function(event) {
         });
     }
 
-    var iconNotifications = d.querySelector('.notification-bell');
+    const iconNotifications = d.querySelector('.notification-bell');
     if (iconNotifications) {
         iconNotifications.addEventListener('shown.bs.dropdown', function () {
             iconNotifications.classList.remove('unread');
@@ -103,22 +103,22 @@ d.addEventListener("DOMContentLoaded", function(event) {
     });
 
     //Tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 
 
     // Popovers
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
       return new bootstrap.Popover(popoverTriggerEl)
     })
     
 
     // Datepicker
-    var datepickers = [].slice.call(d.querySelectorAll('[data-datepicker]'))
-    var datepickersList = datepickers.map(function (el) {
+    const datepickers = [].slice.call(d.querySelectorAll('[data-datepicker]'))
+    const datepickersList = datepickers.map(function (el) {
         return new Datepicker(el, {
             buttonClass: 'btn'
           });
@@ -126,16 +126,16 @@ d.addEventListener("DOMContentLoaded", function(event) {
 
     if(d.querySelector('.input-slider-container')) {
         [].slice.call(d.querySelectorAll('.input-slider-container')).map(function(el) {
-            var slider = el.querySelector(':scope .input-slider');
-            var sliderId = slider.getAttribute('id');
-            var minValue = slider.getAttribute('data-range-value-min');
-            var maxValue = slider.getAttribute('data-range-value-max');
+            const slider = el.querySelector(':scope .input-slider');
+            const sliderId = slider.getAttribute('id');
+            const minValue = slider.getAttribute('data-range-value-min');
+            const maxValue = slider.getAttribute('data-range-value-max');
 
-            var sliderValue = el.querySelector(':scope .range-slider-value');
-            var sliderValueId = sliderValue.getAttribute('id');
-            var startValue = sliderValue.getAttribute('data-range-value-low');
+            const sliderValue = el.querySelector(':scope .range-slider-value');
+            const sliderValueId = sliderValue.getAttribute('id');
+            const startValue = sliderValue.getAttribute('data-range-value-low');
 
-            var c = d.getElementById(sliderId),
+            const c = d.getElementById(sliderId),
                 id = d.getElementById(sliderValueId);
 
             noUiSlider.create(c, {
@@ -151,7 +151,7 @@ d.addEventListener("DOMContentLoaded", function(event) {
     }
 
     if (d.getElementById('input-slider-range')) {
-        var c = d.getElementById("input-slider-range"),
+        const c = d.getElementById("input-slider-range"),
             low = d.getElementById("input-slider-range-value-low"),
             e = d.getElementById("input-slider-range-value-high"),
             f = [d, e];
@@ -202,7 +202,7 @@ d.addEventListener("DOMContentLoaded", function(event) {
     }
 
     if(d.querySelector('.ct-chart-ranking')) {
-        var chart = new Chartist.Bar('.ct-chart-ranking', {
+        const chart = new Chartist.Bar('.ct-chart-ranking', {
             labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
             series: [
               [1, 5, 2, 5, 4, 3],
@@ -242,11 +242,11 @@ d.addEventListener("DOMContentLoaded", function(event) {
     }
 
     if(d.querySelector('.ct-chart-traffic-share')) {
-        var data = {
+        const data = {
             series: [70, 20, 10]
           };
           
-          var sum = function(a, b) { return a + b };
+          const sum = function(a, b) { return a + b };
           
           new Chartist.Pie('.ct-chart-traffic-share', data, {
             labelInterpolationFnc: function(value) {
@@ -267,9 +267,9 @@ d.addEventListener("DOMContentLoaded", function(event) {
 
     if (d.getElementById('loadOnClick')) {
         d.getElementById('loadOnClick').addEventListener('click', function () {
-            var button = this;
-            var loadContent = d.getElementById('extraContent');
-            var allLoaded = d.getElementById('allLoadedText');
+            const button = this;
+            const loadContent = d.getElementById('extraContent');
+            const allLoaded = d.getElementById('allLoadedText');
     
             button.classList.add('btn-loading');
             button.setAttribute('disabled', 'true');
@@ -282,7 +282,7 @@ d.addEventListener("DOMContentLoaded", function(event) {
         });
     }
 
-    var scroll = new SmoothScroll('a[href*="#"]', {
+    const scroll = new SmoothScroll('a[href*="#"]', {
         speed: 500,
         speedAsDuration: true
     });
@@ -338,7 +338,7 @@ d.addEventListener("DOMContentLoaded", function(event) {
     }
 
     // Pricing countup
-    var billingSwitchEl = d.getElementById('billingSwitch');
+    const billingSwitchEl = d.getElementById('billingSwitch');
     if(billingSwitchEl) {
         const countUpStandard = new countUp.CountUp('priceStandard', 99, { startVal: 199 });
         const countUpPremium = new countUp.CountUp('pricePremium', 199, { startVal: 299 });

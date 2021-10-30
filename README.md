@@ -144,17 +144,19 @@ Volt Bootstrap 5 Admin Dashboard
     │   ├── examples
     │   ├── settings.html
     │   ├── tables
-    │   └── transactions.html
+    │   ├── transactions.html
+    │   └── upgrade-to-pro.html
     ├── partials
     │   ├── _analytics.html
+    │   ├── _analytics_body.html
     │   ├── _footer.html
     │   ├── _head.html
     │   ├── _navigation.html
     │   ├── _pages-preview.html
-    │   ├── _preloader.html
     │   ├── _scripts.html
     │   └── dashboard
     └── scss
+        ├── custom
         ├── volt
         └── volt.scss
 ```

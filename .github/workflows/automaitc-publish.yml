@@ -9,8 +9,6 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
-        with:
-          repository: themesberg/volt-bootstrap-5-dashboard
 
       - name: Install packages
         run: npm install

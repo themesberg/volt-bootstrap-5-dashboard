@@ -35,10 +35,11 @@
         "notyf": "^3.10.0",
         "nouislider": "^15.2.0",
         "onscreen": "^1.4.0",
+        "sass": "^1.47.0",
         "simplebar": "^5.3.4",
         "smooth-scroll": "^16.1.3",
         "sweetalert2": "^11.0.18",
-        "vanillajs-datepicker": "^1.1.4",
+        "vanillajs-datepicker": "^1.2.0",
         "waypoints": "^4.0.1"
     },
     "devDependencies": {
@@ -48,7 +49,6 @@
         "gulp-autoprefixer": "^8.0.0",
         "gulp-clean-css": "^4.3.0",
         "gulp-cssbeautify": "^3.0.0",
-        "node-sass": "^6.0.1",
         "gulp-file-include": "^2.3.0",
         "gulp-header": "^2.0.9",
         "gulp-htmlmin": "^5.0.1",

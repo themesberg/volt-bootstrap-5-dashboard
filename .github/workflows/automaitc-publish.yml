@@ -1,0 +1,27 @@
+name: Automatic publish
+on:
+  release:
+    types: [published]
+
+jobs:
+  npm: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v2
+
+      - name: Install packages
+        run: npm install
+
+      - name: Build project
+        run: gulp build:dist
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Publish project
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
